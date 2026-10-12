@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book an Appointment — FIRST STEPS | Gentle Care. Healthy Beginnings.</title>
+  <meta name="description" content="Schedule an unhurried, gentle pediatric checkup with Dr. Maya Carter or Dr. Julian Reed at First Steps Pediatric Clinic.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .slot-pill {
+      padding: 0.6rem 1rem;
+      border: 1.5px solid var(--border-blush);
+      border-radius: var(--radius-pill);
+      background: var(--surface-white);
+      color: var(--text-main);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      text-align: center;
+    }
+    .slot-pill:hover, .slot-pill.active {
+      background: var(--brand-lavender);
+      border-color: var(--brand-lavender);
+      color: #3E3542;
+      transform: translateY(-2px);
+    }
+    .doctor-choice-card {
+      border: 2px solid var(--border-blush);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      transition: all var(--transition-fast);
+      background: var(--surface-white);
+    }
+    .doctor-choice-card:hover, .doctor-choice-card.selected {
+      border-color: var(--brand-lavender);
+      background: var(--bg-secondary);
+    }
+    .doctor-choice-card img {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+    <header class="site-header">
+    <div class="container navbar-container">
+      <a href="index.html" class="first-steps-logo" aria-label="First Steps Pediatric Clinic Home">
+        <img src="assets/images/first_steps_logo.svg" alt="First Steps Logo" class="logo-icon-svg" width="40" height="40">
+        <span class="logo-brand-name">
+          <span class="brand-part-first">FIRST</span>
+          <span class="brand-part-steps">STEPS</span>
+        </span>
+      </a>
+
+      <nav class="site-navigation" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <!-- 1. Home with Home 2 in dropdown -->
+          <li class="nav-item nav-dropdown">
+            <a href="index.html" class="nav-link nav-dropdown-toggle">
+              <span>Home</span>
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-item">Home 1 (Hospital Sanctuary) <span class="item-badge">Core</span></a>
+              <a href="home-services.html" class="dropdown-item">Home 2 (Clinical Care)</a>
+            </div>
+          </li>
+
+          <!-- 2. About -->
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About</a>
+          </li>
+
+          <!-- 3. Services -->
+          <li class="nav-item">
+            <a href="services.html" class="nav-link">Services</a>
+          </li>
+
+          <!-- 4. Doctors -->
+          <li class="nav-item">
+            <a href="doctors.html" class="nav-link">Doctors</a>
+          </li>
+
+          <!-- 5. Pricing -->
+          <li class="nav-item">
+            <a href="appointment.html#insurance-billing" class="nav-link">Pricing</a>
+          </li>
+
+          <!-- 6. Blog -->
+          <li class="nav-item">
+            <a href="blog.html" class="nav-link">Blog</a>
+          </li>
+
+          <!-- 7. Contact -->
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+
+          <!-- 8. Dashboard -->
+          <li class="nav-item">
+            <a href="dashboard.html" class="nav-link">Dashboard</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions: Theme Toggle, RTL, Login, Book Appointment -->
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" aria-label="Toggle light/dark mode" title="Switch Theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="rtl-toggle-btn" aria-label="Toggle RTL layout" title="Switch RTL / LTR">RTL</button>
+        <a href="login.html" class="nav-btn-login">
+          <svg class="nav-btn-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+            <polyline points="10 17 15 12 10 7"></polyline>
+            <line x1="15" y1="12" x2="3" y2="12"></line>
+          </svg>
+          <span>Login</span>
+        </a>
+        <a href="appointment.html" class="btn btn-primary nav-btn-cta">
+          <svg class="nav-btn-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <span>Book Appointment</span>
+        </a>
+        <button class="mobile-nav-toggle" aria-label="Open mobile menu" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       PAGE HERO — BESPOKE BOOKING CONCIERGE & SANCTUARY ASSURANCE ARCHITECTURE
+       ========================================================================== -->
+  <section class="hero-section hero-bg-appointment" id="hero" style="border-bottom: 1px solid var(--border-blush);">
+    <div class="container hero-grid">
+      <!-- Left Column: Booking Presentation & Reassurance -->
+      <div class="hero-content">
+        <div class="hero-live-badge">
+          <span class="live-dot"></span>
+          <span>Online Scheduling Live • Direct Physician Calendar Sync</span>
+        </div>
+
+        <h1 class="hero-title" style="font-size: 2.9rem; line-height: 1.18;">
+          SCHEDULE A GENTLE VISIT FOR YOUR CHILD.<br>
+          <span class="hero-gradient-accent">Unhurried 45-Minute Dedicated Pediatric Care.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Select your favorite attending pediatrician, pick a sensory-calm arrival time, and tell us how we can make your little one feel happiest. No crowded waiting rooms, no clinical rush.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#booking-engine" class="btn btn-primary btn-lg">
+            Start Booking Below
+          </a>
+          <a href="#prep-checklist" class="btn btn-secondary btn-lg">
+            First-Visit Preparation
+          </a>
+        </div>
+
+        <!-- Booking Feature Chips -->
+        <div class="hero-service-chips">
+          <span class="service-chip">
+            <span>⏱️</span> Zero-Wait Arrival
+          </span>
+          <span class="service-chip">
+            <span>🧸</span> Lap Comfort Guarantee
+          </span>
+          <span class="service-chip">
+            <span>📋</span> Instant Digital Confirmation
+          </span>
+        </div>
+      </div>
+
+      <!-- Right Column: Bespoke Sanctuary Assurance Card -->
+      <div class="hero-clinical-pathway-card">
+        <div class="pathway-header">
+          <div>
+            <span class="pathway-tag">Family Care Guarantee</span>
+            <h3 class="pathway-title">Our Sanctuary Standard</h3>
+            <p class="pathway-subtitle">What every family experiences at First Steps</p>
+          </div>
+        </div>
+
+        <div class="pathway-steps-list">
+          <div class="pathway-step-item">
+            <div class="pathway-step-num">🧸</div>
+            <div class="pathway-step-content">
+              <strong>Parent Lap Comfort First</strong>
+              <p>Physical examinations happen where your child feels safest—in your loving arms or play rugs.</p>
+            </div>
+          </div>
+
+          <div class="pathway-step-item">
+            <div class="pathway-step-num">🕒</div>
+            <div class="pathway-step-content">
+              <strong>45-Minute Unrushed Physician Time</strong>
+              <p>Dedicated attending time to answer every sleep, milestone, and emotional concern.</p>
+            </div>
+          </div>
+
+          <div class="pathway-step-item">
+            <div class="pathway-step-num">📱</div>
+            <div class="pathway-step-content">
+              <strong>Instant Digital Results &amp; Charting</strong>
+              <p>Milestone progress charts and vaccine records sync automatically to your mobile app.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Calendar Slot Strip -->
+        <div class="pathway-footer-slot">
+          <div class="pathway-footer-slot-text">
+            <span class="live-dot"></span>
+            <span>Same-Day &amp; Next-Day Openings Available</span>
+          </div>
+          <span style="font-size: 0.8rem; font-weight: 700; color: #047857;">Live Calendar</span>
+        </div>
+
+        <a href="#booking-engine" class="btn btn-primary" style="width: 100%; text-align: center;">
+          Select Physician &amp; Time Slot Below ↓
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SEGMENT 2: INTERACTIVE BOOKING ENGINE (STEP 1, 2, 3)
+       ========================================================================== -->
+  <section class="section-padding" style="background-color: var(--surface-card-alt); border-bottom: 1px solid var(--border-blush);" id="booking-engine">
+    <div class="container" style="max-width: 900px;">
+      <div style="background: var(--surface-white); border: 2px solid var(--border-blush); border-radius: var(--radius-xl); padding: 3rem 2.5rem; box-shadow: var(--shadow-md);">
+        
+        <form id="fullAppointmentForm" onsubmit="event.preventDefault(); showConfirmationBanner();">
+          <!-- Step 1: Select Doctor -->
+          <div style="margin-bottom: 2.5rem;">
+            <label class="form-label" style="font-size: 1.05rem; margin-bottom: 1rem;">1. Select Preferred Pediatrician</label>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+              <div class="doctor-choice-card selected" onclick="selectDoctor(this, 'Dr. Maya Carter')">
+                <img src="assets/images/avatar_booking_dr_carter.jpg" alt="Dr. Maya Carter, MD, FAAP" style="width: 54px; height: 54px; border-radius: 50%; object-fit: cover; object-position: center top; flex-shrink: 0; border: 2px solid var(--border-blush);">
+                <div>
+                  <div style="font-weight: 700; color: var(--text-main);">Dr. Maya Carter, MD, FAAP</div>
+                  <div style="font-size: 0.8rem; color: var(--text-muted);">Lead Pediatrician • Infants & Milestones</div>
+                </div>
+              </div>
+
+              <div class="doctor-choice-card" onclick="selectDoctor(this, 'Dr. Julian Reed')">
+                <img src="assets/images/avatar_booking_dr_reed.jpg" alt="Dr. Julian Reed, MD, PhD" style="width: 54px; height: 54px; border-radius: 50%; object-fit: cover; object-position: center top; flex-shrink: 0; border: 2px solid var(--border-blush);">
+                <div>
+                  <div style="font-weight: 700; color: var(--text-main);">Dr. Julian Reed, MD, PhD</div>
+                  <div style="font-size: 0.8rem; color: var(--text-muted);">Preventive Health Chair • Vaccines &amp; Immunity</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2: Service & Child Details -->
+          <div style="margin-bottom: 2.5rem;">
+            <label class="form-label" style="font-size: 1.05rem; margin-bottom: 1rem;">2. Consultation Details & Patient Profile</label>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+              <div class="form-group">
+                <label class="form-label" for="apptChildName">Child’s Full Name</label>
+                <input type="text" id="apptChildName" name="childName" class="form-input name-input" placeholder="e.g. Liam Carter" required pattern="^[A-Za-z\s.'-]+$" title="Please enter letters only (no numbers)">
+                <span class="form-hint" style="font-size: 0.78rem; color: var(--text-muted); display: block; margin-top: 0.25rem;">Letters only (no numbers)</span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="apptParentPhone">Parent Mobile Phone</label>
+                <input type="tel" id="apptParentPhone" name="parentPhone" class="form-input phone-input" placeholder="(555) 012-3456" required pattern="^(\+?[0-9\s\-()]{10,20})$" title="Please enter a valid phone number (digits only)">
+                <span class="form-hint" style="font-size: 0.78rem; color: var(--text-muted); display: block; margin-top: 0.25rem;">Digits only (e.g. 555-012-3456)</span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="apptChildDOB">Child's Date of Birth (DOB)</label>
+                <input type="date" id="apptChildDOB" name="childDOB" class="form-input dob-input" required>
+                <span class="form-hint" style="font-size: 0.78rem; color: var(--text-muted); display: block; margin-top: 0.25rem;">Birth date (cannot be future)</span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="apptChildAge">Child's Age</label>
+                <input type="text" id="apptChildAge" name="childAge" class="form-input age-input" placeholder="e.g. 14 Months" required>
+                <span class="form-hint" style="font-size: 0.78rem; color: var(--text-muted); display: block; margin-top: 0.25rem;">Auto-calculated or enter age</span>
+              </div>
+
+              <div class="form-group" style="grid-column: 1 / -1;">
+                <label class="form-label" for="apptService">Pediatric Service</label>
+                <select id="apptService" class="form-select">
+                  <option>Well-Child Checkup (30-45 Mins)</option>
+                  <option>Vaccination &amp; Booster</option>
+                  <option>Growth &amp; Weight Monitoring</option>
+                  <option>Developmental &amp; Speech Screening</option>
+                  <option>Pediatric Nutrition Guidance</option>
+                  <option>Same-Day Acute Assessment</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3: Preferred Date & Time Slots -->
+          <div style="margin-bottom: 2.5rem;">
+            <label class="form-label" style="font-size: 1.05rem; margin-bottom: 1rem;">3. Select Date & Morning/Afternoon Slot</label>
+            <div style="margin-bottom: 1.25rem;">
+              <input type="date" id="bookingCalendarDate" class="form-input" style="max-width: 320px;" required value="2026-10-14">
+            </div>
+
+            <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-light); text-transform: uppercase; margin-bottom: 0.6rem;">Available Gentle Slots</div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 0.75rem;">
+              <div class="slot-pill" onclick="selectSlot(this)">9:00 AM</div>
+              <div class="slot-pill" onclick="selectSlot(this)">9:45 AM</div>
+              <div class="slot-pill active" onclick="selectSlot(this)">10:30 AM</div>
+              <div class="slot-pill" onclick="selectSlot(this)">11:15 AM</div>
+              <div class="slot-pill" onclick="selectSlot(this)">2:00 PM</div>
+              <div class="slot-pill" onclick="selectSlot(this)">2:45 PM</div>
+              <div class="slot-pill" onclick="selectSlot(this)">3:30 PM</div>
+              <div class="slot-pill" onclick="selectSlot(this)">4:15 PM</div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+            Confirm & Reserve Appointment
+          </button>
+        </form>
+
+        <!-- Confirmation State Banner -->
+        <div id="bookingSuccessBox" style="display: none; text-align: center; padding: 2rem 1rem;">
+          <div style="width: 72px; height: 72px; background: var(--brand-lavender); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2.2rem;">✓</div>
+          <h2 style="font-size: 2rem; font-family: var(--font-heading); margin-bottom: 0.5rem;">Your Appointment is Booked!</h2>
+          <p style="color: var(--text-muted); font-size: 1.05rem; max-width: 580px; margin: 0 auto 1.5rem;">
+            We look forward to seeing your child. An invitation link has been attached to your Family Portal.
+          </p>
+          <div class="booking-confirmed-details-card" style="max-width: 520px; margin: 0 auto 2rem;">
+            <strong class="clinic-confirmed-title">First Steps Family Clinic</strong>
+            <div class="clinic-confirmed-doc" id="confirmedDocText">Dr. Maya Carter, MD</div>
+            <div class="clinic-confirmed-meta">Date: <strong>14 October 2026</strong> • Time: <strong>10:30 AM</strong></div>
+            <div class="clinic-confirmed-arrival">124 Blossom Hill Way • Free Stroller-Friendly Parking</div>
+          </div>
+          <div style="display: flex; justify-content: center; gap: 1rem;">
+            <a href="dashboard.html" class="btn btn-primary">Go to Family Portal</a>
+            <a href="index.html" class="btn btn-secondary">Return Home</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SEGMENT 3: FIRST-VISIT PREPARATION GUIDE (UNIQUE IMAGE)
+       ========================================================================== -->
+  <section class="section-padding" style="background-color: var(--bg-primary);" id="prep-checklist">
+    <div class="container">
+      <div class="feature-split-grid">
+        <div class="feature-split-img-box">
+          <img src="assets/images/appointment_prep_checklist.jpg" alt="Gentle doctor with stethoscope examining smiling toddler during first clinic visit" width="600" height="420" loading="lazy">
+          <div class="feature-floating-badge">
+            <span class="badge-icon">📋</span>
+            <div>
+              <div class="badge-text-title">First Visit Friendly Guide</div>
+              <div class="badge-text-sub">Zero-stress arrival protocols</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <span class="section-tag">Visit Preparation</span>
+          <h2 style="font-size: 2.3rem; margin-bottom: 1.25rem; font-family: var(--font-heading);">
+            Preparing For a Calm First Visit
+          </h2>
+          <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem;">
+            We believe doctor visits should feel as friendly and gentle as storytime. Here is how you can help your child prepare for an easy, cheerful experience at First Steps.
+          </p>
+
+          <ul class="checklist-bullet-list">
+            <li>
+              <span class="check-icon">✓</span>
+              <span><strong>Talk Positively:</strong> Let your toddler know the pediatrician will count their fingers, listen to their heartbeat with a magic musical tool, and check their big smile.</span>
+            </li>
+            <li>
+              <span class="check-icon">✓</span>
+              <span><strong>Dress in Easy Layers:</strong> Simple snaps or loose cotton clothing make physical exams quick and fuss-free.</span>
+            </li>
+            <li>
+              <span class="check-icon">✓</span>
+              <span><strong>Bring a Comfort Object:</strong> A favorite stuffed teddy or soft baby blanket provides instant soothing familiarity.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SEGMENT 4: INSURANCE & TRANSPARENT BILLING
+       ========================================================================== -->
+  <section class="section-padding" style="background-color: var(--surface-card-alt); border-top: 1px solid var(--border-blush); border-bottom: 1px solid var(--border-blush);" id="insurance-billing">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Transparent Care</span>
+        <h2 class="section-title">Insurance Networks & Direct Pricing</h2>
+        <p class="section-desc">We work with all major pediatric health carriers and provide 100% upfront pricing with no surprise bills.</p>
+      </div>
+
+      <div class="segment-cards-3col">
+        <div class="service-card">
+          <div class="service-icon-box">🛡️</div>
+          <h3 class="service-card-title">In-Network Insurance</h3>
+          <p class="service-card-desc">We accept Blue Cross Blue Shield, Aetna, Cigna, United Healthcare, Kaiser PPO, and state CHIP plans.</p>
+          <div style="font-size: 0.85rem; color: var(--brand-lavender); font-weight: 700; margin-top: auto; padding-top: 1rem;">Direct Claim Processing</div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon-box">💳</div>
+          <h3 class="service-card-title">HSA & FSA Eligible</h3>
+          <p class="service-card-desc">All well-child copays, immunization fees, and specialist screenings qualify for tax-free health savings accounts.</p>
+          <div style="font-size: 0.85rem; color: var(--brand-lavender); font-weight: 700; margin-top: auto; padding-top: 1rem;">Instant Digital Receipts</div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon-box">🏷️</div>
+          <h3 class="service-card-title">Transparent Self-Pay</h3>
+          <p class="service-card-desc">No insurance? Flat-rate predictable pricing packages for complete infant year checkups with zero hidden hospital fees.</p>
+          <div style="font-size: 0.85rem; color: var(--brand-lavender); font-weight: 700; margin-top: auto; padding-top: 1rem;">Predictable Family Care</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SEGMENT 5: WHAT TO BRING CHECKLIST
+       ========================================================================== -->
+  <section class="section-padding" style="background-color: var(--bg-primary);" id="what-to-bring">
+    <div class="container" style="max-width: 860px;">
+      <div class="section-header">
+        <span class="section-tag">Checklist</span>
+        <h2 class="section-title">What to Bring to Your Appointment</h2>
+        <p class="section-desc">A handy list so you can walk in with total peace of mind.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+        <div style="background: var(--surface-white); border: 1px solid var(--border-blush); border-radius: var(--radius-md); padding: 1.5rem;">
+          <h4 style="font-size: 1.1rem; color: var(--text-main); margin-bottom: 0.75rem;">Medical Documents</h4>
+          <ul class="checklist-bullet-list" style="margin-top: 0;">
+            <li><span class="check-icon">✓</span> Parent Photo ID & Insurance Card</li>
+            <li><span class="check-icon">✓</span> Previous immunization / vaccine record</li>
+            <li><span class="check-icon">✓</span> Hospital discharge paperwork (for newborns)</li>
+          </ul>
+        </div>
+
+        <div style="background: var(--surface-white); border: 1px solid var(--border-blush); border-radius: var(--radius-md); padding: 1.5rem;">
+          <h4 style="font-size: 1.1rem; color: var(--text-main); margin-bottom: 0.75rem;">Baby Comfort Gear</h4>
+          <ul class="checklist-bullet-list" style="margin-top: 0;">
+            <li><span class="check-icon">✓</span> Extra diapers, wipes, and a change of clothes</li>
+            <li><span class="check-icon">✓</span> Pacifier, soothing rattle, or toy</li>
+            <li><span class="check-icon">✓</span> List of questions you'd like to ask the doctor</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SEGMENT 6: CANCELLATION & SAME-DAY POLICY BANNER
+       ========================================================================== -->
+  <section class="section-padding" style="background-color: var(--bg-secondary);" id="policy-banner">
+    <div class="container" style="max-width: 860px;">
+      <div style="background: var(--surface-white); border: 2px solid var(--border-blush); border-radius: var(--radius-xl); padding: 2.5rem; box-shadow: var(--shadow-sm); text-align: center;">
+        <h3 style="font-size: 1.4rem; font-family: var(--font-heading); margin-bottom: 0.5rem; color: var(--text-main);">
+          Need to Reschedule or Running Late?
+        </h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; max-width: 600px; margin: 0 auto 1.5rem;">
+          We know parenting days can be unpredictable. You can cancel or move any appointment directly in your Family Portal or by sending a quick text with zero cancellation fees.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 1rem;">
+          <a href="dashboard.html" class="btn btn-secondary">Open Family Portal</a>
+          <a href="tel:18005557837" class="btn btn-primary">Call Front Desk: (800) 555-STEP</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       STANDARDIZED PRE-FOOTER CTA SECTION
+       ========================================================================== -->
+  <section class="section-padding cta-banner-section" style="background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--surface-white) 100%); border-top: 1px solid var(--border-blush); border-bottom: 1px solid var(--border-blush); text-align: center;">
+    <div class="container" style="max-width: 780px;">
+      <span class="section-tag">Have Questions Before Booking?</span>
+      <h2 style="font-size: 2.6rem; margin-bottom: 1.15rem; font-family: var(--font-heading);">
+        Our Pediatric Care Team Is Here For You.
+      </h2>
+      <p style="font-size: 1.05rem; color: var(--text-muted); margin-bottom: 2.25rem; line-height: 1.7;">
+        Whether you need insurance pre-authorization assistance, medical record transfers, or a prenatal clinic tour, our team is just a call away.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 1.25rem; flex-wrap: wrap;">
+        <a href="tel:18005557837" class="btn btn-primary btn-lg">Call (800) 555-STEP</a>
+        <a href="contact.html" class="btn btn-secondary btn-lg">Send Message to Front Desk</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PROFESSIONAL FOOTER (Compact & Clean)
+       ========================================================================== -->
+      <footer class="site-footer">
+    <div class="container footer-grid">
+      <!-- Col 1: Hospital Brand & Accreditations -->
+      <div class="footer-col footer-brand">
+        <a href="index.html" class="first-steps-logo">
+          <img src="assets/images/first_steps_logo.svg" alt="First Steps Logo" class="logo-icon-svg" width="40" height="40">
+          <span class="logo-brand-name">
+            <span class="brand-part-first">FIRST</span>
+            <span class="brand-part-steps">STEPS</span>
+          </span>
+        </a>
+        <span class="logo-tagline">Gentle Care • Healthy Beginnings</span>
+        <p class="footer-tagline">
+          Dedicated children's hospital and pediatric wellness sanctuary supporting your family from first newborn checkup to adolescent milestone care.
+        </p>
+        <div class="footer-accreditations">
+          <span class="footer-accred-badge">🏥 AAP Affiliated</span>
+          <span class="footer-accred-badge">🔒 HIPAA Secure</span>
+          <span class="footer-accred-badge">🧸 Sensory-Calm</span>
+        </div>
+        <div class="footer-social-row">
+          <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z"/></svg>
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22.336 22.336 0 0 0 14.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202h3.312z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Col 2: Clinical Navigation (100% Uniform with Navbar) -->
+      <div class="footer-col">
+        <h4 class="footer-title">Clinical Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home (Sanctuary)</a></li>
+          <li><a href="home-services.html">Home (Clinical Care)</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="doctors.html">Doctors</a></li>
+          <li><a href="appointment.html#insurance-billing">Pricing</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Pediatric Programs -->
+      <div class="footer-col">
+        <h4 class="footer-title">Pediatric Programs</h4>
+        <ul class="footer-links">
+          <li><a href="services.html#clinical-services">Newborn &amp; Infant Wing</a></li>
+          <li><a href="services.html#clinical-services">Vaccination &amp; Immunization</a></li>
+          <li><a href="services.html#clinical-services">Developmental Screening</a></li>
+          <li><a href="services.html#clinical-services">On-Site Diagnostic Lab</a></li>
+          <li><a href="insights.html">Clinical Insights &amp; Research</a></li>
+          <li><a href="appointment.html">Book Urgent Care Slot</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Emergency & Hours Widget -->
+      <div class="footer-col">
+        <h4 class="footer-title">Emergency &amp; Hours</h4>
+        <div class="footer-hours-card">
+          <div class="footer-hour-item">
+            <span class="footer-hour-label">Mon–Sat</span>
+            <span class="footer-hour-val">8:00 AM – 7:00 PM</span>
+          </div>
+          <div class="footer-hour-item">
+            <span class="footer-hour-label">Sunday</span>
+            <span class="footer-hour-val">9:00 AM – 2:00 PM</span>
+          </div>
+          <div class="footer-hour-item" style="border-bottom: none; padding-top: 0.5rem;">
+            <span class="footer-emergency-pill">🟢 24/7 On-Call Pediatrician</span>
+          </div>
+        </div>
+        <a href="tel:18005557837" class="footer-phone-cta">
+          <span class="phone-icon">📞</span>
+          <div class="phone-details">
+            <span class="phone-label">Urgent Pediatric Care</span>
+            <span class="phone-number">(555) 321-KIDS (5437)</span>
+          </div>
+        </a>
+        <a href="appointment.html" class="btn btn-primary footer-btn-cta" data-open-appointment>
+          <svg class="nav-btn-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <span>Book Appointment</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Footer Bottom Bar -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-flex">
+        <p>&copy; 2026 First Steps Pediatric Clinic &amp; Children's Wellness Center. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Care</a>
+          <a href="#">Patient Rights</a>
+          <a href="#">Notice of Privacy Practices</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    let selectedDoctor = "Dr. Maya Carter";
+    function selectDoctor(el, name) {
+      document.querySelectorAll('.doctor-choice-card').forEach(c => c.classList.remove('selected'));
+      el.classList.add('selected');
+      selectedDoctor = name;
+    }
+    function selectSlot(el) {
+      document.querySelectorAll('.slot-pill').forEach(s => s.classList.remove('active'));
+      el.classList.add('active');
+    }
+    function showConfirmationBanner() {
+      const nameInput = document.getElementById('apptChildName');
+      const phoneInput = document.getElementById('apptParentPhone');
+      const dobInput = document.getElementById('apptChildDOB');
+      const ageInput = document.getElementById('apptChildAge');
+
+      if (nameInput && (/[0-9]/.test(nameInput.value) || nameInput.value.trim().length < 2)) {
+        if (typeof showFieldNotice === 'function') {
+          showFieldNotice(nameInput, 'Please enter a valid child name (letters only).');
+        }
+        nameInput.focus();
+        return;
+      }
+      if (phoneInput) {
+        const digits = phoneInput.value.replace(/\D/g, '');
+        if (/[a-zA-Z]/.test(phoneInput.value) || digits.length < 10) {
+          if (typeof showFieldNotice === 'function') {
+            showFieldNotice(phoneInput, 'Please enter a valid 10-digit phone number (digits only).');
+          }
+          phoneInput.focus();
+          return;
+        }
+      }
+      if (dobInput) {
+        if (!dobInput.value) {
+          if (typeof showFieldNotice === 'function') {
+            showFieldNotice(dobInput, 'Please select child’s date of birth.');
+          }
+          dobInput.focus();
+          return;
+        }
+        const pickedDate = new Date(dobInput.value + 'T00:00:00');
+        const now = new Date();
+        now.setHours(23, 59, 59, 999);
+        if (pickedDate > now) {
+          if (typeof showFieldNotice === 'function') {
+            showFieldNotice(dobInput, 'Date of birth cannot be in the future.');
+          }
+          dobInput.focus();
+          return;
+        }
+      }
+      if (ageInput && (!ageInput.value.trim() || (!/\d/.test(ageInput.value) && !/newborn/i.test(ageInput.value)))) {
+        if (typeof showFieldNotice === 'function') {
+          showFieldNotice(ageInput, 'Please enter a valid age (e.g. 14 Months).');
+        }
+        ageInput.focus();
+        return;
+      }
+
+      const serviceSelect = document.getElementById('apptService');
+      const dateInput = document.getElementById('bookingCalendarDate');
+      const slotEl = document.querySelector('.slot-pill.active');
+
+      const apptObj = {
+        id: 'FS-' + Math.floor(100000 + Math.random() * 900000),
+        childName: nameInput ? nameInput.value.trim() : 'Liam Carter',
+        parentPhone: phoneInput ? phoneInput.value.trim() : '',
+        dob: dobInput ? dobInput.value : '',
+        age: ageInput ? ageInput.value.trim() : '',
+        service: serviceSelect ? serviceSelect.value : 'Well-Child Checkup',
+        doctor: selectedDoctor || 'Dr. Maya Carter, MD',
+        date: dateInput ? dateInput.value : '2026-10-14',
+        time: slotEl ? slotEl.innerText : '10:30 AM',
+        status: 'Confirmed',
+        timestamp: Date.now()
+      };
+
+      if (typeof saveBookedAppointment === 'function') {
+        saveBookedAppointment(apptObj);
+      } else {
+        try {
+          const existing = JSON.parse(localStorage.getItem('fs_booked_appointments') || '[]');
+          existing.unshift(apptObj);
+          localStorage.setItem('fs_booked_appointments', JSON.stringify(existing));
+        } catch (e) {}
+      }
+
+      document.getElementById('fullAppointmentForm').style.display = 'none';
+      const box = document.getElementById('bookingSuccessBox');
+      const metaEl = box.querySelector('.clinic-confirmed-meta');
+      if (metaEl) {
+        metaEl.innerHTML = `Date: <strong>${apptObj.date}</strong> • Time: <strong>${apptObj.time}</strong> • Ref: <strong>#${apptObj.id}</strong><br><span style="color: var(--brand-lavender-dark); font-weight: 700;">Patient: ${apptObj.childName}</span>`;
+      }
+      document.getElementById('confirmedDocText').innerText = (selectedDoctor || 'Dr. Maya Carter, MD') + " • First Steps Pediatric Center";
+      box.style.display = 'block';
+      box.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>

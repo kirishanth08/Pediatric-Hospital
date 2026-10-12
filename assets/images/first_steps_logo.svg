@@ -1,0 +1,204 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="140 75 335 410" fill="none">
+  <defs>
+    <linearGradient id="mintHeartGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4DB6AC"/>
+      <stop offset="100%" stop-color="#80CBC4"/>
+    </linearGradient>
+
+    <linearGradient id="warmOrangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD56B"/>
+      <stop offset="100%" stop-color="#FFA43B"/>
+    </linearGradient>
+
+    <linearGradient id="handSkinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE0B2"/>
+      <stop offset="100%" stop-color="#FFCC80"/>
+    </linearGradient>
+
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A5D6A7"/>
+      <stop offset="100%" stop-color="#81C784"/>
+    </linearGradient>
+
+    <!-- Star Glow / Soft Shadow -->
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#37474F" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <style>
+    .outline-stroke {
+      stroke: #2E5266;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .bg-fill-white {
+      fill: #FFFFFF;
+    }
+  </style>
+
+  <!-- BACKGROUND HEART ENVELOPE -->
+  <!-- Mint Green Left Loop -->
+  <path d="M 285 450 C 230 410 170 340 170 245 C 170 170 230 130 290 175 C 300 182 305 188 310 195" 
+        fill="none" 
+        stroke="url(#mintHeartGrad)" 
+        stroke-width="26" 
+        stroke-linecap="round"/>
+
+  <!-- Inner Soft Heart Fill Background (White glow area) -->
+  <path d="M 300 425 C 240 375 195 320 195 245 C 195 190 235 155 285 185 C 300 195 300 195 315 185 C 365 155 405 190 405 245 C 405 320 360 375 300 425 Z" 
+        fill="#F5FDFB"/>
+
+  <!-- Mint Inner Accent Ring -->
+  <path d="M 280 405 C 235 370 200 315 200 245 C 200 185 245 158 288 190" 
+        fill="none" 
+        stroke="#B2DFDB" 
+        stroke-width="8" 
+        stroke-linecap="round"/>
+
+  <!-- Warm Golden Right Arc (Completing the heart with open embrace) -->
+  <path d="M 315 170 C 375 130 435 175 435 255 C 435 320 400 375 350 435" 
+        fill="none" 
+        stroke="url(#warmOrangeGrad)" 
+        stroke-width="24" 
+        stroke-linecap="round"/>
+
+  <!-- TOP SPROUTING LEAVES -->
+  <g transform="translate(290, 105)">
+    <!-- Left Leaf -->
+    <path d="M 5 35 C -25 25 -20 -5 5 -10 C 15 10 15 25 5 35 Z" 
+          fill="url(#leafGrad)" 
+          stroke="#2E5266" 
+          stroke-width="4"/>
+    <!-- Right Leaflet -->
+    <path d="M 12 30 C 32 15 35 -2 20 -8 C 10 5 8 18 12 30 Z" 
+          fill="#C8E6C9" 
+          stroke="#2E5266" 
+          stroke-width="4"/>
+  </g>
+
+  <!-- FRIENDLY LITTLE STAR -->
+  <g transform="translate(245, 230)">
+    <!-- Star Shape -->
+    <path d="M 0 -22 C 3 -12 7 -8 16 -6 C 8 2 5 7 7 17 C 0 11 -4 10 -12 15 C -8 6 -11 1 -18 -4 C -8 -6 -4 -11 0 -22 Z" 
+          fill="#FFCA28" 
+          stroke="#2E5266" 
+          stroke-width="4" 
+          stroke-linejoin="round"/>
+    <!-- Star Eyes & Smile -->
+    <circle cx="-4" cy="-1" r="2" fill="#2E5266"/>
+    <circle cx="4" cy="-1" r="2" fill="#2E5266"/>
+    <path d="M -3 4 Q 0 7 3 4" fill="none" stroke="#2E5266" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- RIGHT BOTANICAL STEM & LEAVES -->
+  <g>
+    <!-- Vine Stem -->
+    <path d="M 330 435 C 370 425 410 395 418 335" 
+          fill="none" 
+          stroke="#2E5266" 
+          stroke-width="4" 
+          stroke-linecap="round"/>
+    
+    <!-- Middle Vine Leaf -->
+    <path d="M 405 325 C 435 320 445 355 415 365 C 400 350 400 335 405 325 Z" 
+          fill="url(#leafGrad)" 
+          stroke="#2E5266" 
+          stroke-width="4"/>
+
+    <!-- Lower Right Leaf -->
+    <path d="M 415 385 C 455 380 460 415 430 430 C 410 415 412 398 415 385 Z" 
+          fill="url(#leafGrad)" 
+          stroke="#2E5266" 
+          stroke-width="4"/>
+
+    <!-- Lower Soft Leaf -->
+    <path d="M 390 425 C 400 455 375 465 360 450 C 365 435 375 425 390 425 Z" 
+          fill="#A5D6A7" 
+          stroke="#2E5266" 
+          stroke-width="4"/>
+  </g>
+
+  <!-- PARENT / CAREGIVER HAND (Protective, open downward) -->
+  <g>
+    <!-- Sleeve Cuff -->
+    <path d="M 405 180 L 435 228" 
+          stroke="#2E5266" 
+          stroke-width="8" 
+          stroke-linecap="round"/>
+    
+    <!-- Hand Base & Fingers Fill and Outline -->
+    <path d="M 400 185 
+             C 365 205 325 235 295 270 
+             C 285 282 290 295 305 290 
+             C 320 285 345 260 360 252 
+             C 350 275 328 322 322 342 
+             C 318 355 330 362 338 352 
+             C 350 338 375 285 385 270 
+             C 378 290 358 352 352 375 
+             C 348 388 360 395 368 385 
+             C 382 368 408 305 416 285 
+             C 413 305 398 360 395 380 
+             C 392 392 405 398 412 388 
+             C 426 368 445 315 440 280 
+             C 436 250 430 220 425 210 Z" 
+          fill="url(#handSkinGrad)" 
+          class="outline-stroke" 
+          stroke-width="7"/>
+
+    <!-- Palm Line Contour -->
+    <path d="M 350 265 C 370 280 390 282 410 275" 
+          fill="none" 
+          stroke="#2E5266" 
+          stroke-width="4" 
+          stroke-linecap="round"/>
+  </g>
+
+  <!-- CHILD HAND (Reaching upward, small & rounded) -->
+  <g>
+    <!-- Child Arm & Wrist -->
+    <path d="M 235 375 L 260 415" 
+          stroke="#2E5266" 
+          stroke-width="8" 
+          stroke-linecap="round"/>
+
+    <!-- Child Hand Body & Fingers -->
+    <path d="M 238 370 
+             C 248 350 262 320 265 310 
+             C 268 300 278 305 276 315 
+             C 274 325 270 338 272 335 
+             C 278 318 288 302 292 298 
+             C 298 292 305 298 302 308 
+             C 298 318 288 340 290 338 
+             C 298 322 308 308 315 306 
+             C 322 304 326 312 320 322 
+             C 312 335 298 360 300 356 
+             C 308 345 320 332 327 334 
+             C 333 336 332 346 324 356 
+             C 312 372 295 392 280 398 
+             C 265 404 250 398 245 390 Z" 
+          fill="url(#handSkinGrad)" 
+          class="outline-stroke" 
+          stroke-width="6"/>
+
+    <!-- Gentle Palm Crease -->
+    <path d="M 270 355 C 278 360 288 362 296 358" 
+          fill="none" 
+          stroke="#2E5266" 
+          stroke-width="3" 
+          stroke-linecap="round"/>
+  </g>
+
+  <!-- PLAYFUL COMPLEMENTARY ACCENT DOTS -->
+  <circle cx="210" cy="335" r="7" fill="#FFA726"/>
+  <circle cx="205" cy="285" r="5" fill="#4DB6AC"/>
+  <circle cx="340" cy="455" r="7" fill="#FFB74D"/>
+  <circle cx="260" cy="460" r="6" fill="#80CBC4"/>
+  <circle cx="435" cy="290" r="5" fill="#81C784"/>
+
+  <!-- Left Foliage Stem & Leaf -->
+  <path d="M 235 390 C 205 385 190 395 180 405 C 190 420 215 425 240 405 Z" 
+        fill="url(#leafGrad)" 
+        stroke="#2E5266" 
+        stroke-width="4"/>
+</svg>

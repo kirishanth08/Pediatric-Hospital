@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab &amp; Diagnostic Results — FIRST STEPS Family Portal</title>
+  <meta name="description" content="Official clinical laboratory reports, lead screening, hemoglobin levels, and newborn metabolic panels for Liam Carter.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <div class="portal-layout">
+    <!-- Top Right Corner Actions (Theme Toggle & RTL Layout Switch) -->
+    <div class="portal-top-actions">
+      <button class="theme-toggle-btn" aria-label="Toggle light/dark mode" title="Switch Theme">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+      <button class="rtl-toggle-btn" aria-label="Toggle RTL layout" title="Switch RTL / LTR">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m16 8 4 4-4 4M8 16l-4-4 4-4M4 12h16"/>
+        </svg>
+        RTL
+      </button>
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="portal-sidebar">
+      <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border-blush);">
+        <a href="index.html" class="first-steps-logo" style="text-decoration: none;" aria-label="First Steps Pediatric Clinic Home">
+          <img src="assets/images/first_steps_logo.svg" alt="First Steps Logo" class="logo-icon-svg" width="34" height="34">
+          <span class="logo-brand-name" style="font-size: 1.1rem;">
+            <span class="brand-part-first">FIRST</span>
+            <span class="brand-part-steps">STEPS</span>
+          </span>
+        </a>
+      </div>
+
+      <div class="portal-user-card">
+        <div class="user-avatar">
+          <img src="assets/images/avatar_liam_chen.jpg" alt="Liam Carter">
+        </div>
+        <div class="user-details">
+          <div class="user-name">Liam Carter</div>
+          <div class="child-tag">14 Months • Dr. Maya Carter</div>
+        </div>
+      </div>
+
+      <ul class="portal-menu">
+        <li><a href="dashboard.html" class="portal-menu-link"><span>📊</span> Overview</a></li>
+        <li><a href="dashboard-growth.html" class="portal-menu-link"><span>📈</span> Growth Chart</a></li>
+        <li><a href="dashboard-vaccines.html" class="portal-menu-link"><span>💉</span> Vaccine Timeline</a></li>
+        <li><a href="dashboard-milestones.html" class="portal-menu-link"><span>👣</span> Milestones Checklist</a></li>
+        <li><a href="dashboard-prescriptions.html" class="portal-menu-link"><span>🩺</span> Prescriptions &amp; Meds</a></li>
+        <li><a href="dashboard-labs.html" class="portal-menu-link active"><span>📋</span> Lab Results</a></li>
+        <li><a href="dashboard-messages.html" class="portal-menu-link"><span>💬</span> Messages</a></li>
+        <li><a href="dashboard-billing.html" class="portal-menu-link"><span>💳</span> Billing &amp; Insurance</a></li>
+        <li><a href="dashboard-settings.html" class="portal-menu-link"><span>⚙️</span> Portal Settings</a></li>
+      </ul>
+
+      <div class="portal-sidebar-widget">
+        <strong style="color: var(--brand-lavender-dark); display: block; margin-bottom: 0.25rem;">Next Milestone Visit</strong>
+        <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 0.75rem;">15-Month Checkup Due in 26 days</p>
+        <button class="btn btn-primary btn-sm" style="width: 100%; font-size: 0.78rem;" data-open-appointment>Reserve Slot</button>
+      </div>
+
+      <!-- 24/7 Nurse Triage & Support -->
+      <div class="portal-sidebar-support-card">
+        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem;">
+          <span style="font-size: 1.1rem;">🩺</span>
+          <strong style="color: var(--text-main); font-size: 0.825rem;">24/7 Nurse Triage</strong>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.75rem; margin-bottom: 0.4rem; line-height: 1.35;">On-call pediatric triage for fever &amp; urgent care.</p>
+        <a href="tel:5550192273" class="sidebar-contact-pill">📞 (555) 019-CARE</a>
+      </div>
+
+      <!-- Clinic Live Status Pill -->
+      <div class="portal-sidebar-status-pill">
+        <span>📍 Main Campus</span>
+        <span style="color: #10B981; font-weight: 700;">● Open till 7 PM</span>
+      </div>
+    </aside>
+
+    <!-- Main Content Area: Labs -->
+    <main class="portal-content-area">
+      <!-- Portal Header Banner -->
+      <div class="portal-header hero-bg-dashboard" style="border-radius: var(--radius-lg); padding: 2.25rem; margin-bottom: 2rem; border: 1px solid var(--border-blush);">
+        <div>
+          <div class="child-friendly-badge" style="margin-bottom: 0.65rem;">
+            <span>🔬</span> CLIA Certified On-Site Diagnostic Laboratory
+          </div>
+          <h1 class="portal-title">Laboratory &amp; Test Results</h1>
+          <p class="portal-subtitle">Physician-reviewed screening reports, hemoglobin readings, and newborn panels.</p>
+        </div>
+        <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+          <button class="btn btn-secondary btn-sm" onclick="window.print()">📥 Download Complete Records PDF</button>
+        </div>
+      </div>
+
+      <!-- Lab Cards Grid -->
+      <div class="dashboard-grid">
+        <!-- 1. Lead Screen -->
+        <div class="col-6">
+          <div class="dash-card">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+              <div>
+                <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">12-Month Routine Screen</span>
+                <h3 style="font-size: 1.15rem; color: var(--text-main); margin-top: 0.2rem;">Blood Lead Level (Capillary)</h3>
+              </div>
+              <span style="background: rgba(16, 185, 129, 0.15); color: #10B981; font-weight: 700; font-size: 0.75rem; padding: 0.25rem 0.65rem; border-radius: var(--radius-pill);">Normal</span>
+            </div>
+            <div style="display: flex; align-items: baseline; gap: 0.5rem; margin: 0.75rem 0;">
+              <span style="font-size: 1.75rem; font-weight: 800; color: var(--text-main); font-family: var(--font-heading);">&lt; 1.0</span>
+              <span style="font-size: 0.85rem; color: var(--text-muted);">µg/dL (Reference: &lt; 3.5 µg/dL)</span>
+            </div>
+            <p style="font-size: 0.825rem; color: var(--text-muted); line-height: 1.5; margin: 0;">
+              Lead toxicity screen completely clear. No detectable heavy metal exposure. Collected 12 Aug 2026.
+            </p>
+            <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--border-blush); font-size: 0.8rem; color: var(--brand-lavender-dark); font-weight: 600;">
+              Reviewed by Dr. Maya Carter, MD (Signed electronically)
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Hemoglobin Screen -->
+        <div class="col-6">
+          <div class="dash-card">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+              <div>
+                <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">12-Month Iron Screening</span>
+                <h3 style="font-size: 1.15rem; color: var(--text-main); margin-top: 0.2rem;">Hemoglobin &amp; Hematocrit</h3>
+              </div>
+              <span style="background: rgba(16, 185, 129, 0.15); color: #10B981; font-weight: 700; font-size: 0.75rem; padding: 0.25rem 0.65rem; border-radius: var(--radius-pill);">Optimal</span>
+            </div>
+            <div style="display: flex; align-items: baseline; gap: 0.5rem; margin: 0.75rem 0;">
+              <span style="font-size: 1.75rem; font-weight: 800; color: var(--text-main); font-family: var(--font-heading);">12.4</span>
+              <span style="font-size: 0.85rem; color: var(--text-muted);">g/dL (Standard: 11.0 – 13.5 g/dL)</span>
+            </div>
+            <p style="font-size: 0.825rem; color: var(--text-muted); line-height: 1.5; margin: 0;">
+              Zero signs of childhood iron deficiency anemia. Dietary iron intake from table solids is optimal.
+            </p>
+            <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--border-blush); font-size: 0.8rem; color: var(--brand-lavender-dark); font-weight: 600;">
+              Reviewed by Dr. Maya Carter, MD (Signed electronically)
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Newborn Metabolic Screen -->
+        <div class="col-6">
+          <div class="dash-card">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+              <div>
+                <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Birth Record Screening</span>
+                <h3 style="font-size: 1.15rem; color: var(--text-main); margin-top: 0.2rem;">Newborn 34-Panel Blood Spot</h3>
+              </div>
+              <span style="background: rgba(16, 185, 129, 0.15); color: #10B981; font-weight: 700; font-size: 0.75rem; padding: 0.25rem 0.65rem; border-radius: var(--radius-pill);">All Clear</span>
+            </div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.55; margin: 0.75rem 0;">
+              Screened for cystic fibrosis, sickle cell trait, phenylketonuria (PKU), and endocrine disorders. All 34 biomarkers confirmed negative and verified by state public health laboratory.
+            </p>
+            <div style="font-size: 0.8rem; color: var(--text-muted);">Collected at birth • Lab Ref #NB-89410</div>
+          </div>
+        </div>
+
+        <!-- 4. Hearing & Vision -->
+        <div class="col-6">
+          <div class="dash-card">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+              <div>
+                <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Special Sensory Testing</span>
+                <h3 style="font-size: 1.15rem; color: var(--text-main); margin-top: 0.2rem;">OAE Hearing &amp; Photoscreening</h3>
+              </div>
+              <span style="background: rgba(16, 185, 129, 0.15); color: #10B981; font-weight: 700; font-size: 0.75rem; padding: 0.25rem 0.65rem; border-radius: var(--radius-pill);">Pass Both</span>
+            </div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.55; margin: 0.75rem 0;">
+              Automated Otoacoustic Emissions (OAE) confirmed normal cochlear hair cell response in both left and right ears. Spot vision camera confirmed balanced red reflex with zero amblyopia risk.
+            </p>
+            <div style="font-size: 0.8rem; color: var(--text-muted);">Sensory exam completed at 6-month checkup</div>
+          </div>
+        </div>
+
+        <!-- Full Width: Point-of-Care Rapid Diagnostics Protocol -->
+        <div class="col-12" style="margin-top: 1.5rem;">
+          <div class="dash-card">
+            <h3 class="dash-card-title" style="font-size: 1.15rem;"><span>🔬</span> First Steps Point-of-Care In-Office Diagnostics</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1rem;">
+              Our on-site clinical laboratory provides CLIA-waived micro-volume screening. Most blood screenings require only a single capillary finger prick rather than traumatic venous blood draws.
+            </p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem;">
+              <div style="background: var(--bg-primary); border: 1px solid var(--border-blush); border-radius: var(--radius-md); padding: 0.85rem;">
+                <strong style="color: var(--brand-lavender-dark); font-size: 0.85rem; display: block; margin-bottom: 0.2rem;">⚡ Rapid Turnaround (8 Mins)</strong>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">Lead, hemoglobin, and rapid viral panels process before you leave the exam room.</p>
+              </div>
+              <div style="background: var(--bg-primary); border: 1px solid var(--border-blush); border-radius: var(--radius-md); padding: 0.85rem;">
+                <strong style="color: var(--brand-lavender-dark); font-size: 0.85rem; display: block; margin-bottom: 0.2rem;">🧸 Child-Comfort Micro-Prick</strong>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">High-precision spring lancets paired with topical soothing spray for zero-fear collection.</p>
+              </div>
+              <div style="background: var(--bg-primary); border: 1px solid var(--border-blush); border-radius: var(--radius-md); padding: 0.85rem;">
+                <strong style="color: var(--brand-lavender-dark); font-size: 0.85rem; display: block; margin-bottom: 0.2rem;">🔒 HIPAA Electronic Sync</strong>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">Certified records directly sync with state registries and your exportable PDF portal.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

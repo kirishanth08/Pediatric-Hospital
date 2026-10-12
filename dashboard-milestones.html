@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Developmental Milestones Checklist — FIRST STEPS Family Portal</title>
+  <meta name="description" content="CDC and AAP developmental milestone tracker for Liam Carter (14 Months): Gross motor, fine motor, communication, and cognitive milestones.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <div class="portal-layout">
+    <!-- Top Right Corner Actions (Theme Toggle & RTL Layout Switch) -->
+    <div class="portal-top-actions">
+      <button class="theme-toggle-btn" aria-label="Toggle light/dark mode" title="Switch Theme">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+      <button class="rtl-toggle-btn" aria-label="Toggle RTL layout" title="Switch RTL / LTR">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m16 8 4 4-4 4M8 16l-4-4 4-4M4 12h16"/>
+        </svg>
+        RTL
+      </button>
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="portal-sidebar">
+      <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border-blush);">
+        <a href="index.html" class="first-steps-logo" style="text-decoration: none;" aria-label="First Steps Pediatric Clinic Home">
+          <img src="assets/images/first_steps_logo.svg" alt="First Steps Logo" class="logo-icon-svg" width="34" height="34">
+          <span class="logo-brand-name" style="font-size: 1.1rem;">
+            <span class="brand-part-first">FIRST</span>
+            <span class="brand-part-steps">STEPS</span>
+          </span>
+        </a>
+      </div>
+
+      <div class="portal-user-card">
+        <div class="user-avatar">
+          <img src="assets/images/avatar_liam_chen.jpg" alt="Liam Carter">
+        </div>
+        <div class="user-details">
+          <div class="user-name">Liam Carter</div>
+          <div class="child-tag">14 Months • Dr. Maya Carter</div>
+        </div>
+      </div>
+
+      <ul class="portal-menu">
+        <li><a href="dashboard.html" class="portal-menu-link"><span>📊</span> Overview</a></li>
+        <li><a href="dashboard-growth.html" class="portal-menu-link"><span>📈</span> Growth Chart</a></li>
+        <li><a href="dashboard-vaccines.html" class="portal-menu-link"><span>💉</span> Vaccine Timeline</a></li>
+        <li><a href="dashboard-milestones.html" class="portal-menu-link active"><span>👣</span> Milestones Checklist</a></li>
+        <li><a href="dashboard-prescriptions.html" class="portal-menu-link"><span>🩺</span> Prescriptions &amp; Meds</a></li>
+        <li><a href="dashboard-labs.html" class="portal-menu-link"><span>📋</span> Lab Results</a></li>
+        <li><a href="dashboard-messages.html" class="portal-menu-link"><span>💬</span> Messages</a></li>
+        <li><a href="dashboard-billing.html" class="portal-menu-link"><span>💳</span> Billing &amp; Insurance</a></li>
+        <li><a href="dashboard-settings.html" class="portal-menu-link"><span>⚙️</span> Portal Settings</a></li>
+      </ul>
+
+      <div class="portal-sidebar-widget">
+        <strong style="color: var(--brand-lavender-dark); display: block; margin-bottom: 0.25rem;">Next Milestone Visit</strong>
+        <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 0.75rem;">15-Month Checkup Due in 26 days</p>
+        <button class="btn btn-primary btn-sm" style="width: 100%; font-size: 0.78rem;" data-open-appointment>Reserve Slot</button>
+      </div>
+
+      <!-- 24/7 Nurse Triage & Support -->
+      <div class="portal-sidebar-support-card">
+        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem;">
+          <span style="font-size: 1.1rem;">🩺</span>
+          <strong style="color: var(--text-main); font-size: 0.825rem;">24/7 Nurse Triage</strong>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.75rem; margin-bottom: 0.4rem; line-height: 1.35;">On-call pediatric triage for fever &amp; urgent care.</p>
+        <a href="tel:5550192273" class="sidebar-contact-pill">📞 (555) 019-CARE</a>
+      </div>
+
+      <!-- Clinic Live Status Pill -->
+      <div class="portal-sidebar-status-pill">
+        <span>📍 Main Campus</span>
+        <span style="color: #10B981; font-weight: 700;">● Open till 7 PM</span>
+      </div>
+    </aside>
+
+    <!-- Main Content Area: Milestones -->
+    <main class="portal-content-area">
+      <!-- Portal Header Banner -->
+      <div class="portal-header hero-bg-dashboard" style="border-radius: var(--radius-lg); padding: 2.25rem; margin-bottom: 2rem; border: 1px solid var(--border-blush);">
+        <div>
+          <div class="child-friendly-badge" style="margin-bottom: 0.65rem;">
+            <span>👣</span> CDC &amp; AAP Developmental Milestone Screen
+          </div>
+          <h1 class="portal-title">12 – 15 Month Milestone Guide</h1>
+          <p class="portal-subtitle">Track Liam's cognitive, physical, and communication progress between clinical checkups.</p>
+        </div>
+        <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+          <button class="btn btn-secondary btn-sm" onclick="window.print()">📥 Print Milestone Sheet</button>
+          <button class="btn btn-primary btn-sm" onclick="alert('Milestones successfully synced with Dr. Maya Carter\'s clinical chart!')">✓ Sync with Dr. Carter</button>
+        </div>
+      </div>
+
+      <!-- Milestone Summary Bar -->
+      <div class="dash-card" style="margin-bottom: 1.75rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+          <strong style="color: var(--text-main); font-size: 1rem;">Liam's 14-Month Progress: 9 of 10 Mastered (90%)</strong>
+          <span style="font-size: 0.85rem; color: #10B981; font-weight: 700;">On Track for 15-Month Well Visit</span>
+        </div>
+        <div style="width: 100%; height: 12px; background: var(--bg-primary); border-radius: var(--radius-pill); overflow: hidden; border: 1px solid var(--border-blush);">
+          <div style="width: 90%; height: 100%; background: linear-gradient(90deg, var(--brand-lavender) 0%, #10B981 100%); border-radius: var(--radius-pill);"></div>
+        </div>
+      </div>
+
+      <!-- Milestone Categorized Grids -->
+      <div class="dashboard-grid">
+        <!-- Motor Skills -->
+        <div class="col-6">
+          <div class="dash-card" style="height: 100%;">
+            <h2 class="dash-card-title" style="font-size: 1.15rem;"><span>🏃‍♂️</span> Gross &amp; Fine Motor Skills</h2>
+            <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 0.75rem;">
+              <label style="display: flex; align-items: flex-start; gap: 0.85rem; font-size: 0.95rem; cursor: pointer;">
+                <input type="checkbox" checked style="accent-color: var(--brand-lavender); width: 20px; height: 20px; margin-top: 2px;">
+                <div>
+                  <strong style="color: var(--text-main); display: block;">Pulls up to stand independently</strong>
+                  <span style="font-size: 0.8rem; color: var(--text-muted);">Uses furniture or parents' hands (Mastered at 11 mo)</span>
+                </div>
+              </label>
+
+              <label style="display: flex; align-items: flex-start; gap: 0.85rem; font-size: 0.95rem; cursor: pointer;">
+                <input type="checkbox" checked style="accent-color: var(--brand-lavender); width: 20px; height: 20px; margin-top: 2px;">
+                <div>
+                  <strong style="color: var(--text-main); display: block;">Precise pincer grasp</strong>
+                  <span style="font-size: 0.8rem; color: var(--text-muted);">Picks up small puffed cereal with thumb and index finger</span>
+                </div>
+              </label>
+
+              <label style="display: flex; align-items: flex-start; gap: 0.85rem; font-size: 0.95rem; cursor: pointer;">
+                <input type="checkbox" checked style="accent-color: var(--brand-lavender); width: 20px; height: 20px; margin-top: 2px;">
+                <div>
+                  <strong style="color: var(--text-main); display: block;">Cruises along couches &amp; tables</strong>
+                  <span style="font-size: 0.8rem; color: var(--text-muted);">Smooth lateral navigation while holding on</span>
+                </div>
+              </label>
+
+              <label style="display: flex; align-items: flex-start; gap: 0.85rem; font-size: 0.95rem; cursor: pointer;">
+                <input type="checkbox" style="accent-color: var(--brand-lavender); width: 20px; height: 20px; margin-top: 2px;">
+                <div>
+                  <strong style="color: var(--text-main); display: block;">Takes 2 to 3 independent steps</strong>
+                  <span style="font-size: 0.8rem; color: var(--brand-lavender-dark); font-weight: 600;">In progress! Expected window: 12 – 15 months</span>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Language & Social -->
+        <div class="col-6">
+          <div class="dash-card" style="height: 100%;">
+            <h2 class="dash-card-title" style="font-size: 1.15rem;"><span>🗣️</span> Speech, Social &amp; Cognitive</h2>
+            <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 0.75rem;">
+              <label style="display: flex; align-items: flex-start; gap: 0.85rem; font-size: 0.95rem; cursor: pointer;">
+                <input type="checkbox" checked style="accent-color: var(--brand-lavender); width: 20px; height: 20px; margin-top: 2px;">
+                <div>
+                  <strong style="color: var(--text-main); display: block;">Says specific words ("mama", "dada", "ba")</strong>
+                  <span style="font-size: 0.8rem; color: var(--text-muted);">Associates words with the correct person</span>
+                </div>
+              </label>
+
+              <label style="display: flex; align-items: flex-start; gap: 0.85rem; font-size: 0.95rem; cursor: pointer;">
+                <input type="checkbox" checked style="accent-color: var(--brand-lavender); width: 20px; height: 20px; margin-top: 2px;">
+                <div>
+                  <strong style="color: var(--text-main); display: block;">Waves "bye-bye" and claps hands</strong>
+                  <span style="font-size: 0.8rem; color: var(--text-muted);">Imitates simple social gestures</span>
+                </div>
+              </label>
+
+              <label style="display: flex; align-items: flex-start; gap: 0.85rem; font-size: 0.95rem; cursor: pointer;">
+                <input type="checkbox" checked style="accent-color: var(--brand-lavender); width: 20px; height: 20px; margin-top: 2px;">
+                <div>
+                  <strong style="color: var(--text-main); display: block;">Searches for hidden object</strong>
+                  <span style="font-size: 0.8rem; color: var(--text-muted);">Object permanence established</span>
+                </div>
+              </label>
+
+              <label style="display: flex; align-items: flex-start; gap: 0.85rem; font-size: 0.95rem; cursor: pointer;">
+                <input type="checkbox" checked style="accent-color: var(--brand-lavender); width: 20px; height: 20px; margin-top: 2px;">
+                <div>
+                  <strong style="color: var(--text-main); display: block;">Drinks from an open or weighted straw cup</strong>
+                  <span style="font-size: 0.8rem; color: var(--text-muted);">Oral motor coordination progressing nicely</span>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Guidance Alert Box -->
+        <div class="col-12">
+          <div class="dash-card" style="background: rgba(133, 92, 150, 0.06); border-left: 4px solid var(--brand-lavender);">
+            <h3 style="font-size: 1.05rem; color: var(--text-main); margin-bottom: 0.35rem;">💡 AAP Pediatric Guidance on Walking Timelines</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin: 0;">
+              Every child develops at their own unique pace. Independent walking comfortably occurs anytime between 9 and 15 months. Since Liam is actively cruising along furniture and pulling to stand with stability, his motor foundation is strong. Dr. Carter will evaluate his gait during the upcoming 14 October visit.
+            </p>
+          </div>
+        </div>
+
+        <!-- Sensory & Motor Stimulation Card -->
+        <div class="col-6" style="margin-top: 1.5rem;">
+          <div class="dash-card">
+            <h3 class="dash-card-title" style="font-size: 1.1rem;"><span>🧩</span> Motor &amp; Sensory Games (12–15 Mo)</h3>
+            <ul style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; padding-left: 1.1rem; margin-bottom: 0;">
+              <li><strong>Stacking Soft Blocks:</strong> Encourages wrist rotation and spatial balance.</li>
+              <li><strong>Push-Toy Cruising:</strong> Stable weighted carts reinforce ankle stability before independent steps.</li>
+              <li><strong>Water Sensory Play:</strong> Pouring cups during bath time builds hand-eye coordination.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Speech & Cognitive Games Card -->
+        <div class="col-6" style="margin-top: 1.5rem;">
+          <div class="dash-card">
+            <h3 class="dash-card-title" style="font-size: 1.1rem;"><span>🗣️</span> Speech &amp; Social Communication</h3>
+            <ul style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; padding-left: 1.1rem; margin-bottom: 0;">
+              <li><strong>Narrate Daily Routines:</strong> Name utensils, clothing items, and household sounds out loud.</li>
+              <li><strong>Interactive Board Books:</strong> Lift-the-flap books encourage tactile pointing and animal sounds.</li>
+              <li><strong>Mirror Expression Mimicry:</strong> Foster self-recognition and emotional bonding.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vaccine Timeline &amp; Immunizations — FIRST STEPS Family Portal</title>
+  <meta name="description" content="CDC pediatric immunization records, batch tracking numbers, upcoming booster dates, and official daycare vaccination passports for Liam Carter.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <div class="portal-layout">
+    <!-- Top Right Corner Actions (Theme Toggle & RTL Layout Switch) -->
+    <div class="portal-top-actions">
+      <button class="theme-toggle-btn" aria-label="Toggle light/dark mode" title="Switch Theme">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+      <button class="rtl-toggle-btn" aria-label="Toggle RTL layout" title="Switch RTL / LTR">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m16 8 4 4-4 4M8 16l-4-4 4-4M4 12h16"/>
+        </svg>
+        RTL
+      </button>
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="portal-sidebar">
+      <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border-blush);">
+        <a href="index.html" class="first-steps-logo" style="text-decoration: none;" aria-label="First Steps Pediatric Clinic Home">
+          <img src="assets/images/first_steps_logo.svg" alt="First Steps Logo" class="logo-icon-svg" width="34" height="34">
+          <span class="logo-brand-name" style="font-size: 1.1rem;">
+            <span class="brand-part-first">FIRST</span>
+            <span class="brand-part-steps">STEPS</span>
+          </span>
+        </a>
+      </div>
+
+      <div class="portal-user-card">
+        <div class="user-avatar">
+          <img src="assets/images/avatar_liam_chen.jpg" alt="Liam Carter">
+        </div>
+        <div class="user-details">
+          <div class="user-name">Liam Carter</div>
+          <div class="child-tag">14 Months • Dr. Maya Carter</div>
+        </div>
+      </div>
+
+      <ul class="portal-menu">
+        <li><a href="dashboard.html" class="portal-menu-link"><span>📊</span> Overview</a></li>
+        <li><a href="dashboard-growth.html" class="portal-menu-link"><span>📈</span> Growth Chart</a></li>
+        <li><a href="dashboard-vaccines.html" class="portal-menu-link active"><span>💉</span> Vaccine Timeline</a></li>
+        <li><a href="dashboard-milestones.html" class="portal-menu-link"><span>👣</span> Milestones Checklist</a></li>
+        <li><a href="dashboard-prescriptions.html" class="portal-menu-link"><span>🩺</span> Prescriptions &amp; Meds</a></li>
+        <li><a href="dashboard-labs.html" class="portal-menu-link"><span>📋</span> Lab Results</a></li>
+        <li><a href="dashboard-messages.html" class="portal-menu-link"><span>💬</span> Messages</a></li>
+        <li><a href="dashboard-billing.html" class="portal-menu-link"><span>💳</span> Billing &amp; Insurance</a></li>
+        <li><a href="dashboard-settings.html" class="portal-menu-link"><span>⚙️</span> Portal Settings</a></li>
+      </ul>
+
+      <div class="portal-sidebar-widget">
+        <strong style="color: var(--brand-lavender-dark); display: block; margin-bottom: 0.25rem;">Next Milestone Visit</strong>
+        <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 0.75rem;">15-Month Checkup Due in 26 days</p>
+        <button class="btn btn-primary btn-sm" style="width: 100%; font-size: 0.78rem;" data-open-appointment>Reserve Slot</button>
+      </div>
+
+      <!-- 24/7 Nurse Triage & Support -->
+      <div class="portal-sidebar-support-card">
+        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem;">
+          <span style="font-size: 1.1rem;">🩺</span>
+          <strong style="color: var(--text-main); font-size: 0.825rem;">24/7 Nurse Triage</strong>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.75rem; margin-bottom: 0.4rem; line-height: 1.35;">On-call pediatric triage for fever &amp; urgent care.</p>
+        <a href="tel:5550192273" class="sidebar-contact-pill">📞 (555) 019-CARE</a>
+      </div>
+
+      <!-- Clinic Live Status Pill -->
+      <div class="portal-sidebar-status-pill">
+        <span>📍 Main Campus</span>
+        <span style="color: #10B981; font-weight: 700;">● Open till 7 PM</span>
+      </div>
+    </aside>
+
+    <!-- Main Content Area: Vaccines -->
+    <main class="portal-content-area">
+      <!-- Portal Header Banner -->
+      <div class="portal-header hero-bg-dashboard" style="border-radius: var(--radius-lg); padding: 2.25rem; margin-bottom: 2rem; border: 1px solid var(--border-blush);">
+        <div>
+          <div class="child-friendly-badge" style="margin-bottom: 0.65rem;">
+            <span>💉</span> CDC Pediatric Immunization Schedule
+          </div>
+          <h1 class="portal-title">Vaccination Records &amp; Timeline</h1>
+          <p class="portal-subtitle">Verified immunization history, batch serials, and scheduled booster intervals.</p>
+        </div>
+        <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+          <button class="btn btn-secondary btn-sm" onclick="alert('Downloading official Daycare & School Immunization Certificate PDF...')">📥 Official Vaccine Passport (PDF)</button>
+          <a href="appointment.html" class="btn btn-primary btn-sm">+ Schedule Vaccine</a>
+        </div>
+      </div>
+
+      <!-- Vaccine Timeline Content -->
+      <div class="dashboard-grid">
+        <div class="col-8">
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <div>
+                <h2 class="dash-card-title"><span>🛡️</span> Immunization Schedule</h2>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.15rem;">All vaccines administered using our Buzzy® zero-tears comfort protocol.</p>
+              </div>
+              <div style="display: flex; gap: 0.35rem;">
+                <button class="btn btn-secondary btn-sm active" data-vaccine-filter="all" style="padding: 0.3rem 0.65rem; font-size: 0.75rem;">All</button>
+                <button class="btn btn-secondary btn-sm" data-vaccine-filter="completed" style="padding: 0.3rem 0.65rem; font-size: 0.75rem;">Completed (6)</button>
+                <button class="btn btn-secondary btn-sm" data-vaccine-filter="duesoon" style="padding: 0.3rem 0.65rem; font-size: 0.75rem;">Due Soon (1)</button>
+              </div>
+            </div>
+
+            <div class="vaccine-list" style="margin-top: 1rem;">
+              <!-- 1. DTaP -->
+              <div class="vaccine-item" data-status="completed">
+                <div class="vaccine-main">
+                  <div class="status-indicator status-completed">✓</div>
+                  <div class="vaccine-meta">
+                    <h4>DTaP (Diphtheria, Tetanus, Acellular Pertussis) — Dose 3</h4>
+                    <p>Administered 14 Feb 2026 (6 Mo) • Lot #FD-8921 • Admin: Nurse Elena, RN</p>
+                  </div>
+                </div>
+                <span class="vaccine-badge badge-tag-completed">Completed</span>
+              </div>
+
+              <!-- 2. HepB -->
+              <div class="vaccine-item" data-status="completed">
+                <div class="vaccine-main">
+                  <div class="status-indicator status-completed">✓</div>
+                  <div class="vaccine-meta">
+                    <h4>Hepatitis B (HepB) — 3-Dose Series Complete</h4>
+                    <p>Completed 10 May 2026 (9 Mo) • Lot #HB-4402 • Admin: Dr. Maya Carter, MD</p>
+                  </div>
+                </div>
+                <span class="vaccine-badge badge-tag-completed">Completed</span>
+              </div>
+
+              <!-- 3. Hib -->
+              <div class="vaccine-item" data-status="completed">
+                <div class="vaccine-main">
+                  <div class="status-indicator status-completed">✓</div>
+                  <div class="vaccine-meta">
+                    <h4>Haemophilus Influenzae Type b (Hib) — Dose 3</h4>
+                    <p>Administered 14 Feb 2026 (6 Mo) • Lot #HB-9102 • First Steps Pediatric Clinic</p>
+                  </div>
+                </div>
+                <span class="vaccine-badge badge-tag-completed">Completed</span>
+              </div>
+
+              <!-- 4. PCV15 -->
+              <div class="vaccine-item" data-status="completed">
+                <div class="vaccine-main">
+                  <div class="status-indicator status-completed">✓</div>
+                  <div class="vaccine-meta">
+                    <h4>Pneumococcal Conjugate (PCV15) — Dose 3</h4>
+                    <p>Administered 14 Feb 2026 (6 Mo) • Lot #PC-3310 • Verified State Registry</p>
+                  </div>
+                </div>
+                <span class="vaccine-badge badge-tag-completed">Completed</span>
+              </div>
+
+              <!-- 5. IPV -->
+              <div class="vaccine-item" data-status="completed">
+                <div class="vaccine-main">
+                  <div class="status-indicator status-completed">✓</div>
+                  <div class="vaccine-meta">
+                    <h4>Inactivated Poliovirus (IPV) — Dose 2</h4>
+                    <p>Administered 15 Dec 2025 (4 Mo) • Lot #PV-5511 • State Health Dept Certified</p>
+                  </div>
+                </div>
+                <span class="vaccine-badge badge-tag-completed">Completed</span>
+              </div>
+
+              <!-- 6. Rotavirus -->
+              <div class="vaccine-item" data-status="completed">
+                <div class="vaccine-main">
+                  <div class="status-indicator status-completed">✓</div>
+                  <div class="vaccine-meta">
+                    <h4>Rotavirus Oral Vaccine (RV5) — Completed</h4>
+                    <p>Administered 14 Feb 2026 (6 Mo) • Lot #RV-2290 • Oral Suspension Mastered</p>
+                  </div>
+                </div>
+                <span class="vaccine-badge badge-tag-completed">Completed</span>
+              </div>
+
+              <!-- 7. MMR Due Soon -->
+              <div class="vaccine-item" data-status="duesoon">
+                <div class="vaccine-main">
+                  <div class="status-indicator status-duesoon">!</div>
+                  <div class="vaccine-meta">
+                    <h4>MMR (Measles, Mumps, Rubella) — Dose 1</h4>
+                    <p>Recommended 12–15 Months • Scheduled for confirmed 14 October appointment</p>
+                  </div>
+                </div>
+                <span class="vaccine-badge badge-tag-duesoon">Due Soon</span>
+              </div>
+
+              <!-- 8. Varicella Upcoming -->
+              <div class="vaccine-item" data-status="upcoming">
+                <div class="vaccine-main">
+                  <div class="status-indicator status-upcoming">🕒</div>
+                  <div class="vaccine-meta">
+                    <h4>Varicella (Chickenpox) — Dose 1</h4>
+                    <p>Planned co-administration during 14 Oct visit or 18-month follow-up</p>
+                  </div>
+                </div>
+                <span class="vaccine-badge badge-tag-upcoming">Upcoming</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Comfort Protocols & State Registry Sync Info -->
+        <div class="col-4">
+          <div class="dash-card" style="margin-bottom: 1.5rem;">
+            <h2 class="dash-card-title" style="font-size: 1.15rem;"><span>🐝</span> Comfort Protocol</h2>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.55; margin-bottom: 1rem;">
+              We deploy the clinical <strong>Buzzy® Bee</strong> device (high-frequency cold vibration) + sucrose comfort drops to gate pain signals during immunizations.
+            </p>
+            <div style="background: var(--bg-primary); border-radius: var(--radius-md); padding: 0.85rem; border: 1px solid var(--border-blush); font-size: 0.8rem; color: var(--text-main); font-weight: 600;">
+              ✓ 98.4% Zero-Tears Rating at 12-Month Visit
+            </div>
+          </div>
+
+          <div class="dash-card">
+            <h2 class="dash-card-title" style="font-size: 1.15rem;"><span>🏛️</span> State Registry Sync</h2>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 0.85rem;">
+              Every administered dose is electronically transmitted to the State Immunization Information System (IIS) within 2 hours of injection.
+            </p>
+            <div style="font-size: 0.8rem; color: #10B981; font-weight: 700;">
+              ✓ IIS Registry Status: 100% Up to Date
+            </div>
+          </div>
+
+          <!-- Post-Vaccine Home Care Card -->
+          <div class="dash-card" style="margin-top: 1.5rem;">
+            <h2 class="dash-card-title" style="font-size: 1.15rem;"><span>🌡️</span> Post-Vaccine Comfort Care</h2>
+            <ul style="font-size: 0.825rem; color: var(--text-muted); line-height: 1.6; padding-left: 1.1rem; margin-bottom: 0.85rem;">
+              <li>Apply cool damp washcloth gently over injection sites</li>
+              <li>Encourage extra hydration and calming contact</li>
+              <li>Mild tenderness or low-grade warmth is a positive sign of antibody building</li>
+            </ul>
+            <a href="dashboard-prescriptions.html" class="btn btn-secondary btn-sm" style="width: 100%; font-size: 0.78rem;">View Weight-Calibrated Dosing</a>
+          </div>
+        </div>
+
+        <!-- Full Width: CDC Vaccine Information Statements (VIS) Library -->
+        <div class="col-12" style="margin-top: 1.5rem;">
+          <div class="dash-card">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+              <div>
+                <h3 class="dash-card-title" style="font-size: 1.15rem; margin-bottom: 0.2rem;"><span>📚</span> CDC Vaccine Information Statements (VIS)</h3>
+                <p style="font-size: 0.825rem; color: var(--text-muted); margin: 0;">Official federal safety statements and benefit fact sheets for parents.</p>
+              </div>
+              <button class="btn btn-secondary btn-sm" onclick="alert('Downloading Combined VIS Package PDF...')">Download Complete VIS Pack (PDF)</button>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem;">
+              <div style="background: var(--bg-primary); border: 1px solid var(--border-blush); border-radius: var(--radius-md); padding: 0.85rem; display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 0.85rem; font-weight: 600; color: var(--text-main);">MMR VIS Sheet (CDC 2026)</span>
+                <span style="font-size: 0.75rem; color: var(--brand-lavender-dark); font-weight: 700;">Verified</span>
+              </div>
+              <div style="background: var(--bg-primary); border: 1px solid var(--border-blush); border-radius: var(--radius-md); padding: 0.85rem; display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 0.85rem; font-weight: 600; color: var(--text-main);">Varicella (Chickenpox) Sheet</span>
+                <span style="font-size: 0.75rem; color: var(--brand-lavender-dark); font-weight: 700;">Verified</span>
+              </div>
+              <div style="background: var(--bg-primary); border: 1px solid var(--border-blush); border-radius: var(--radius-md); padding: 0.85rem; display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 0.85rem; font-weight: 600; color: var(--text-main);">DTaP Multi-Antigen Fact Sheet</span>
+                <span style="font-size: 0.75rem; color: var(--brand-lavender-dark); font-weight: 700;">Verified</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clinical Messages &amp; Doctor Chat — FIRST STEPS Family Portal</title>
+  <meta name="description" content="Secure, direct non-emergency messaging with Dr. Maya Carter and the First Steps pediatric nurse triage team for Liam Carter.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <div class="portal-layout">
+    <!-- Top Right Corner Actions (Theme Toggle & RTL Layout Switch) -->
+    <div class="portal-top-actions">
+      <button class="theme-toggle-btn" aria-label="Toggle light/dark mode" title="Switch Theme">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+      <button class="rtl-toggle-btn" aria-label="Toggle RTL layout" title="Switch RTL / LTR">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m16 8 4 4-4 4M8 16l-4-4 4-4M4 12h16"/>
+        </svg>
+        RTL
+      </button>
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="portal-sidebar">
+      <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border-blush);">
+        <a href="index.html" class="first-steps-logo" style="text-decoration: none;" aria-label="First Steps Pediatric Clinic Home">
+          <img src="assets/images/first_steps_logo.svg" alt="First Steps Logo" class="logo-icon-svg" width="34" height="34">
+          <span class="logo-brand-name" style="font-size: 1.1rem;">
+            <span class="brand-part-first">FIRST</span>
+            <span class="brand-part-steps">STEPS</span>
+          </span>
+        </a>
+      </div>
+
+      <div class="portal-user-card">
+        <div class="user-avatar">
+          <img src="assets/images/avatar_liam_chen.jpg" alt="Liam Carter">
+        </div>
+        <div class="user-details">
+          <div class="user-name">Liam Carter</div>
+          <div class="child-tag">14 Months • Dr. Maya Carter</div>
+        </div>
+      </div>
+
+      <ul class="portal-menu">
+        <li><a href="dashboard.html" class="portal-menu-link"><span>📊</span> Overview</a></li>
+        <li><a href="dashboard-growth.html" class="portal-menu-link"><span>📈</span> Growth Chart</a></li>
+        <li><a href="dashboard-vaccines.html" class="portal-menu-link"><span>💉</span> Vaccine Timeline</a></li>
+        <li><a href="dashboard-milestones.html" class="portal-menu-link"><span>👣</span> Milestones Checklist</a></li>
+        <li><a href="dashboard-prescriptions.html" class="portal-menu-link"><span>🩺</span> Prescriptions &amp; Meds</a></li>
+        <li><a href="dashboard-labs.html" class="portal-menu-link"><span>📋</span> Lab Results</a></li>
+        <li><a href="dashboard-messages.html" class="portal-menu-link active"><span>💬</span> Messages</a></li>
+        <li><a href="dashboard-billing.html" class="portal-menu-link"><span>💳</span> Billing &amp; Insurance</a></li>
+        <li><a href="dashboard-settings.html" class="portal-menu-link"><span>⚙️</span> Portal Settings</a></li>
+      </ul>
+
+      <div class="portal-sidebar-widget">
+        <strong style="color: var(--brand-lavender-dark); display: block; margin-bottom: 0.25rem;">Next Milestone Visit</strong>
+        <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 0.75rem;">15-Month Checkup Due in 26 days</p>
+        <button class="btn btn-primary btn-sm" style="width: 100%; font-size: 0.78rem;" data-open-appointment>Reserve Slot</button>
+      </div>
+
+      <!-- 24/7 Nurse Triage & Support -->
+      <div class="portal-sidebar-support-card">
+        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem;">
+          <span style="font-size: 1.1rem;">🩺</span>
+          <strong style="color: var(--text-main); font-size: 0.825rem;">24/7 Nurse Triage</strong>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.75rem; margin-bottom: 0.4rem; line-height: 1.35;">On-call pediatric triage for fever &amp; urgent care.</p>
+        <a href="tel:5550192273" class="sidebar-contact-pill">📞 (555) 019-CARE</a>
+      </div>
+
+      <!-- Clinic Live Status Pill -->
+      <div class="portal-sidebar-status-pill">
+        <span>📍 Main Campus</span>
+        <span style="color: #10B981; font-weight: 700;">● Open till 7 PM</span>
+      </div>
+    </aside>
+
+    <!-- Main Content Area: Messages -->
+    <main class="portal-content-area">
+      <!-- Portal Header Banner -->
+      <div class="portal-header hero-bg-dashboard" style="border-radius: var(--radius-lg); padding: 2.25rem; margin-bottom: 2rem; border: 1px solid var(--border-blush);">
+        <div>
+          <div class="child-friendly-badge" style="margin-bottom: 0.65rem;">
+            <span>💬</span> 256-Bit Encrypted Pediatric Communication
+          </div>
+          <h1 class="portal-title">Direct Clinical Messaging</h1>
+          <p class="portal-subtitle">Communicate with Dr. Maya Carter and our certified nurse triage team for non-emergency inquiries.</p>
+        </div>
+      </div>
+
+      <!-- Messages Layout: Two Columns -->
+      <div class="dashboard-grid">
+        <!-- Thread List (Left Col) -->
+        <div class="col-4">
+          <div class="dash-card" style="height: 100%; display: flex; flex-direction: column; padding: 1.25rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <h3 style="font-size: 1rem; color: var(--text-main); margin: 0;">Clinical Conversations</h3>
+              <span style="font-size: 0.72rem; color: var(--brand-lavender-dark); font-weight: 700; background: var(--bg-secondary); padding: 0.2rem 0.55rem; border-radius: var(--radius-pill); border: 1px solid var(--border-blush);">7 Records</span>
+            </div>
+
+            <!-- Quick Search & Category Filters -->
+            <div style="margin-bottom: 0.75rem;">
+              <div style="position: relative; margin-bottom: 0.5rem;">
+                <input type="text" placeholder="Search care messages..." style="width: 100%; font-size: 0.78rem; padding: 0.45rem 0.65rem 0.45rem 1.85rem; border: 1px solid var(--border-blush); border-radius: var(--radius-sm); background: var(--bg-primary); color: var(--text-main); box-sizing: border-box;">
+                <span style="position: absolute; left: 0.6rem; top: 50%; transform: translateY(-50%); font-size: 0.75rem; color: var(--text-muted);">🔍</span>
+              </div>
+              <div style="display: flex; gap: 0.35rem; flex-wrap: wrap;">
+                <button type="button" class="btn btn-secondary btn-sm" style="padding: 0.2rem 0.5rem; font-size: 0.7rem; background: var(--brand-lavender); color: #1A0F22; border-color: var(--brand-lavender-dark);">All</button>
+                <button type="button" class="btn btn-secondary btn-sm" style="padding: 0.2rem 0.5rem; font-size: 0.7rem;">Pediatricians</button>
+                <button type="button" class="btn btn-secondary btn-sm" style="padding: 0.2rem 0.5rem; font-size: 0.7rem;">Nurses</button>
+                <button type="button" class="btn btn-secondary btn-sm" style="padding: 0.2rem 0.5rem; font-size: 0.7rem;">Rx Refills</button>
+              </div>
+            </div>
+            
+            <div style="display: flex; flex-direction: column; gap: 0.45rem; flex: 1; overflow-y: auto; padding-right: 0.25rem;">
+              <!-- Active Thread -->
+              <div style="padding: 0.75rem 0.85rem; border-radius: var(--radius-md); background: var(--bg-primary); border: 1.5px solid var(--brand-lavender); cursor: pointer;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.2rem;">
+                  <strong style="font-size: 0.86rem; color: var(--text-main);">Dr. Maya Carter, MD</strong>
+                  <span style="font-size: 0.68rem; color: var(--text-muted);">Yesterday</span>
+                </div>
+                <div style="font-size: 0.78rem; color: var(--brand-lavender-dark); font-weight: 600; margin-bottom: 0.2rem;">12-Month Iron Screening Results</div>
+                <p style="font-size: 0.75rem; color: var(--text-muted); margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                  "Hi Sarah! Liam's 12-month blood iron screening looks completely normal..."
+                </p>
+              </div>
+
+              <!-- Thread 2 -->
+              <div style="padding: 0.75rem 0.85rem; border-radius: var(--radius-md); border: 1px solid var(--border-blush); cursor: pointer; transition: background 0.2s;" onmouseover="this.style.background='var(--bg-secondary)'" onmouseout="this.style.background='transparent'">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.2rem;">
+                  <strong style="font-size: 0.86rem; color: var(--text-main);">Nurse Elena, RN</strong>
+                  <span style="font-size: 0.68rem; color: var(--text-muted);">Oct 2</span>
+                </div>
+                <div style="font-size: 0.78rem; color: var(--text-main); font-weight: 600; margin-bottom: 0.2rem;">Teething &amp; Mild Sleep Waking</div>
+                <p style="font-size: 0.75rem; color: var(--text-muted); margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                  "Cold silicone teethers and a gentle gum massage before bed work wonders..."
+                </p>
+              </div>
+
+              <!-- Thread 3 -->
+              <div style="padding: 0.75rem 0.85rem; border-radius: var(--radius-md); border: 1px solid var(--border-blush); cursor: pointer; transition: background 0.2s;" onmouseover="this.style.background='var(--bg-secondary)'" onmouseout="this.style.background='transparent'">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.2rem;">
+                  <strong style="font-size: 0.86rem; color: var(--text-main);">Clinic Reception</strong>
+                  <span style="font-size: 0.68rem; color: var(--text-muted);">Sep 18</span>
+                </div>
+                <div style="font-size: 0.78rem; color: var(--text-main); font-weight: 600; margin-bottom: 0.2rem;">Daycare Vaccination Form Sent</div>
+                <p style="font-size: 0.75rem; color: var(--text-muted); margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                  "We have electronically signed and dispatched the immunization certificate..."
+                </p>
+              </div>
+
+              <!-- Thread 4 -->
+              <div style="padding: 0.75rem 0.85rem; border-radius: var(--radius-md); border: 1px solid var(--border-blush); cursor: pointer; transition: background 0.2s;" onmouseover="this.style.background='var(--bg-secondary)'" onmouseout="this.style.background='transparent'">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.2rem;">
+                  <strong style="font-size: 0.86rem; color: var(--text-main);">Dr. Julian Reed, MD, PhD</strong>
+                  <span style="font-size: 0.68rem; color: var(--text-muted);">Aug 28</span>
+                </div>
+                <div style="font-size: 0.78rem; color: var(--text-main); font-weight: 600; margin-bottom: 0.2rem;">Egg &amp; Peanut Allergen Weaning</div>
+                <p style="font-size: 0.75rem; color: var(--text-muted); margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                  "Skin tolerance after 4 consecutive introduction trials looks wonderful, keep rotating..."
+                </p>
+              </div>
+
+              <!-- Thread 5 -->
+              <div style="padding: 0.75rem 0.85rem; border-radius: var(--radius-md); border: 1px solid var(--border-blush); cursor: pointer; transition: background 0.2s;" onmouseover="this.style.background='var(--bg-secondary)'" onmouseout="this.style.background='transparent'">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.2rem;">
+                  <strong style="font-size: 0.86rem; color: var(--text-main);">Nurse Triage Desk</strong>
+                  <span style="font-size: 0.68rem; color: var(--text-muted);">Aug 10</span>
+                </div>
+                <div style="font-size: 0.78rem; color: var(--text-main); font-weight: 600; margin-bottom: 0.2rem;">Post-Immunization Care Advice</div>
+                <p style="font-size: 0.75rem; color: var(--text-muted); margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                  "Low-grade warmth (99.2°F) is normal after 6-month DTaP booster. Keep Liam hydrated..."
+                </p>
+              </div>
+
+              <!-- Thread 6 -->
+              <div style="padding: 0.75rem 0.85rem; border-radius: var(--radius-md); border: 1px solid var(--border-blush); cursor: pointer; transition: background 0.2s;" onmouseover="this.style.background='var(--bg-secondary)'" onmouseout="this.style.background='transparent'">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.2rem;">
+                  <strong style="font-size: 0.86rem; color: var(--text-main);">Dr. Clara Bennett, MS, OTR/L</strong>
+                  <span style="font-size: 0.68rem; color: var(--text-muted);">Jul 22</span>
+                </div>
+                <div style="font-size: 0.78rem; color: var(--text-main); font-weight: 600; margin-bottom: 0.2rem;">10-Month Milestone Verification</div>
+                <p style="font-size: 0.75rem; color: var(--text-muted); margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                  "Liam's responsive babbling and reciprocal smiling demonstrate healthy cognitive growth..."
+                </p>
+              </div>
+
+              <!-- Thread 7 -->
+              <div style="padding: 0.75rem 0.85rem; border-radius: var(--radius-md); border: 1px solid var(--border-blush); cursor: pointer; transition: background 0.2s;" onmouseover="this.style.background='var(--bg-secondary)'" onmouseout="this.style.background='transparent'">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.2rem;">
+                  <strong style="font-size: 0.86rem; color: var(--text-main);">Pediatric Pharmacy</strong>
+                  <span style="font-size: 0.68rem; color: var(--text-muted);">Jul 04</span>
+                </div>
+                <div style="font-size: 0.78rem; color: var(--text-main); font-weight: 600; margin-bottom: 0.2rem;">Vitamin D3 Refill Dispatched</div>
+                <p style="font-size: 0.75rem; color: var(--text-muted); margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                  "Prescription #RX-8821 for 400 IU Vitamin D3 cholecalciferol drops processed..."
+                </p>
+              </div>
+            </div>
+
+            <!-- Liam's Assigned Primary Care Team -->
+            <div style="margin-top: 0.65rem; padding: 0.65rem 0.85rem; background: var(--bg-primary); border: 1px solid var(--border-blush); border-radius: var(--radius-md);">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
+                <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-main);">🩺 Liam's Care Team</span>
+                <span style="font-size: 0.68rem; color: var(--brand-lavender-dark); font-weight: 600;">Main Campus</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.72rem; color: var(--text-muted); margin-bottom: 0.15rem;">
+                <span>Attending MD:</span>
+                <strong style="color: var(--text-main);">Dr. Maya Carter, MD, FAAP</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.72rem; color: var(--text-muted);">
+                <span>Primary Nurse:</span>
+                <strong style="color: var(--text-main);">Chloe Laurent, RN, CPNP</strong>
+              </div>
+            </div>
+
+            <!-- Integrated Rapid Nurse Response & Telehealth Status Widget -->
+            <div style="margin-top: 0.65rem; padding: 0.75rem 0.85rem; background: var(--bg-secondary); border: 1px solid var(--border-blush); border-radius: var(--radius-md);">
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.25rem;">
+                <h4 style="font-size: 0.8rem; color: var(--text-main); margin: 0; display: flex; align-items: center; gap: 0.35rem;">
+                  <span>⚡</span> Rapid Nurse Response
+                </h4>
+                <span style="font-size: 0.64rem; background: rgba(16, 185, 129, 0.15); color: #10B981; font-weight: 700; padding: 0.15rem 0.45rem; border-radius: var(--radius-pill);">LIVE ONLINE</span>
+              </div>
+              <p style="font-size: 0.72rem; color: var(--text-muted); line-height: 1.35; margin: 0 0 0.35rem 0;">
+                Avg triage response: <strong>18 mins</strong>. 3 RNs currently on duty.
+              </p>
+              <div style="display: flex; justify-content: space-between; font-size: 0.72rem; border-top: 1px solid var(--border-blush); padding-top: 0.3rem;">
+                <span style="color: var(--text-muted);">Direct Desk:</span>
+                <strong style="color: var(--text-main);">(555) 321-KIDS</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Conversation Details (Right Col) -->
+        <div class="col-8">
+          <div class="dash-card" style="height: 100%; display: flex; flex-direction: column;">
+            <!-- Header -->
+            <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 1rem; border-bottom: 1px solid var(--border-blush); margin-bottom: 1.25rem;">
+              <div style="display: flex; align-items: center; gap: 0.85rem;">
+                <img src="assets/images/avatar_dashboard_dr_carter.jpg" alt="Dr. Maya Carter" style="width: 44px; height: 44px; border-radius: 50%; object-fit: cover; border: 2px solid var(--border-blush);">
+                <div>
+                  <strong style="font-size: 1rem; color: var(--text-main); display: block;">Dr. Maya Carter, MD, FAAP</strong>
+                  <span style="font-size: 0.78rem; color: #10B981; font-weight: 600;">● Active in Clinic • Typical reply under 2h</span>
+                </div>
+              </div>
+              <span style="font-size: 0.78rem; background: var(--bg-primary); border: 1px solid var(--border-blush); padding: 0.3rem 0.65rem; border-radius: var(--radius-pill); color: var(--text-muted);">
+                Routine Inquiry
+              </span>
+            </div>
+
+            <!-- Messages Stream -->
+            <div style="flex: 1; display: flex; flex-direction: column; gap: 0.85rem; margin-bottom: 1.25rem; overflow-y: auto; padding-right: 0.5rem;">
+              <!-- Message from Parent -->
+              <div style="align-self: flex-end; max-width: 80%; background: var(--brand-lavender); color: #1A0F22; padding: 0.85rem 1.15rem; border-radius: 16px 16px 2px 16px; font-size: 0.9rem; line-height: 1.5; font-weight: 500;">
+                <div style="font-size: 0.7rem; opacity: 0.75; margin-bottom: 0.25rem;">You (Sarah Carter) • Yesterday, 2:30 PM</div>
+                Hi Dr. Carter! Just following up on Liam’s 12-month fingerstick test results from last week. Everything felt very smooth with the zero-tears protocol!
+              </div>
+
+              <!-- Doctor Response -->
+              <div style="align-self: flex-start; max-width: 80%; background: var(--bg-primary); border: 1px solid var(--border-blush); padding: 0.85rem 1.15rem; border-radius: 16px 16px 16px 2px; font-size: 0.9rem; line-height: 1.5; color: var(--text-main);">
+                <div style="font-size: 0.7rem; color: var(--text-muted); margin-bottom: 0.25rem;">Dr. Maya Carter, MD • Yesterday, 4:15 PM</div>
+                Hi Sarah! Liam’s 12-month blood iron screening looks completely normal (12.4 g/dL) and blood lead is undetectable (&lt; 1.0 µg/dL). Looking forward to seeing his new walking steps on the 14th! Feel free to upload any photos if questions arise before then.
+              </div>
+
+              <!-- Message from Parent (Follow-up) -->
+              <div style="align-self: flex-end; max-width: 80%; background: var(--brand-lavender); color: #1A0F22; padding: 0.85rem 1.15rem; border-radius: 16px 16px 2px 16px; font-size: 0.9rem; line-height: 1.5; font-weight: 500;">
+                <div style="font-size: 0.7rem; opacity: 0.75; margin-bottom: 0.25rem;">You (Sarah Carter) • Yesterday, 5:10 PM</div>
+                That is wonderful news! Quick question: since his iron is optimal, should we taper off the liquid multivitamin drops or keep him on them through winter?
+              </div>
+
+              <!-- Doctor Response 2 -->
+              <div style="align-self: flex-start; max-width: 80%; background: var(--bg-primary); border: 1px solid var(--border-blush); padding: 0.85rem 1.15rem; border-radius: 16px 16px 16px 2px; font-size: 0.9rem; line-height: 1.5; color: var(--text-main);">
+                <div style="font-size: 0.7rem; color: var(--text-muted); margin-bottom: 0.25rem;">Dr. Maya Carter, MD • Yesterday, 5:48 PM</div>
+                Great question! Since he is eating fortified purees and yogurt consistently, you can discontinue the added iron drops. Keep 400 IU Vitamin D3 daily through springtime. I've attached Liam's 12-to-18 month feeding guideline below.
+                
+                <div style="margin-top: 0.65rem; padding: 0.6rem 0.85rem; background: var(--surface-white); border: 1px solid var(--border-blush); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: space-between; gap: 0.5rem;">
+                  <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.8rem; font-weight: 600; color: var(--text-main);">
+                    <span>📄</span> Infant_Nutrition_12-18M_Guide.pdf
+                  </div>
+                  <span style="font-size: 0.72rem; color: var(--brand-lavender-dark); font-weight: 700; cursor: pointer;" onclick="alert('Downloading Infant Nutrition Guide (PDF)...')">Download PDF</span>
+                </div>
+              </div>
+
+              <!-- Message from Parent (Final Confirmation) -->
+              <div style="align-self: flex-end; max-width: 80%; background: var(--brand-lavender); color: #1A0F22; padding: 0.85rem 1.15rem; border-radius: 16px 16px 2px 16px; font-size: 0.9rem; line-height: 1.5; font-weight: 500;">
+                <div style="font-size: 0.7rem; opacity: 0.75; margin-bottom: 0.25rem;">You (Sarah Carter) • Yesterday, 6:02 PM</div>
+                Downloaded! Thank you so much for the detailed weaning advice, Dr. Carter. We will see you and the clinic staff next Wednesday at 10:00 AM for Liam's 1-year checkup!
+              </div>
+
+              <!-- Doctor Closing Note -->
+              <div style="align-self: flex-start; max-width: 80%; background: var(--bg-primary); border: 1px solid var(--border-blush); padding: 0.85rem 1.15rem; border-radius: 16px 16px 16px 2px; font-size: 0.9rem; line-height: 1.5; color: var(--text-main);">
+                <div style="font-size: 0.7rem; color: var(--text-muted); margin-bottom: 0.25rem;">Dr. Maya Carter, MD • Yesterday, 6:15 PM</div>
+                You are so welcome, Sarah. Have a wonderful weekend and give Liam a big high-five from our clinic team! See you both on Wednesday.
+              </div>
+
+              <!-- Next Appointment Linked Status Card -->
+              <div style="background: var(--bg-secondary); border: 1px solid var(--border-blush); border-radius: var(--radius-md); padding: 0.75rem 1rem; display: flex; align-items: center; justify-content: space-between; gap: 0.75rem;">
+                <div style="display: flex; align-items: center; gap: 0.65rem;">
+                  <span style="font-size: 1.25rem;">🗓️</span>
+                  <div>
+                    <strong style="font-size: 0.82rem; color: var(--text-main); display: block;">Upcoming Visit: 12-Month Well-Child Examination</strong>
+                    <span style="font-size: 0.74rem; color: var(--text-muted);">Wednesday, Oct 14 • 10:00 AM • Main Campus Exam Suite 3B</span>
+                  </div>
+                </div>
+                <a href="appointment.html" class="btn btn-secondary btn-sm" style="font-size: 0.72rem; padding: 0.25rem 0.65rem; white-space: nowrap;">Visit Details</a>
+              </div>
+
+              <!-- Clinical Documentation Chip -->
+              <div style="align-self: center; background: var(--bg-primary); border: 1px dashed var(--border-blush); color: var(--text-muted); padding: 0.35rem 0.85rem; border-radius: var(--radius-pill); font-size: 0.72rem; display: flex; align-items: center; gap: 0.4rem;">
+                <span style="color: #10B981;">✓</span> Clinical inquiry verified &amp; documented in electronic chart #PED-8842
+              </div>
+            </div>
+
+            <!-- Composer Form -->
+            <form onsubmit="event.preventDefault(); const input = this.querySelector('textarea'); if(input.value.trim()){ alert('Message dispatched to Dr. Maya Carter. You will receive an SMS alert when she responds.'); input.value=''; }">
+              <div style="border: 1.5px solid var(--border-blush); border-radius: var(--radius-md); padding: 0.75rem; background: var(--surface-white);">
+                <textarea rows="3" class="form-textarea" placeholder="Type your non-emergency message to Dr. Carter here..." style="border: none; padding: 0; box-shadow: none; resize: none; width: 100%; font-size: 0.9rem;" required></textarea>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.5rem; pt: 0.5rem; border-top: 1px solid var(--border-blush);">
+                  <button type="button" class="btn btn-white btn-sm" style="font-size: 0.75rem; padding: 0.35rem 0.65rem;" onclick="alert('Photo attachment tool: Upload infant rash/skin image.')">
+                    📷 Attach Photo
+                  </button>
+                  <button type="submit" class="btn btn-primary btn-sm">Send to Dr. Carter</button>
+                </div>
+              </div>
+              <p style="font-size: 0.75rem; color: var(--text-muted); margin: 0.5rem 0 0 0;">
+                ⚠️ For emergency pediatric symptoms (difficulty breathing, severe lethargy), please call our 24/7 on-call triage line at (555) 321-KIDS or dial 911 immediately.
+              </p>
+            </form>
+          </div>
+        </div>
+
+        <!-- Full Width: Clinical Communication Guidelines -->
+        <div class="col-12">
+          <div class="dash-card">
+            <h3 class="dash-card-title" style="font-size: 1.15rem;"><span>📋</span> Non-Emergency Messaging Protocol</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin-top: 0.85rem;">
+              <div style="background: var(--bg-primary); border: 1px solid var(--border-blush); border-radius: var(--radius-md); padding: 0.85rem;">
+                <strong style="color: var(--brand-lavender-dark); font-size: 0.85rem; display: block; margin-bottom: 0.2rem;">⏱️ Turnaround Expectations</strong>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">Routine messages sent during clinic hours (8 AM – 5 PM) are typically reviewed by Dr. Carter or an RN within 2 hours.</p>
+              </div>
+              <div style="background: var(--bg-primary); border: 1px solid var(--border-blush); border-radius: var(--radius-md); padding: 0.85rem;">
+                <strong style="color: var(--brand-lavender-dark); font-size: 0.85rem; display: block; margin-bottom: 0.2rem;">📸 Rash &amp; Symptom Photos</strong>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">When submitting skin images, use bright indirect natural daylight with a clean scale reference (e.g. coin or finger).</p>
+              </div>
+              <div style="background: var(--bg-primary); border: 1px solid var(--border-blush); border-radius: var(--radius-md); padding: 0.85rem;">
+                <strong style="color: var(--brand-lavender-dark); font-size: 0.85rem; display: block; margin-bottom: 0.2rem;">🔐 Privacy &amp; Record Sync</strong>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">All communications are stored securely in Liam's electronic health record under strict HIPAA Title II compliance.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

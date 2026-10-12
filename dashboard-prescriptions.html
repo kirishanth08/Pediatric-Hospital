@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prescriptions &amp; Pediatric Medications — FIRST STEPS Family Portal</title>
+  <meta name="description" content="Active pediatric medications, weight-based infant dosing calculator, pharmacy routing, and 1-click prescription refills for Liam Carter.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <div class="portal-layout">
+    <!-- Top Right Corner Actions (Theme Toggle & RTL Layout Switch) -->
+    <div class="portal-top-actions">
+      <button class="theme-toggle-btn" aria-label="Toggle light/dark mode" title="Switch Theme">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+      <button class="rtl-toggle-btn" aria-label="Toggle RTL layout" title="Switch RTL / LTR">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m16 8 4 4-4 4M8 16l-4-4 4-4M4 12h16"/>
+        </svg>
+        RTL
+      </button>
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="portal-sidebar">
+      <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border-blush);">
+        <a href="index.html" class="first-steps-logo" style="text-decoration: none;" aria-label="First Steps Pediatric Clinic Home">
+          <img src="assets/images/first_steps_logo.svg" alt="First Steps Logo" class="logo-icon-svg" width="34" height="34">
+          <span class="logo-brand-name" style="font-size: 1.1rem;">
+            <span class="brand-part-first">FIRST</span>
+            <span class="brand-part-steps">STEPS</span>
+          </span>
+        </a>
+      </div>
+
+      <div class="portal-user-card">
+        <div class="user-avatar">
+          <img src="assets/images/avatar_liam_chen.jpg" alt="Liam Carter">
+        </div>
+        <div class="user-details">
+          <div class="user-name">Liam Carter</div>
+          <div class="child-tag">14 Months • Dr. Maya Carter</div>
+        </div>
+      </div>
+
+      <ul class="portal-menu">
+        <li><a href="dashboard.html" class="portal-menu-link"><span>📊</span> Overview</a></li>
+        <li><a href="dashboard-growth.html" class="portal-menu-link"><span>📈</span> Growth Chart</a></li>
+        <li><a href="dashboard-vaccines.html" class="portal-menu-link"><span>💉</span> Vaccine Timeline</a></li>
+        <li><a href="dashboard-milestones.html" class="portal-menu-link"><span>👣</span> Milestones Checklist</a></li>
+        <li><a href="dashboard-prescriptions.html" class="portal-menu-link active"><span>🩺</span> Prescriptions &amp; Meds</a></li>
+        <li><a href="dashboard-labs.html" class="portal-menu-link"><span>📋</span> Lab Results</a></li>
+        <li><a href="dashboard-messages.html" class="portal-menu-link"><span>💬</span> Messages</a></li>
+        <li><a href="dashboard-billing.html" class="portal-menu-link"><span>💳</span> Billing &amp; Insurance</a></li>
+        <li><a href="dashboard-settings.html" class="portal-menu-link"><span>⚙️</span> Portal Settings</a></li>
+      </ul>
+
+      <div class="portal-sidebar-widget">
+        <strong style="color: var(--brand-lavender-dark); display: block; margin-bottom: 0.25rem;">Next Milestone Visit</strong>
+        <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 0.75rem;">15-Month Checkup Due in 26 days</p>
+        <button class="btn btn-primary btn-sm" style="width: 100%; font-size: 0.78rem;" data-open-appointment>Reserve Slot</button>
+      </div>
+
+      <!-- 24/7 Nurse Triage & Support -->
+      <div class="portal-sidebar-support-card">
+        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem;">
+          <span style="font-size: 1.1rem;">🩺</span>
+          <strong style="color: var(--text-main); font-size: 0.825rem;">24/7 Nurse Triage</strong>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.75rem; margin-bottom: 0.4rem; line-height: 1.35;">On-call pediatric triage for fever &amp; urgent care.</p>
+        <a href="tel:5550192273" class="sidebar-contact-pill">📞 (555) 019-CARE</a>
+      </div>
+
+      <!-- Clinic Live Status Pill -->
+      <div class="portal-sidebar-status-pill">
+        <span>📍 Main Campus</span>
+        <span style="color: #10B981; font-weight: 700;">● Open till 7 PM</span>
+      </div>
+    </aside>
+
+    <!-- Main Content Area: Prescriptions -->
+    <main class="portal-content-area">
+      <!-- Portal Header Banner -->
+      <div class="portal-header hero-bg-dashboard" style="border-radius: var(--radius-lg); padding: 2.25rem; margin-bottom: 2rem; border: 1px solid var(--border-blush);">
+        <div>
+          <div class="child-friendly-badge" style="margin-bottom: 0.65rem;">
+            <span>🩺</span> Pediatric Pharmacy &amp; Formulations
+          </div>
+          <h1 class="portal-title">Prescriptions &amp; Medications</h1>
+          <p class="portal-subtitle">Active medication schedules, weight-calibrated fever dosing, and electronic pharmacy routing.</p>
+        </div>
+        <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+          <button class="btn btn-primary btn-sm" onclick="alert('Refill request sent to Walgreens Pediatric Specialty. Dr. Carter will review within 24 hours.')">⚡ Request Refill</button>
+        </div>
+      </div>
+
+      <div class="dashboard-grid">
+        <!-- Active Prescription Card -->
+        <div class="col-8">
+          <div class="dash-card">
+            <h2 class="dash-card-title"><span>💊</span> Active Prescriptions (1)</h2>
+            <div style="background: var(--bg-primary); border: 1.5px solid var(--border-blush); border-radius: var(--radius-md); padding: 1.25rem; margin-top: 1rem;">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <div>
+                  <h3 style="font-size: 1.15rem; color: var(--text-main); margin-bottom: 0.25rem;">Vitamin D3 (Cholecalciferol Drops)</h3>
+                  <p style="font-size: 0.85rem; color: var(--brand-lavender-dark); font-weight: 700; margin: 0;">400 IU / 1 mL Daily Oral Drops</p>
+                </div>
+                <span style="background: rgba(16, 185, 129, 0.15); color: #10B981; font-weight: 700; font-size: 0.75rem; padding: 0.25rem 0.65rem; border-radius: var(--radius-pill);">Active</span>
+              </div>
+              <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--border-blush); font-size: 0.825rem; color: var(--text-muted);">
+                <div><strong>Prescribed By:</strong><br>Dr. Maya Carter, MD</div>
+                <div><strong>Refills Remaining:</strong><br>2 Refills (Exp. Aug 2027)</div>
+                <div><strong>Pharmacy on File:</strong><br>Walgreens #4810 (Pediatric Specialty)</div>
+              </div>
+              <div style="margin-top: 1rem; display: flex; gap: 0.75rem;">
+                <button class="btn btn-secondary btn-sm" onclick="alert('Sent 1-click refill request to Walgreens.')">Refill at Walgreens</button>
+                <button class="btn btn-white btn-sm" onclick="alert('Medication instruction sheet downloaded.')">View Instructions PDF</button>
+              </div>
+            </div>
+
+            <!-- Historical Medications Log -->
+            <h3 style="font-size: 1.05rem; color: var(--text-main); margin: 1.75rem 0 0.85rem 0;">Past Medication Archive</h3>
+            <div style="border: 1px solid var(--border-blush); border-radius: var(--radius-md); overflow: hidden;">
+              <table style="width: 100%; border-collapse: collapse; font-size: 0.875rem;">
+                <tr style="background: var(--bg-primary); border-bottom: 1px solid var(--border-blush); text-align: left;">
+                  <th style="padding: 0.65rem 1rem;">Medication</th>
+                  <th style="padding: 0.65rem 1rem;">Course</th>
+                  <th style="padding: 0.65rem 1rem;">Reason</th>
+                  <th style="padding: 0.65rem 1rem;">Status</th>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-blush);">
+                  <td style="padding: 0.65rem 1rem; font-weight: 600;">Amoxicillin 250mg/5mL</td>
+                  <td style="padding: 0.65rem 1rem;">10-day course (Nov 2025)</td>
+                  <td style="padding: 0.65rem 1rem;">Mild Otitis Media (Ear)</td>
+                  <td style="padding: 0.65rem 1rem; color: var(--text-muted);">Completed</td>
+                </tr>
+                <tr>
+                  <td style="padding: 0.65rem 1rem; font-weight: 600;">Saline Nasal Drops 0.65%</td>
+                  <td style="padding: 0.65rem 1rem;">As needed for congestion</td>
+                  <td style="padding: 0.65rem 1rem;">Seasonal dry air comfort</td>
+                  <td style="padding: 0.65rem 1rem; color: var(--text-muted);">Completed</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Weight-Calibrated Infant Dosing Guide -->
+        <div class="col-4">
+          <div class="dash-card" style="margin-bottom: 1.5rem;">
+            <h2 class="dash-card-title" style="font-size: 1.15rem;"><span>⚖️</span> Weight-Based Dosing</h2>
+            <p style="font-size: 0.825rem; color: var(--text-muted); margin-bottom: 0.85rem;">
+              Calibrated strictly for Liam's verified weight: <strong>10.2 kg (22.5 lbs)</strong>.
+            </p>
+
+            <div style="background: var(--bg-primary); border-radius: var(--radius-md); padding: 0.85rem; border: 1px solid var(--border-blush); margin-bottom: 0.85rem;">
+              <strong style="color: var(--text-main); font-size: 0.85rem; display: block;">Infant Acetaminophen (Tylenol)</strong>
+              <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem;">Concentration: 160 mg / 5 mL</div>
+              <div style="font-size: 0.95rem; font-weight: 800; color: var(--brand-lavender-dark); margin-top: 0.35rem;">Dose: 3.75 mL every 4–6 hrs</div>
+            </div>
+
+            <div style="background: var(--bg-primary); border-radius: var(--radius-md); padding: 0.85rem; border: 1px solid var(--border-blush);">
+              <strong style="color: var(--text-main); font-size: 0.85rem; display: block;">Infant Ibuprofen (Motrin)</strong>
+              <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem;">Concentration: 50 mg / 1.25 mL (Infant Drops)</div>
+              <div style="font-size: 0.95rem; font-weight: 800; color: var(--brand-lavender-dark); margin-top: 0.35rem;">Dose: 2.5 mL every 6–8 hrs</div>
+            </div>
+            <p style="font-size: 0.725rem; color: var(--text-muted); margin: 0.65rem 0 0 0;">
+              *Always use the provided syringe. Never administer adult formulations.
+            </p>
+          </div>
+
+          <!-- Pharmacy Routing -->
+          <div class="dash-card">
+            <h2 class="dash-card-title" style="font-size: 1.15rem;"><span>🏪</span> Preferred Pharmacy</h2>
+            <strong style="font-size: 0.9rem; color: var(--text-main);">Walgreens Pediatric Specialty</strong>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0.2rem 0 0.75rem 0;">1024 Elmwood Ave • Open 24 Hours</p>
+            <div style="display: flex; gap: 0.5rem;">
+              <a href="tel:5553215500" class="btn btn-secondary btn-sm" style="font-size: 0.75rem;">Call Pharmacy</a>
+              <button class="btn btn-white btn-sm" style="font-size: 0.75rem;" onclick="alert('Change pharmacy modal opened.')">Change</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Full Width: Pediatric Medication Safety & Storage Protocol -->
+        <div class="col-12" style="margin-top: 1.5rem;">
+          <div class="dash-card">
+            <h3 class="dash-card-title" style="font-size: 1.15rem;"><span>🛡️</span> Pediatric Medication Safety &amp; Storage Guidelines</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; margin-top: 1rem;">
+              <div style="background: var(--bg-primary); border: 1px solid var(--border-blush); border-radius: var(--radius-md); padding: 1rem;">
+                <strong style="color: var(--brand-lavender-dark); font-size: 0.9rem; display: block; margin-bottom: 0.35rem;">Accurate Syringe Precision</strong>
+                <p style="font-size: 0.825rem; color: var(--text-muted); margin: 0; line-height: 1.5;">Never use kitchen silverware spoons. Always use the milliliter (mL) calibrated oral syringe provided by our clinical pharmacy.</p>
+              </div>
+              <div style="background: var(--bg-primary); border: 1px solid var(--border-blush); border-radius: var(--radius-md); padding: 1rem;">
+                <strong style="color: var(--brand-lavender-dark); font-size: 0.9rem; display: block; margin-bottom: 0.35rem;">Weight vs Age Dosing</strong>
+                <p style="font-size: 0.825rem; color: var(--text-muted); margin: 0; line-height: 1.5;">Pediatric drug metabolism relies strictly on body weight, not chronological age. Check with our triage line before altering any dose.</p>
+              </div>
+              <div style="background: var(--bg-primary); border: 1px solid var(--border-blush); border-radius: var(--radius-md); padding: 1rem;">
+                <strong style="color: var(--brand-lavender-dark); font-size: 0.9rem; display: block; margin-bottom: 0.35rem;">High-Up Locked Storage</strong>
+                <p style="font-size: 0.825rem; color: var(--text-muted); margin: 0; line-height: 1.5;">Store all vitamins and liquid syrups in a cool, dry cabinet well out of reach and sight. Keep Poison Control handy: (800) 222-1222.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

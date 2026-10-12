@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Family Portal Overview — FIRST STEPS Pediatric Clinic</title>
+  <meta name="description" content="Executive parent dashboard overview for Liam Carter: track upcoming appointments, WHO/CDC growth percentiles, vaccination due dates, and secure messaging with Dr. Maya Carter.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- DASHBOARD / PORTAL LAYOUT (Dedicated Full-Screen Portal View Without Marketing Header/Footer) -->
+  <div class="portal-layout">
+    <!-- Top Right Corner Actions (Theme Toggle & RTL Layout Switch) -->
+    <div class="portal-top-actions">
+      <button class="theme-toggle-btn" aria-label="Toggle light/dark mode" title="Switch Theme">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+      <button class="rtl-toggle-btn" aria-label="Toggle RTL layout" title="Switch RTL / LTR">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m16 8 4 4-4 4M8 16l-4-4 4-4M4 12h16"/>
+        </svg>
+        RTL
+      </button>
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="portal-sidebar">
+      <!-- Portal Brand -->
+      <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border-blush);">
+        <a href="index.html" class="first-steps-logo" style="text-decoration: none;" aria-label="First Steps Pediatric Clinic Home">
+          <img src="assets/images/first_steps_logo.svg" alt="First Steps Logo" class="logo-icon-svg" width="34" height="34">
+          <span class="logo-brand-name" style="font-size: 1.1rem;">
+            <span class="brand-part-first">FIRST</span>
+            <span class="brand-part-steps">STEPS</span>
+          </span>
+        </a>
+      </div>
+
+      <!-- Child Profile Selector Card -->
+      <div class="portal-user-card">
+        <div class="user-avatar">
+          <img src="assets/images/avatar_liam_chen.jpg" alt="Liam Carter">
+        </div>
+        <div class="user-details">
+          <div class="user-name">Liam Carter</div>
+          <div class="child-tag">14 Months • Dr. Maya Carter</div>
+        </div>
+      </div>
+
+      <!-- Portal Navigation Links -->
+      <ul class="portal-menu">
+        <li><a href="dashboard.html" class="portal-menu-link active"><span>📊</span> Overview</a></li>
+        <li><a href="dashboard-growth.html" class="portal-menu-link"><span>📈</span> Growth Chart</a></li>
+        <li><a href="dashboard-vaccines.html" class="portal-menu-link"><span>💉</span> Vaccine Timeline</a></li>
+        <li><a href="dashboard-milestones.html" class="portal-menu-link"><span>👣</span> Milestones Checklist</a></li>
+        <li><a href="dashboard-prescriptions.html" class="portal-menu-link"><span>🩺</span> Prescriptions &amp; Meds</a></li>
+        <li><a href="dashboard-labs.html" class="portal-menu-link"><span>📋</span> Lab Results</a></li>
+        <li><a href="dashboard-messages.html" class="portal-menu-link"><span>💬</span> Messages</a></li>
+        <li><a href="dashboard-billing.html" class="portal-menu-link"><span>💳</span> Billing &amp; Insurance</a></li>
+        <li><a href="dashboard-settings.html" class="portal-menu-link"><span>⚙️</span> Portal Settings</a></li>
+      </ul>
+
+      <!-- Next Visit Countdown Widget -->
+      <div class="portal-sidebar-widget">
+        <strong style="color: var(--brand-lavender-dark); display: block; margin-bottom: 0.25rem;">Next Milestone Visit</strong>
+        <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 0.75rem;">15-Month Checkup Due in 26 days</p>
+        <button class="btn btn-primary btn-sm" style="width: 100%; font-size: 0.78rem;" data-open-appointment>Reserve Slot</button>
+      </div>
+
+      <!-- 24/7 Nurse Triage & Support -->
+      <div class="portal-sidebar-support-card">
+        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem;">
+          <span style="font-size: 1.1rem;">🩺</span>
+          <strong style="color: var(--text-main); font-size: 0.825rem;">24/7 Nurse Triage</strong>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.75rem; margin-bottom: 0.4rem; line-height: 1.35;">On-call pediatric triage for fever &amp; urgent care.</p>
+        <a href="tel:5550192273" class="sidebar-contact-pill">📞 (555) 019-CARE</a>
+      </div>
+
+      <!-- Clinic Live Status Pill -->
+      <div class="portal-sidebar-status-pill">
+        <span>📍 Main Campus</span>
+        <span style="color: #10B981; font-weight: 700;">● Open till 7 PM</span>
+      </div>
+    </aside>
+
+    <!-- Main Content Area: Overview -->
+    <main class="portal-content-area">
+      <!-- Portal Header Banner -->
+      <div class="portal-header hero-bg-dashboard" style="border-radius: var(--radius-lg); padding: 2.5rem; margin-bottom: 2rem; border: 1px solid var(--border-blush);">
+        <div>
+          <div class="child-friendly-badge" style="margin-bottom: 0.65rem;">
+            <span>🌱</span> First Steps Family Portal • Executive Overview
+          </div>
+          <h1 class="portal-title">Welcome Back, Sarah!</h1>
+          <p class="portal-subtitle">Viewing Liam’s health dashboard, growth percentiles, and upcoming clinic milestones.</p>
+          <div class="hero-unified-pills" style="justify-content: flex-start; margin-top: 1rem;">
+            <div class="hero-unified-pill-item"><span style="color: #10B981; font-weight: 700;">✓</span> Live Clinic Sync</div>
+            <div class="hero-unified-pill-item"><span style="color: #855C96; font-weight: 700;">🧸</span> 14-Mo Active Protocol</div>
+            <div class="hero-unified-pill-item"><span style="color: #3B82F6; font-weight: 700;">🔒</span> HIPAA 256-Bit Secure</div>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+          <button class="btn btn-secondary btn-sm" onclick="window.print()">📥 Export Summary PDF</button>
+          <button class="btn btn-primary btn-sm" data-open-appointment>+ Book New Visit</button>
+        </div>
+      </div>
+
+      <!-- Quick KPI Health Summary Cards -->
+      <div class="dashboard-grid" style="margin-bottom: 1.75rem;">
+        <!-- KPI 1: Growth -->
+        <div class="col-3">
+          <a href="dashboard-growth.html" style="text-decoration: none; color: inherit;">
+            <div class="dash-card" style="padding: 1.25rem; transition: transform var(--transition-fast); border-left: 4px solid var(--brand-lavender);" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+                <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Growth Curve</span>
+                <span style="font-size: 1.2rem;">📈</span>
+              </div>
+              <div style="font-size: 1.35rem; font-weight: 800; color: var(--text-main); font-family: var(--font-heading);">10.2 kg / 76.8 cm</div>
+              <p style="font-size: 0.78rem; color: #10B981; font-weight: 700; margin: 0.25rem 0 0 0;">64th %ile • CDC Healthy</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- KPI 2: Immunizations -->
+        <div class="col-3">
+          <a href="dashboard-vaccines.html" style="text-decoration: none; color: inherit;">
+            <div class="dash-card" style="padding: 1.25rem; transition: transform var(--transition-fast); border-left: 4px solid #3B82F6;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+                <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Immunizations</span>
+                <span style="font-size: 1.2rem;">💉</span>
+              </div>
+              <div style="font-size: 1.35rem; font-weight: 800; color: var(--text-main); font-family: var(--font-heading);">6 of 8 Done</div>
+              <p style="font-size: 0.78rem; color: #F59E0B; font-weight: 700; margin: 0.25rem 0 0 0;">MMR Booster Due Soon</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- KPI 3: Milestones -->
+        <div class="col-3">
+          <a href="dashboard-milestones.html" style="text-decoration: none; color: inherit;">
+            <div class="dash-card" style="padding: 1.25rem; transition: transform var(--transition-fast); border-left: 4px solid #10B981;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+                <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Milestones</span>
+                <span style="font-size: 1.2rem;">👣</span>
+              </div>
+              <div style="font-size: 1.35rem; font-weight: 800; color: var(--text-main); font-family: var(--font-heading);">9 of 10 Checked</div>
+              <p style="font-size: 0.78rem; color: #10B981; font-weight: 700; margin: 0.25rem 0 0 0;">90% Complete (14-Mo)</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- KPI 4: Prescriptions -->
+        <div class="col-3">
+          <a href="dashboard-prescriptions.html" style="text-decoration: none; color: inherit;">
+            <div class="dash-card" style="padding: 1.25rem; transition: transform var(--transition-fast); border-left: 4px solid #EC4899;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+                <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Active Meds</span>
+                <span style="font-size: 1.2rem;">🩺</span>
+              </div>
+              <div style="font-size: 1.35rem; font-weight: 800; color: var(--text-main); font-family: var(--font-heading);">1 Active Rx</div>
+              <p style="font-size: 0.78rem; color: var(--text-muted); font-weight: 600; margin: 0.25rem 0 0 0;">Vitamin D3 (400 IU Daily)</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Overview Main Grid -->
+      <div class="dashboard-grid">
+
+        <!-- Confirmed Next Visit Banner -->
+        <div class="col-12" id="overview">
+          <div class="appointment-banner">
+            <div class="appt-doctor-info">
+              <img src="assets/images/avatar_dashboard_dr_carter.jpg" alt="Dr. Maya Carter, MD" style="width: 58px; height: 58px; border-radius: 50%; object-fit: cover; flex-shrink: 0; box-shadow: var(--shadow-sm); border: 2px solid var(--border-blush);">
+              <div class="appt-details">
+                <span style="background: var(--surface-white); border: 1px solid var(--border-blush); padding: 0.2rem 0.65rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 700; color: var(--brand-lavender-dark); text-transform: uppercase;">
+                  Confirmed Upcoming Visit
+                </span>
+                <h3 style="margin-top: 0.4rem; color: var(--text-main);">NEXT APPOINTMENT</h3>
+                <p><strong>Dr. Maya Carter, MD, FAAP</strong> • 15-Month Milestone Visit &amp; MMR Comfort Booster</p>
+              </div>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 1.25rem;">
+              <div class="appt-time-badge">
+                <div class="date">14 October</div>
+                <div class="time">10:30 AM</div>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                <button class="btn btn-secondary btn-sm" onclick="alert('Digital check-in opened: Please confirm Liam\'s current weight and arrival status.')">Check In Online</button>
+                <button class="btn btn-primary btn-sm" data-open-appointment>Reschedule Visit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Left Column: Growth Trend Preview -->
+        <div class="col-7">
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <div>
+                <h2 class="dash-card-title"><span>📈</span> Growth Trend Snapshot</h2>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.15rem;">WHO/CDC standard curves for Liam's first 14 months.</p>
+              </div>
+              <div style="display: flex; gap: 0.5rem;">
+                <button class="btn btn-secondary btn-sm active" data-chart-metric="both" style="padding: 0.35rem 0.75rem; font-size: 0.75rem;">All</button>
+                <button class="btn btn-secondary btn-sm" data-chart-metric="weight" style="padding: 0.35rem 0.75rem; font-size: 0.75rem;">Weight</button>
+                <button class="btn btn-secondary btn-sm" data-chart-metric="height" style="padding: 0.35rem 0.75rem; font-size: 0.75rem;">Height</button>
+              </div>
+            </div>
+
+            <!-- Dynamic SVG Growth Chart Canvas -->
+            <div class="chart-container" id="growthChartCanvas">
+              <!-- Rendered automatically by main.js -->
+            </div>
+
+            <div style="margin-top: 1.25rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; color: var(--text-muted); border-top: 1px solid var(--border-blush); padding-top: 0.85rem;">
+              <span>Latest Entry: <strong>10.2 kg / 76.8 cm</strong> (12 Mo Checkup)</span>
+              <a href="dashboard-growth.html" class="btn btn-secondary btn-sm" style="font-size: 0.8rem; padding: 0 1rem !important; height: 38px !important; min-height: 38px !important;">
+                Full Growth Analytics →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Recent Activity & Action Hub -->
+        <div class="col-5">
+          <!-- Recent Message Alert -->
+          <div class="dash-card" style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <h2 class="dash-card-title" style="font-size: 1.15rem; margin-bottom: 0;"><span>💬</span> Message from Dr. Carter</h2>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">Yesterday, 4:15 PM</span>
+            </div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 0.85rem;">
+              <em>"Hi Sarah! Liam’s 12-month blood iron screening looks completely normal (12.4 g/dL). Looking forward to seeing his new walking steps on the 14th!"</em>
+            </p>
+            <div style="display: flex; gap: 0.75rem;">
+              <a href="dashboard-messages.html" class="btn btn-primary btn-sm" style="font-size: 0.78rem;">Reply in Messages</a>
+              <a href="dashboard-labs.html" class="btn btn-secondary btn-sm" style="font-size: 0.78rem;">View Lab Screen</a>
+            </div>
+          </div>
+
+          <!-- Quick Navigation Hub -->
+          <div class="dash-card">
+            <h2 class="dash-card-title" style="font-size: 1.15rem; margin-bottom: 0.85rem;"><span>⚡</span> Direct Portal Links</h2>
+            <div style="display: flex; flex-direction: column; gap: 0.65rem;">
+              <a href="dashboard-vaccines.html" class="portal-menu-link" style="background: var(--bg-primary); border: 1px solid var(--border-blush); font-size: 0.85rem; padding: 0.65rem 0.9rem;">
+                <span>💉</span> Check Vaccination Certificate &amp; Batch Records
+              </a>
+              <a href="dashboard-milestones.html" class="portal-menu-link" style="background: var(--bg-primary); border: 1px solid var(--border-blush); font-size: 0.85rem; padding: 0.65rem 0.9rem;">
+                <span>👣</span> Complete 15-Month Milestone Questionnaire
+              </a>
+              <a href="dashboard-prescriptions.html" class="portal-menu-link" style="background: var(--bg-primary); border: 1px solid var(--border-blush); font-size: 0.85rem; padding: 0.65rem 0.9rem;">
+                <span>🩺</span> View Vitamin D3 Dosage &amp; Request Refill
+              </a>
+              <a href="dashboard-billing.html" class="portal-menu-link" style="background: var(--bg-primary); border: 1px solid var(--border-blush); font-size: 0.85rem; padding: 0.65rem 0.9rem;">
+                <span>💳</span> Review BCBS Co-Pay &amp; Clean Bill Statement ($0.00)
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Appointment Modal -->
+  <dialog class="custom-modal" id="appointmentModal">
+    <div class="modal-content-card">
+      <button class="modal-close-btn" data-close-modal aria-label="Close dialog">✕</button>
+      <h3 style="font-size: 1.5rem; font-family: var(--font-heading); margin-bottom: 0.5rem;">Schedule Next Milestone</h3>
+      <form id="bookingModalForm">
+        <div class="form-group">
+          <label class="form-label" for="dashChild">Child</label>
+          <input type="text" id="dashChild" class="form-input" value="Liam Carter (14 Mo)" readonly>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="modalServiceSelect">Pediatric Service</label>
+          <select id="modalServiceSelect" class="form-select">
+            <option value="well-child">15-Month Milestone Visit</option>
+            <option value="vaccinations">MMR Vaccine Booster</option>
+            <option value="sick">Urgent Pediatric Check</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="dashDate">Preferred Date</label>
+          <input type="date" id="dashDate" class="form-input" required>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Confirm Appointment Slot</button>
+      </form>
+    </div>
+  </dialog>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

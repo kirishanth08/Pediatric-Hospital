@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Pediatric Doctors &amp; Specialists — FIRST STEPS | Children's Hospital &amp; Wellness Center</title>
+  <meta name="description" content="Meet First Steps board-certified pediatric medical faculty: Senior Attending Doctors and Specialized Associates across General Pediatrics, Immunizations, Developmental Care, and Sensory Wellness.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       NAVBAR BRANDING
+       ========================================================================== -->
+    <header class="site-header">
+    <div class="container navbar-container">
+      <a href="index.html" class="first-steps-logo" aria-label="First Steps Pediatric Clinic Home">
+        <img src="assets/images/first_steps_logo.svg" alt="First Steps Logo" class="logo-icon-svg" width="40" height="40">
+        <span class="logo-brand-name">
+          <span class="brand-part-first">FIRST</span>
+          <span class="brand-part-steps">STEPS</span>
+        </span>
+      </a>
+
+      <nav class="site-navigation" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <!-- 1. Home with Home 2 in dropdown -->
+          <li class="nav-item nav-dropdown">
+            <a href="index.html" class="nav-link nav-dropdown-toggle">
+              <span>Home</span>
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-item">Home 1 (Hospital Sanctuary) <span class="item-badge">Core</span></a>
+              <a href="home-services.html" class="dropdown-item">Home 2 (Clinical Care)</a>
+            </div>
+          </li>
+
+          <!-- 2. About -->
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About</a>
+          </li>
+
+          <!-- 3. Services -->
+          <li class="nav-item">
+            <a href="services.html" class="nav-link">Services</a>
+          </li>
+
+          <!-- 4. Doctors -->
+          <li class="nav-item">
+            <a href="doctors.html" class="nav-link active">Doctors</a>
+          </li>
+
+          <!-- 5. Pricing -->
+          <li class="nav-item">
+            <a href="appointment.html#insurance-billing" class="nav-link">Pricing</a>
+          </li>
+
+          <!-- 6. Blog -->
+          <li class="nav-item">
+            <a href="blog.html" class="nav-link">Blog</a>
+          </li>
+
+          <!-- 7. Contact -->
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+
+          <!-- 8. Dashboard -->
+          <li class="nav-item">
+            <a href="dashboard.html" class="nav-link">Dashboard</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions: Theme Toggle, RTL, Login, Book Appointment -->
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" aria-label="Toggle light/dark mode" title="Switch Theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="rtl-toggle-btn" aria-label="Toggle RTL layout" title="Switch RTL / LTR">RTL</button>
+        <a href="login.html" class="nav-btn-login">
+          <svg class="nav-btn-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+            <polyline points="10 17 15 12 10 7"></polyline>
+            <line x1="15" y1="12" x2="3" y2="12"></line>
+          </svg>
+          <span>Login</span>
+        </a>
+        <a href="appointment.html" class="btn btn-primary nav-btn-cta">
+          <svg class="nav-btn-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <span>Book Appointment</span>
+        </a>
+        <button class="mobile-nav-toggle" aria-label="Open mobile menu" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       PAGE HERO — BESPOKE MEDICAL FACULTY DIRECTORY ARCHITECTURE
+       ========================================================================== -->
+  <section class="hero-section hero-bg-doctors" id="hero" style="border-bottom: 1px solid var(--border-blush);">
+    <div class="container hero-grid">
+      <!-- Left Column: Faculty Directory Introduction & Filter Bar -->
+      <div class="hero-content">
+        <div class="hero-live-badge">
+          <span class="live-dot"></span>
+          <span>American Board of Pediatrics Certified Faculty</span>
+        </div>
+
+        <h1 class="hero-title" style="font-size: 2.9rem; line-height: 1.18;">
+          PHYSICIANS WHO LISTEN WITH EMPATHY.<br>
+          <span class="hero-gradient-accent">Guiding Your Family Through Every Milestone.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          At First Steps Children's Wellness Center, your child receives collaborative, multi-tiered care. Every clinical department pairs seasoned Senior Attending specialists with dedicated Clinical Associates and Fellows.
+        </p>
+
+        <div class="hero-actions">
+          <a href="appointment.html" class="btn btn-primary btn-lg" data-open-appointment>
+            Book Faculty Consultation
+          </a>
+          <a href="#faculty-directory" class="btn btn-secondary btn-lg">
+            Explore All Departments
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Interactive Clinical Leadership Compass Widget -->
+      <div class="hero-doctor-spotlight" data-compass>
+        <div class="pathway-header">
+          <div>
+            <span class="pathway-tag">Faculty Leadership Compass</span>
+            <h3 class="pathway-title">Senior Attending Model</h3>
+            <p class="pathway-subtitle">Select a clinical lead to explore their medical fellowship credentials:</p>
+          </div>
+        </div>
+
+        <!-- Interactive Compass Tab Bar -->
+        <div class="compass-tab-bar" role="tablist">
+          <button class="compass-tab-btn active" data-compass-tab="carter" type="button" role="tab" aria-selected="true">
+            <span>🩺</span> Dr. Carter
+          </button>
+          <button class="compass-tab-btn" data-compass-tab="reed" type="button" role="tab" aria-selected="false">
+            <span>🧠</span> Dr. Reed
+          </button>
+          <button class="compass-tab-btn" data-compass-tab="rostova" type="button" role="tab" aria-selected="false">
+            <span>🌿</span> Dr. Rostov
+          </button>
+          <button class="compass-tab-btn" data-compass-tab="vance" type="button" role="tab" aria-selected="false">
+            <span>🎒</span> Dr. Vance
+          </button>
+        </div>
+
+        <!-- Dynamic Panel 1: Dr. Carter -->
+        <div class="compass-panel active" data-compass-panel="carter" role="tabpanel">
+          <div class="doctor-spotlight-top">
+            <div class="stat-icon-bubble" style="width: 54px; height: 54px; font-size: 1.6rem; background: rgba(133, 92, 150, 0.15); border: 2px solid var(--brand-lavender);">
+              🩺
+            </div>
+            <div>
+              <h4 class="doctor-spotlight-title">Dr. Maya Carter, MD, FAAP</h4>
+              <div class="doctor-spotlight-role">Chief Medical Officer • Neonatal &amp; Infant</div>
+            </div>
+          </div>
+          <div class="doctor-spotlight-meta-list">
+            <div class="doctor-meta-row">
+              <span>Fellowship</span>
+              <strong>Johns Hopkins Children's Center</strong>
+            </div>
+            <div class="doctor-meta-row">
+              <span>Certification</span>
+              <strong>American Board of Pediatrics (ABP)</strong>
+            </div>
+            <div class="doctor-meta-row">
+              <span>Clinical Focus</span>
+              <strong>Newborn transition, lactation &amp; gentle well-checks</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dynamic Panel 2: Dr. Reed -->
+        <div class="compass-panel" data-compass-panel="reed" role="tabpanel">
+          <div class="doctor-spotlight-top">
+            <div class="stat-icon-bubble" style="width: 54px; height: 54px; font-size: 1.6rem; background: rgba(133, 92, 150, 0.15); border: 2px solid var(--brand-lavender);">
+              🧠
+            </div>
+            <div>
+              <h4 class="doctor-spotlight-title">Dr. Julian Reed, MD, FAAP</h4>
+              <div class="doctor-spotlight-role">Director • Developmental &amp; Behavioral Pediatrics</div>
+            </div>
+          </div>
+          <div class="doctor-spotlight-meta-list">
+            <div class="doctor-meta-row">
+              <span>Fellowship</span>
+              <strong>Boston Children's Hospital / Harvard Medical</strong>
+            </div>
+            <div class="doctor-meta-row">
+              <span>Certification</span>
+              <strong>ABP Developmental-Behavioral Pediatrics</strong>
+            </div>
+            <div class="doctor-meta-row">
+              <span>Clinical Focus</span>
+              <strong>Neurodevelopmental milestones, sensory &amp; speech</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dynamic Panel 3: Dr. Rostova -->
+        <div class="compass-panel" data-compass-panel="rostova" role="tabpanel">
+          <div class="doctor-spotlight-top">
+            <div class="stat-icon-bubble" style="width: 54px; height: 54px; font-size: 1.6rem; background: rgba(133, 92, 150, 0.15); border: 2px solid var(--brand-lavender);">
+              🌿
+            </div>
+            <div>
+              <h4 class="doctor-spotlight-title">Dr. Alexei Rostov, MD, PhD</h4>
+              <div class="doctor-spotlight-role">Chief of Preventive Medicine &amp; Immunization</div>
+            </div>
+          </div>
+          <div class="doctor-spotlight-meta-list">
+            <div class="doctor-meta-row">
+              <span>Fellowship</span>
+              <strong>Children's Hospital of Philadelphia (CHOP)</strong>
+            </div>
+            <div class="doctor-meta-row">
+              <span>Certification</span>
+              <strong>ABP Certified &amp; Pediatric Immunology Fellow</strong>
+            </div>
+            <div class="doctor-meta-row">
+              <span>Clinical Focus</span>
+              <strong>Painless Buzzy® vaccine protocols &amp; gut immunity</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dynamic Panel 4: Dr. Vance -->
+        <div class="compass-panel" data-compass-panel="vance" role="tabpanel">
+          <div class="doctor-spotlight-top">
+            <div class="stat-icon-bubble" style="width: 54px; height: 54px; font-size: 1.6rem; background: rgba(133, 92, 150, 0.15); border: 2px solid var(--brand-lavender);">
+              🎒
+            </div>
+            <div>
+              <h4 class="doctor-spotlight-title">Dr. Monica Vance, MD, FAAP</h4>
+              <div class="doctor-spotlight-role">Head of Adolescent Medicine &amp; Sports Clearances</div>
+            </div>
+          </div>
+          <div class="doctor-spotlight-meta-list">
+            <div class="doctor-meta-row">
+              <span>Fellowship</span>
+              <strong>Cincinnati Children's Hospital Medical Center</strong>
+            </div>
+            <div class="doctor-meta-row">
+              <span>Certification</span>
+              <strong>ABP Pediatrics &amp; Pediatric Sports Medicine</strong>
+            </div>
+            <div class="doctor-meta-row">
+              <span>Clinical Focus</span>
+              <strong>Youth spinal posture, sports clearances &amp; wellness</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Faculty Availability Strip -->
+        <div class="pathway-footer-slot">
+          <div class="pathway-footer-slot-text">
+            <span class="live-dot"></span>
+            <span>Consultation Openings Available This Week</span>
+          </div>
+          <span style="font-size: 0.8rem; font-weight: 700; color: #047857;">Openings</span>
+        </div>
+
+        <a href="appointment.html" class="btn btn-primary" style="width: 100%; text-align: center;" data-open-appointment>
+          Book an Appointment with Our Faculty
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CLINICAL FACULTY DIRECTORY & DEPARTMENT FILTER TOOLBAR
+       ========================================================================== -->
+  <section class="faculty-filter-toolbar" id="faculty-directory" aria-label="Department Filter Bar">
+    <div class="container faculty-filter-inner">
+      <div class="faculty-filter-intro">
+        <span class="faculty-filter-badge">Clinical Faculty Specialties</span>
+        <h2 class="faculty-filter-title">Filter by Medical Department</h2>
+      </div>
+      <div class="dept-filter-container" id="dept-filter-bar">
+        <button class="dept-filter-btn active" data-filter="all">All Clinical Faculty</button>
+        <button class="dept-filter-btn" data-filter="general">General &amp; Newborn</button>
+        <button class="dept-filter-btn" data-filter="preventive">Preventive &amp; Vaccines</button>
+        <button class="dept-filter-btn" data-filter="developmental">Developmental &amp; Neuro</button>
+        <button class="dept-filter-btn" data-filter="sensory">Sensory &amp; Child Life</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FACULTY SECTIONS BY CLINICAL DEPARTMENT
+       ========================================================================== -->
+  <main class="container faculty-main-directory">
+
+    <!-- DEPARTMENT 1: GENERAL PEDIATRICS & NEWBORN MEDICINE -->
+    <section class="department-section" id="dept-general" data-dept="general">
+      <div class="department-banner">
+        <div class="department-title-group">
+          <h2>1. Department of General Pediatrics &amp; Newborn Medicine</h2>
+          <p>Comprehensive neonatal transitions, infant wellness evaluations, unhurried checkups, and acute pediatric care.</p>
+        </div>
+        <div class="hospital-stat-pill">
+          ⭐ 24/7 Neonatal On-Call Coverage
+        </div>
+      </div>
+
+      <div class="doctors-grid">
+        <!-- DOCTOR 1: Senior Attending -->
+        <article class="doctor-card">
+          <div class="doctor-card-top">
+            <div class="doctor-avatar-box">
+              <img src="assets/images/doc_maya_carter.jpg" alt="Dr. Maya Carter, Chief Pediatrician" width="130" height="130">
+            </div>
+            <div class="doctor-header-info">
+              <span class="doctor-seniority-tag senior">★ Senior Attending &amp; Chief of Pediatrics</span>
+              <h3 class="doctor-name">Dr. Maya Carter, MD, FAAP</h3>
+              <div class="doctor-role-title">Clinical Director &amp; Neonatal Specialist</div>
+              <span class="doctor-experience-pill">18+ Years Experience • Harvard Med &amp; Boston Children's</span>
+            </div>
+          </div>
+          <div class="doctor-card-body">
+            <p class="doctor-bio-text">
+              Dr. Carter specializes in the delicate "fourth trimester" newborn transition and childhood growth architecture. She founded the First Steps Sensory Exam Protocol to eliminate clinical fear for young infants and anxious new parents.
+            </p>
+            <div class="doctor-specs-list">
+              <span class="doctor-spec-pill">Newborn Critical Care</span>
+              <span class="doctor-spec-pill">AAP Board Certified</span>
+              <span class="doctor-spec-pill">Lactation Medicine</span>
+              <span class="doctor-spec-pill">Zero-Tears Exams</span>
+            </div>
+            <div class="doctor-quote-box">
+              “Every newborn is a world of potential. Our hospital's commitment is to protect that gentle beginning with rigorous medicine and tender, unrushed care.”
+            </div>
+            <div class="doctor-card-footer">
+              <span style="font-size: 0.82rem; font-weight: 600; color: #10B981;">● Accepting New Patients</span>
+              <a href="appointment.html?doctor=carter" class="btn btn-primary btn-sm" data-open-appointment>Book with Dr. Carter</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- DOCTOR 2: Assistant / Associate -->
+        <article class="doctor-card">
+          <div class="doctor-card-top">
+            <div class="doctor-avatar-box">
+              <img src="assets/images/doc_ethan_miller.jpg" alt="Dr. Emily Miller, Associate Pediatrician" width="130" height="130">
+            </div>
+            <div class="doctor-header-info">
+              <span class="doctor-seniority-tag assistant">✦ Associate Pediatrician &amp; Fellow</span>
+              <h3 class="doctor-name">Dr. Emily Miller, MD</h3>
+              <div class="doctor-role-title">Attending Associate &amp; Infant Wellness Fellow</div>
+              <span class="doctor-experience-pill">6 Years Experience • Columbia University Medical Center</span>
+            </div>
+          </div>
+          <div class="doctor-card-body">
+            <p class="doctor-bio-text">
+              Working directly alongside Dr. Carter, Dr. Miller focuses on infant colic soothing, sleep-wake architecture, pediatric digestive comfort, and guiding first-time parents through everyday clinical milestones.
+            </p>
+            <div class="doctor-specs-list">
+              <span class="doctor-spec-pill">Infant Nutrition</span>
+              <span class="doctor-spec-pill">Pediatric Sleep Science</span>
+              <span class="doctor-spec-pill">Fever Management</span>
+              <span class="doctor-spec-pill">Family Coaching</span>
+            </div>
+            <div class="doctor-quote-box">
+              “I partner closely with families to ensure no question is too small. A calm, reassured parent is the very best medicine for a thriving baby.”
+            </div>
+            <div class="doctor-card-footer">
+              <span style="font-size: 0.82rem; font-weight: 600; color: #10B981;">● Immediate Openings This Week</span>
+              <a href="appointment.html?doctor=miller" class="btn btn-secondary btn-sm" data-open-appointment>Book with Dr. Miller</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- DEPARTMENT 2: PREVENTIVE MEDICINE & IMMUNIZATION -->
+    <section class="department-section" id="dept-preventive" data-dept="preventive">
+      <div class="department-banner">
+        <div class="department-title-group">
+          <h2>2. Department of Pediatric Immunization &amp; Preventive Health</h2>
+          <p>CDC &amp; AAP aligned vaccine schedules, painless injection protocols, allergy immunology, and preventive screening.</p>
+        </div>
+        <div class="hospital-stat-pill">
+          🛡️ Zero-Pain Gentle Injection Protocol
+        </div>
+      </div>
+
+      <div class="doctors-grid">
+        <!-- DOCTOR 3: Senior Attending -->
+        <article class="doctor-card">
+          <div class="doctor-card-top">
+            <div class="doctor-avatar-box">
+              <img src="assets/images/doc_julian_reed.jpg" alt="Dr. Julian Reed, Head of Preventive Health" width="130" height="130">
+            </div>
+            <div class="doctor-header-info">
+              <span class="doctor-seniority-tag senior">★ Senior Attending &amp; Department Chair</span>
+              <h3 class="doctor-name">Dr. Julian Reed, MD, PhD</h3>
+              <div class="doctor-role-title">Director of Pediatric Preventive Health &amp; Immunology</div>
+              <span class="doctor-experience-pill">16+ Years Experience • Johns Hopkins Medicine Fellow</span>
+            </div>
+          </div>
+          <div class="doctor-card-body">
+            <p class="doctor-bio-text">
+              An international expert in child mucosal immunity and vaccine safety, Dr. Reed pioneered our hospital’s comfort-first immunization framework, incorporating topical numbing and vibration distraction so children never fear needles.
+            </p>
+            <div class="doctor-specs-list">
+              <span class="doctor-spec-pill">Vaccine Immunology</span>
+              <span class="doctor-spec-pill">Child Allergy Diagnostics</span>
+              <span class="doctor-spec-pill">Epidemiology</span>
+              <span class="doctor-spec-pill">Preventive Protocols</span>
+            </div>
+            <div class="doctor-quote-box">
+              “Immunizations are medicine’s most miraculous shield. When delivered with gentle touch and playfulness, children leave with pride and bravery.”
+            </div>
+            <div class="doctor-card-footer">
+              <span style="font-size: 0.82rem; font-weight: 600; color: #10B981;">● Accepting Consultations</span>
+              <a href="appointment.html?doctor=reed" class="btn btn-primary btn-sm" data-open-appointment>Book with Dr. Reed</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- DOCTOR 4: Assistant / Associate -->
+        <article class="doctor-card">
+          <div class="doctor-card-top">
+            <div class="doctor-avatar-box">
+              <img src="assets/images/doc_ananya_sharma.jpg" alt="Dr. Arjun Sharma, Immunization Specialist" width="130" height="130">
+            </div>
+            <div class="doctor-header-info">
+              <span class="doctor-seniority-tag assistant">✦ Clinical Immunization Associate</span>
+              <h3 class="doctor-name">Dr. Arjun Sharma, MBBS, DCH</h3>
+              <div class="doctor-role-title">Clinical Associate in Pediatric Immunization &amp; Allergy</div>
+              <span class="doctor-experience-pill">7 Years Experience • Stanford Children's Health</span>
+            </div>
+          </div>
+          <div class="doctor-card-body">
+            <p class="doctor-bio-text">
+              Dr. Sharma specializes in custom catch-up immunization roadmaps for relocated families, needle-phobia desensitization, and infant immune protection counseling. His gentle bedside manner puts even the most nervous toddlers at ease.
+            </p>
+            <div class="doctor-specs-list">
+              <span class="doctor-spec-pill">Needle Comfort Therapy</span>
+              <span class="doctor-spec-pill">Catch-Up Schedules</span>
+              <span class="doctor-spec-pill">Travel Vaccines</span>
+              <span class="doctor-spec-pill">Parental Reassurance</span>
+            </div>
+            <div class="doctor-quote-box">
+              “Our distraction bubble toys, sweet drops, and soft praise turn vaccine appointments into celebratory milestones where children feel like superheroes.”
+            </div>
+            <div class="doctor-card-footer">
+              <span style="font-size: 0.82rem; font-weight: 600; color: #10B981;">● Walk-In Vaccines Supported</span>
+              <a href="appointment.html?doctor=sharma" class="btn btn-secondary btn-sm" data-open-appointment>Book with Dr. Sharma</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- DEPARTMENT 3: DEVELOPMENTAL & BEHAVIORAL PEDIATRICS -->
+    <section class="department-section" id="dept-developmental" data-dept="developmental">
+      <div class="department-banner">
+        <div class="department-title-group">
+          <h2>3. Department of Developmental &amp; Behavioral Pediatrics</h2>
+          <p>Early milestone tracking, speech &amp; motor development, cognitive evaluations, and neurodiversity support.</p>
+        </div>
+        <div class="hospital-stat-pill">
+          🧩 Comprehensive Developmental Screening Suite
+        </div>
+      </div>
+
+      <div class="doctors-grid">
+        <!-- DOCTOR 5: Senior Attending -->
+        <article class="doctor-card">
+          <div class="doctor-card-top">
+            <div class="doctor-avatar-box">
+              <img src="assets/images/doc_elena_rostova.jpg" alt="Dr. Alexei Rostov, Neurodevelopmental Lead" width="130" height="130">
+            </div>
+            <div class="doctor-header-info">
+              <span class="doctor-seniority-tag senior">★ Senior Specialist &amp; Developmental Chair</span>
+              <h3 class="doctor-name">Dr. Alexei Rostov, MD, PhD</h3>
+              <div class="doctor-role-title">Senior Consultant in Neurodevelopment &amp; Behavior</div>
+              <span class="doctor-experience-pill">20+ Years Experience • Great Ormond Street Hospital, London</span>
+            </div>
+          </div>
+          <div class="doctor-card-body">
+            <p class="doctor-bio-text">
+              Dr. Rostov has dedicated two decades to pediatric neurodevelopment, early autism identification, speech delays, and gifted cognitive pathways. He works with families to build nurturing, strength-based developmental plans.
+            </p>
+            <div class="doctor-specs-list">
+              <span class="doctor-spec-pill">Neurodevelopmental Assessments</span>
+              <span class="doctor-spec-pill">Milestone Tracking</span>
+              <span class="doctor-spec-pill">Early Intervention</span>
+              <span class="doctor-spec-pill">ADHD &amp; Sensory Profiles</span>
+            </div>
+            <div class="doctor-quote-box">
+              “Every child learns and blossoms at their own natural cadence. We meet children where they are and celebrate every single step forward.”
+            </div>
+            <div class="doctor-card-footer">
+              <span style="font-size: 0.82rem; font-weight: 600; color: #10B981;">● Comprehensive Assessments Open</span>
+              <a href="appointment.html?doctor=rostov" class="btn btn-primary btn-sm" data-open-appointment>Book with Dr. Rostov</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- DOCTOR 6: Assistant / Associate -->
+        <article class="doctor-card">
+          <div class="doctor-card-top">
+            <div class="doctor-avatar-box">
+              <img src="assets/images/doc_clara_bennett.jpg" alt="Dr. Clara Bennett, Developmental Associate" width="130" height="130">
+            </div>
+            <div class="doctor-header-info">
+              <span class="doctor-seniority-tag assistant">✦ Clinical Developmental Associate</span>
+              <h3 class="doctor-name">Dr. Clara Bennett, MS, OTR/L</h3>
+              <div class="doctor-role-title">Clinical Associate in Pediatric Development &amp; Sensory Therapy</div>
+              <span class="doctor-experience-pill">8 Years Experience • UW Children's Hospital</span>
+            </div>
+          </div>
+          <div class="doctor-card-body">
+            <p class="doctor-bio-text">
+              Specializing in fine and gross motor milestones, tactile integration, and developmental play therapy, Dr. Bennett conducts fun, engaging sessions in our padded gym suites that feel entirely like joyful games to the child.
+            </p>
+            <div class="doctor-specs-list">
+              <span class="doctor-spec-pill">Motor Milestone Play</span>
+              <span class="doctor-spec-pill">Vestibular Balance</span>
+              <span class="doctor-spec-pill">Hand-Eye Coordination</span>
+              <span class="doctor-spec-pill">Sensory Regulation</span>
+            </div>
+            <div class="doctor-quote-box">
+              “When therapy is wrapped in play, magic happens. Children discover their physical confidence while having the time of their lives.”
+            </div>
+            <div class="doctor-card-footer">
+              <span style="font-size: 0.82rem; font-weight: 600; color: #10B981;">● Therapy Evaluations Available</span>
+              <a href="appointment.html?doctor=bennett" class="btn btn-secondary btn-sm" data-open-appointment>Book with Dr. Bennett</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- DEPARTMENT 4: SENSORY INTEGRATION & CHILD LIFE THERAPY -->
+    <section class="department-section" id="dept-sensory" data-dept="sensory">
+      <div class="department-banner">
+        <div class="department-title-group">
+          <h2>4. Department of Pediatric Sensory Wellness &amp; Child Life</h2>
+          <p>Sensory-friendly hospital environments, medical trauma mitigation, holistic wellbeing, and patient advocacy.</p>
+        </div>
+        <div class="hospital-stat-pill">
+          🧸 Quiet Sensory-Calm Hospital Suites
+        </div>
+      </div>
+
+      <div class="doctors-grid">
+        <!-- DOCTOR 7: Senior Attending -->
+        <article class="doctor-card">
+          <div class="doctor-card-top">
+            <div class="doctor-avatar-box">
+              <img src="assets/images/doc_marcus_vance.jpg" alt="Dr. Monica Vance, Child Life Director" width="130" height="130">
+            </div>
+            <div class="doctor-header-info">
+              <span class="doctor-seniority-tag senior">★ Senior Director of Child Life &amp; Sensory Care</span>
+              <h3 class="doctor-name">Dr. Monica Vance, MD</h3>
+              <div class="doctor-role-title">Clinical Director of Child Life &amp; Sensory Integration</div>
+              <span class="doctor-experience-pill">14+ Years Experience • Children's Hospital of Philadelphia (CHOP)</span>
+            </div>
+          </div>
+          <div class="doctor-card-body">
+            <p class="doctor-bio-text">
+              Dr. Vance architects our hospital’s sensory environment, ensuring lighting, sound levels, and exam pacing are calibrated for hypersensitive children. She ensures no medical encounter creates emotional fear or trauma.
+            </p>
+            <div class="doctor-specs-list">
+              <span class="doctor-spec-pill">Child Life Medicine</span>
+              <span class="doctor-spec-pill">Sensory Lighting Protocols</span>
+              <span class="doctor-spec-pill">Anxiety Alleviation</span>
+              <span class="doctor-spec-pill">Pediatric Mind-Body Care</span>
+            </div>
+            <div class="doctor-quote-box">
+              “Healthcare should never be frightening. We designed our hospital suites so children feel the calm safety of a cozy children's library.”
+            </div>
+            <div class="doctor-card-footer">
+              <span style="font-size: 0.82rem; font-weight: 600; color: #10B981;">● Sensory Suite Tours Available</span>
+              <a href="appointment.html?doctor=vance" class="btn btn-primary btn-sm" data-open-appointment>Book with Dr. Vance</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- DOCTOR 8: Assistant / Associate -->
+        <article class="doctor-card">
+          <div class="doctor-card-top">
+            <div class="doctor-avatar-box">
+              <img src="assets/images/doc_chloe_laurent.jpg" alt="Chloe Laurent, Assistant Wellness Practitioner" width="130" height="130">
+            </div>
+            <div class="doctor-header-info">
+              <span class="doctor-seniority-tag assistant">✦ Assistant Pediatric Wellness Practitioner</span>
+              <h3 class="doctor-name">Chloe Laurent, RN, CPNP</h3>
+              <div class="doctor-role-title">Certified Pediatric Nurse Practitioner &amp; Child Life Specialist</div>
+              <span class="doctor-experience-pill">5 Years Experience • Vanderbilt Pediatric Care</span>
+            </div>
+          </div>
+          <div class="doctor-card-body">
+            <p class="doctor-bio-text">
+              Chloe specializes in guided comfort techniques, pre-appointment prep for nervous children, family health literacy, and pediatric wellness routines. She is a favorite among little ones for her warm smile and calming stories.
+            </p>
+            <div class="doctor-specs-list">
+              <span class="doctor-spec-pill">Child Life Coaching</span>
+              <span class="doctor-spec-pill">Pre-Visit Familiarization</span>
+              <span class="doctor-spec-pill">Sensory Comfort Tools</span>
+              <span class="doctor-spec-pill">Family Advocacy</span>
+            </div>
+            <div class="doctor-quote-box">
+              “When we meet a child with a gentle smile and a warm toy, their shoulders drop and their natural joy comes right back.”
+            </div>
+            <div class="doctor-card-footer">
+              <span style="font-size: 0.82rem; font-weight: 600; color: #10B981;">● Family Orientations Daily</span>
+              <a href="appointment.html?doctor=laurent" class="btn btn-secondary btn-sm" data-open-appointment>Book with Chloe Laurent</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         HIGHLIGHTED INSIGHTS HOOK SECTION (User Requirement: Hook for Insights page)
+         ========================================================================== -->
+    <div class="insights-hook-wrapper">
+      <div class="insights-hook-card">
+        <div class="insights-hook-grid">
+          <div>
+            <div class="insights-hook-badge">
+              <span>🧬</span> Evidence-Based Pediatric Medicine
+            </div>
+            <h2 class="insights-hook-title">
+              EXPLORE OUR CLINICAL INSIGHTS &amp; RESEARCH REPOSITORY
+            </h2>
+            <p class="insights-hook-desc">
+              Our attending physicians and pediatric researchers regularly publish clinical guidelines, developmental milestone studies, and practical family wellness frameworks. Access peer-reviewed medical guidance written specifically for parents.
+            </p>
+            <a href="insights.html" class="btn-insights-highlight" id="insights-highlight-btn">
+              <span>Explore Pediatric Clinical Insights</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <div class="insights-hook-topics">
+            <strong style="color: #FFFFFF; font-size: 1.05rem; display: block; margin-bottom: 0.5rem;">
+              Featured Research &amp; Clinical Topics:
+            </strong>
+            <div class="insights-hook-topic-item">
+              <div class="insights-hook-topic-icon">📊</div>
+              <div>
+                <strong>WHO &amp; CDC Growth Percentile Dynamics</strong>
+                <div style="font-size: 0.8rem; color: rgba(255, 255, 255, 0.75);">Clinical analysis of infant weight &amp; length trajectories</div>
+              </div>
+            </div>
+            <div class="insights-hook-topic-item">
+              <div class="insights-hook-topic-icon">🛡️</div>
+              <div>
+                <strong>Gentle Pediatric Vaccine Immunology</strong>
+                <div style="font-size: 0.8rem; color: rgba(255, 255, 255, 0.75);">By Dr. Julian Reed: Painless injection science &amp; antibody response</div>
+              </div>
+            </div>
+            <div class="insights-hook-topic-item">
+              <div class="insights-hook-topic-icon">🧸</div>
+              <div>
+                <strong>Sensory Environment &amp; Medical Recovery</strong>
+                <div style="font-size: 0.8rem; color: rgba(255, 255, 255, 0.75);">By Dr. Maya Carter: Reducing pediatric vital sign cortisol spikes</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+    <footer class="site-footer">
+    <div class="container footer-grid">
+      <!-- Col 1: Hospital Brand & Accreditations -->
+      <div class="footer-col footer-brand">
+        <a href="index.html" class="first-steps-logo">
+          <img src="assets/images/first_steps_logo.svg" alt="First Steps Logo" class="logo-icon-svg" width="40" height="40">
+          <span class="logo-brand-name">
+            <span class="brand-part-first">FIRST</span>
+            <span class="brand-part-steps">STEPS</span>
+          </span>
+        </a>
+        <span class="logo-tagline">Gentle Care • Healthy Beginnings</span>
+        <p class="footer-tagline">
+          Dedicated children's hospital and pediatric wellness sanctuary supporting your family from first newborn checkup to adolescent milestone care.
+        </p>
+        <div class="footer-accreditations">
+          <span class="footer-accred-badge">🏥 AAP Affiliated</span>
+          <span class="footer-accred-badge">🔒 HIPAA Secure</span>
+          <span class="footer-accred-badge">🧸 Sensory-Calm</span>
+        </div>
+        <div class="footer-social-row">
+          <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z"/></svg>
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22.336 22.336 0 0 0 14.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202h3.312z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Col 2: Clinical Navigation (100% Uniform with Navbar) -->
+      <div class="footer-col">
+        <h4 class="footer-title">Clinical Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home (Sanctuary)</a></li>
+          <li><a href="home-services.html">Home (Clinical Care)</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="doctors.html">Doctors</a></li>
+          <li><a href="appointment.html#insurance-billing">Pricing</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Pediatric Programs -->
+      <div class="footer-col">
+        <h4 class="footer-title">Pediatric Programs</h4>
+        <ul class="footer-links">
+          <li><a href="services.html#clinical-services">Newborn &amp; Infant Wing</a></li>
+          <li><a href="services.html#clinical-services">Vaccination &amp; Immunization</a></li>
+          <li><a href="services.html#clinical-services">Developmental Screening</a></li>
+          <li><a href="services.html#clinical-services">On-Site Diagnostic Lab</a></li>
+          <li><a href="insights.html">Clinical Insights &amp; Research</a></li>
+          <li><a href="appointment.html">Book Urgent Care Slot</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Emergency & Hours Widget -->
+      <div class="footer-col">
+        <h4 class="footer-title">Emergency &amp; Hours</h4>
+        <div class="footer-hours-card">
+          <div class="footer-hour-item">
+            <span class="footer-hour-label">Mon–Sat</span>
+            <span class="footer-hour-val">8:00 AM – 7:00 PM</span>
+          </div>
+          <div class="footer-hour-item">
+            <span class="footer-hour-label">Sunday</span>
+            <span class="footer-hour-val">9:00 AM – 2:00 PM</span>
+          </div>
+          <div class="footer-hour-item" style="border-bottom: none; padding-top: 0.5rem;">
+            <span class="footer-emergency-pill">🟢 24/7 On-Call Pediatrician</span>
+          </div>
+        </div>
+        <a href="tel:18005557837" class="footer-phone-cta">
+          <span class="phone-icon">📞</span>
+          <div class="phone-details">
+            <span class="phone-label">Urgent Pediatric Care</span>
+            <span class="phone-number">(555) 321-KIDS (5437)</span>
+          </div>
+        </a>
+        <a href="appointment.html" class="btn btn-primary footer-btn-cta" data-open-appointment>
+          <svg class="nav-btn-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <span>Book Appointment</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Footer Bottom Bar -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-flex">
+        <p>&copy; 2026 First Steps Pediatric Clinic &amp; Children's Wellness Center. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Care</a>
+          <a href="#">Patient Rights</a>
+          <a href="#">Notice of Privacy Practices</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Native Accessible Appointment Modal -->
+  <dialog class="custom-modal" id="appointmentModal" aria-labelledby="modalTitle">
+    <div class="modal-content-card">
+      <button class="modal-close-btn" data-close-modal aria-label="Close dialog">✕</button>
+
+      <div style="margin-bottom: 1.75rem;">
+        <span class="child-friendly-badge">Faculty Consultation</span>
+        <h3 id="modalTitle" style="font-size: 1.65rem; font-family: var(--font-heading); margin-bottom: 0.35rem;">
+          Consultation with Medical Faculty
+        </h3>
+        <p style="font-size: 0.9rem; color: var(--text-muted);">
+          Reserve an unrushed consultation with our pediatric specialists.
+        </p>
+      </div>
+
+      <form id="bookingModalForm" novalidate>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div class="form-group">
+            <label class="form-label" for="childName">Child's Full Name</label>
+            <input type="text" id="childName" name="childName" class="form-input name-input" placeholder="e.g. Liam Miller" required pattern="^[A-Za-z\s.'-]+$" title="Please enter letters only (no numbers)">
+            <span class="form-hint" style="font-size: 0.78rem; color: var(--text-muted); display: block; margin-top: 0.25rem;">Letters only (no numbers)</span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="parentPhone">Parent Contact Phone</label>
+            <input type="tel" id="parentPhone" name="parentPhone" class="form-input phone-input" placeholder="(555) 000-0000" required pattern="^(\+?[0-9\s\-()]{10,20})$" title="Please enter a valid phone number (digits only)">
+            <span class="form-hint" style="font-size: 0.78rem; color: var(--text-muted); display: block; margin-top: 0.25rem;">Digits only (e.g. 555-012-3456)</span>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div class="form-group">
+            <label class="form-label" for="childDOB">Child's Date of Birth (DOB)</label>
+            <input type="date" id="childDOB" name="childDOB" class="form-input dob-input" required>
+            <span class="form-hint" style="font-size: 0.78rem; color: var(--text-muted); display: block; margin-top: 0.25rem;">Birth date (cannot be future)</span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="childAge">Child's Age</label>
+            <input type="text" id="childAge" name="childAge" class="form-input age-input" placeholder="e.g. 14 Months" required>
+            <span class="form-hint" style="font-size: 0.78rem; color: var(--text-muted); display: block; margin-top: 0.25rem;">Auto-calculated or enter age</span>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div class="form-group">
+            <label class="form-label" for="modalServiceSelect">Pediatric Service</label>
+            <select id="modalServiceSelect" class="form-select" required>
+              <option value="well-child">Comprehensive Well-Child Visit</option>
+              <option value="vaccinations">Comfort-First Immunization</option>
+              <option value="screening">Developmental &amp; Sensory Screening</option>
+              <option value="nutrition">Pediatric Nutrition &amp; Lactation</option>
+              <option value="pediatric-urgent">Same-Day Urgent Care</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="modalDoctorSelect">Attending Physician</label>
+            <select id="modalDoctorSelect" class="form-select">
+              <option value="Dr. Maya Carter">Dr. Maya Carter, MD, FAAP (Chief)</option>
+              <option value="Dr. Emily Miller">Dr. Emily Miller, MD (Associate)</option>
+              <option value="Dr. Julian Reed">Dr. Julian Reed, MD, PhD (Preventive Chair)</option>
+              <option value="Dr. Arjun Sharma">Dr. Arjun Sharma, MBBS (Associate)</option>
+              <option value="Dr. Alexei Rostov">Dr. Alexei Rostov, MD, PhD (Neurodevelopment)</option>
+              <option value="Dr. Clara Bennett">Dr. Clara Bennett, MS, OTR/L (Developmental)</option>
+              <option value="Dr. Monica Vance">Dr. Monica Vance, MD (Child Life)</option>
+              <option value="Chloe Laurent">Chloe Laurent, RN, CPNP (Wellness)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="preferredDate">Preferred Appointment Date</label>
+          <input type="date" id="preferredDate" class="form-input" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.75rem;">
+          Confirm Booking Request
+        </button>
+      </form>
+    </div>
+  </dialog>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Interactive department filtering for doctors page
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterBtns = document.querySelectorAll('.dept-filter-btn');
+      const deptSections = document.querySelectorAll('.department-section');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const filter = btn.getAttribute('data-filter');
+          deptSections.forEach(sec => {
+            if (filter === 'all' || sec.getAttribute('data-dept') === filter) {
+              sec.style.display = 'block';
+            } else {
+              sec.style.display = 'none';
+            }
+          });
+
+          // Gentle scroll to ensure the filtered department is neatly positioned
+          const toolbar = document.getElementById('faculty-directory');
+          if (toolbar && window.scrollY > toolbar.offsetTop) {
+            toolbar.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

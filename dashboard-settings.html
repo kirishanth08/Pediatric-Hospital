@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Settings &amp; Family Profile — FIRST STEPS Family Portal</title>
+  <meta name="description" content="Manage parent contact details, child emergency contacts, SMS appointment reminders, and security preferences for Liam Carter.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <div class="portal-layout">
+    <!-- Top Right Corner Actions (Theme Toggle & RTL Layout Switch) -->
+    <div class="portal-top-actions">
+      <button class="theme-toggle-btn" aria-label="Toggle light/dark mode" title="Switch Theme">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+      <button class="rtl-toggle-btn" aria-label="Toggle RTL layout" title="Switch RTL / LTR">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m16 8 4 4-4 4M8 16l-4-4 4-4M4 12h16"/>
+        </svg>
+        RTL
+      </button>
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="portal-sidebar">
+      <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border-blush);">
+        <a href="index.html" class="first-steps-logo" style="text-decoration: none;" aria-label="First Steps Pediatric Clinic Home">
+          <img src="assets/images/first_steps_logo.svg" alt="First Steps Logo" class="logo-icon-svg" width="34" height="34">
+          <span class="logo-brand-name" style="font-size: 1.1rem;">
+            <span class="brand-part-first">FIRST</span>
+            <span class="brand-part-steps">STEPS</span>
+          </span>
+        </a>
+      </div>
+
+      <div class="portal-user-card">
+        <div class="user-avatar">
+          <img src="assets/images/avatar_liam_chen.jpg" alt="Liam Carter">
+        </div>
+        <div class="user-details">
+          <div class="user-name">Liam Carter</div>
+          <div class="child-tag">14 Months • Dr. Maya Carter</div>
+        </div>
+      </div>
+
+      <ul class="portal-menu">
+        <li><a href="dashboard.html" class="portal-menu-link"><span>📊</span> Overview</a></li>
+        <li><a href="dashboard-growth.html" class="portal-menu-link"><span>📈</span> Growth Chart</a></li>
+        <li><a href="dashboard-vaccines.html" class="portal-menu-link"><span>💉</span> Vaccine Timeline</a></li>
+        <li><a href="dashboard-milestones.html" class="portal-menu-link"><span>👣</span> Milestones Checklist</a></li>
+        <li><a href="dashboard-prescriptions.html" class="portal-menu-link"><span>🩺</span> Prescriptions &amp; Meds</a></li>
+        <li><a href="dashboard-labs.html" class="portal-menu-link"><span>📋</span> Lab Results</a></li>
+        <li><a href="dashboard-messages.html" class="portal-menu-link"><span>💬</span> Messages</a></li>
+        <li><a href="dashboard-billing.html" class="portal-menu-link"><span>💳</span> Billing &amp; Insurance</a></li>
+        <li><a href="dashboard-settings.html" class="portal-menu-link active"><span>⚙️</span> Portal Settings</a></li>
+      </ul>
+
+      <div class="portal-sidebar-widget">
+        <strong style="color: var(--brand-lavender-dark); display: block; margin-bottom: 0.25rem;">Next Milestone Visit</strong>
+        <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 0.75rem;">15-Month Checkup Due in 26 days</p>
+        <button class="btn btn-primary btn-sm" style="width: 100%; font-size: 0.78rem;" data-open-appointment>Reserve Slot</button>
+      </div>
+
+      <!-- 24/7 Nurse Triage & Support -->
+      <div class="portal-sidebar-support-card">
+        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem;">
+          <span style="font-size: 1.1rem;">🩺</span>
+          <strong style="color: var(--text-main); font-size: 0.825rem;">24/7 Nurse Triage</strong>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.75rem; margin-bottom: 0.4rem; line-height: 1.35;">On-call pediatric triage for fever &amp; urgent care.</p>
+        <a href="tel:5550192273" class="sidebar-contact-pill">📞 (555) 019-CARE</a>
+      </div>
+
+      <!-- Clinic Live Status Pill -->
+      <div class="portal-sidebar-status-pill">
+        <span>📍 Main Campus</span>
+        <span style="color: #10B981; font-weight: 700;">● Open till 7 PM</span>
+      </div>
+    </aside>
+
+    <!-- Main Content Area: Settings -->
+    <main class="portal-content-area">
+      <!-- Portal Header Banner -->
+      <div class="portal-header hero-bg-dashboard" style="border-radius: var(--radius-lg); padding: 2.25rem; margin-bottom: 2rem; border: 1px solid var(--border-blush);">
+        <div>
+          <div class="child-friendly-badge" style="margin-bottom: 0.65rem;">
+            <span>⚙️</span> Portal Preferences &amp; Family Security
+          </div>
+          <h1 class="portal-title">Account &amp; Portal Settings</h1>
+          <p class="portal-subtitle">Configure contact numbers, emergency notifications, and family access authorizations.</p>
+        </div>
+      </div>
+
+      <div class="dashboard-grid">
+        <!-- Family Profile -->
+        <div class="col-7">
+          <div class="dash-card">
+            <h2 class="dash-card-title"><span>👶</span> Child &amp; Guardian Profile</h2>
+            <form onsubmit="event.preventDefault(); alert('Profile updates saved successfully!');" style="margin-top: 1rem;">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                <div class="form-group">
+                  <label class="form-label">Child's Full Name</label>
+                  <input type="text" class="form-input" value="Liam Carter" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Date of Birth</label>
+                  <input type="date" class="form-input" value="2025-08-12" required>
+                </div>
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                <div class="form-group">
+                  <label class="form-label">Primary Guardian</label>
+                  <input type="text" class="form-input" value="Sarah Carter (Mother)" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Primary Mobile Phone</label>
+                  <input type="tel" class="form-input" value="(555) 438-9210" required>
+                </div>
+              </div>
+
+              <div class="form-group" style="margin-bottom: 1.25rem;">
+                <label class="form-label">Home Address</label>
+                <input type="text" class="form-input" value="742 Evergreen Terrace, Springfield" required>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-sm">Save Profile Changes</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Notification & Alert Settings -->
+        <div class="col-5">
+          <div class="dash-card" style="margin-bottom: 1.5rem;">
+            <h2 class="dash-card-title" style="font-size: 1.15rem;"><span>🔔</span> Notification Preferences</h2>
+            <div style="display: flex; flex-direction: column; gap: 0.85rem; margin-top: 0.75rem;">
+              <label style="display: flex; align-items: center; justify-content: space-between; cursor: pointer;">
+                <div>
+                  <strong style="font-size: 0.88rem; color: var(--text-main); display: block;">SMS Appointment Reminders</strong>
+                  <span style="font-size: 0.78rem; color: var(--text-muted);">Text alerts 48h &amp; 2h prior to visits</span>
+                </div>
+                <input type="checkbox" checked style="accent-color: var(--brand-lavender); width: 18px; height: 18px;">
+              </label>
+
+              <label style="display: flex; align-items: center; justify-content: space-between; cursor: pointer;">
+                <div>
+                  <strong style="font-size: 0.88rem; color: var(--text-main); display: block;">Vaccine Booster Alerts</strong>
+                  <span style="font-size: 0.78rem; color: var(--text-muted);">Alerts when CDC milestone vaccines are due</span>
+                </div>
+                <input type="checkbox" checked style="accent-color: var(--brand-lavender); width: 18px; height: 18px;">
+              </label>
+
+              <label style="display: flex; align-items: center; justify-content: space-between; cursor: pointer;">
+                <div>
+                  <strong style="font-size: 0.88rem; color: var(--text-main); display: block;">Doctor Message Notifications</strong>
+                  <span style="font-size: 0.78rem; color: var(--text-muted);">Immediate email &amp; SMS when Dr. Carter replies</span>
+                </div>
+                <input type="checkbox" checked style="accent-color: var(--brand-lavender); width: 18px; height: 18px;">
+              </label>
+            </div>
+          </div>
+
+          <!-- Security & Assigned Physician -->
+          <div class="dash-card">
+            <h2 class="dash-card-title" style="font-size: 1.15rem;"><span>🔒</span> Security &amp; Care Team</h2>
+            <div style="background: var(--bg-primary); border: 1px solid var(--border-blush); border-radius: var(--radius-md); padding: 0.85rem; margin-bottom: 0.75rem;">
+              <strong style="font-size: 0.85rem; color: var(--text-main); display: block;">Assigned Lead Pediatrician</strong>
+              <p style="font-size: 0.8rem; color: var(--brand-lavender-dark); font-weight: 700; margin: 0.2rem 0 0 0;">
+                Dr. Maya Carter, MD, FAAP
+              </p>
+            </div>
+            <div style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.5;">
+              Two-factor biometric authentication active on Sarah's mobile device.
+            </div>
+          </div>
+        </div>
+
+        <!-- Full Width: Authorized Caregivers & Medical Proxies -->
+        <div class="col-12" style="margin-top: 1.5rem;">
+          <div class="dash-card">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+              <div>
+                <h3 class="dash-card-title" style="font-size: 1.15rem; margin-bottom: 0.2rem;"><span>👨‍👩‍👧</span> Authorized Caregivers &amp; Medical Proxies</h3>
+                <p style="font-size: 0.825rem; color: var(--text-muted); margin: 0;">Family members authorized to accompany Liam to appointments or receive emergency treatment updates.</p>
+              </div>
+              <button class="btn btn-secondary btn-sm" onclick="alert('Add caregiver authorization modal opened.')">+ Add Authorized Proxy</button>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
+              <div style="background: var(--bg-primary); border: 1px solid var(--border-blush); border-radius: var(--radius-md); padding: 1rem; display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                  <strong style="color: var(--text-main); font-size: 0.9rem; display: block;">David Carter (Father)</strong>
+                  <span style="font-size: 0.78rem; color: var(--text-muted);">(555) 912-3847 • Full Legal &amp; Medical Authority</span>
+                </div>
+                <span style="background: rgba(16, 185, 129, 0.15); color: #10B981; font-weight: 700; font-size: 0.75rem; padding: 0.25rem 0.6rem; border-radius: var(--radius-pill);">Active</span>
+              </div>
+              <div style="background: var(--bg-primary); border: 1px solid var(--border-blush); border-radius: var(--radius-md); padding: 1rem; display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                  <strong style="color: var(--text-main); font-size: 0.9rem; display: block;">Eleanor Chen (Grandmother)</strong>
+                  <span style="font-size: 0.78rem; color: var(--text-muted);">(555) 803-1192 • Emergency Pickup &amp; Consent</span>
+                </div>
+                <span style="background: rgba(16, 185, 129, 0.15); color: #10B981; font-weight: 700; font-size: 0.75rem; padding: 0.25rem 0.6rem; border-radius: var(--radius-pill);">Active</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

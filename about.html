@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — FIRST STEPS | Gentle Care. Healthy Beginnings.</title>
+  <meta name="description" content="Learn about First Steps Pediatric Clinic, our gentle care philosophy, board-certified pediatricians, and our child-first healthcare environment.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+    <header class="site-header">
+    <div class="container navbar-container">
+      <a href="index.html" class="first-steps-logo" aria-label="First Steps Pediatric Clinic Home">
+        <img src="assets/images/first_steps_logo.svg" alt="First Steps Logo" class="logo-icon-svg" width="40" height="40">
+        <span class="logo-brand-name">
+          <span class="brand-part-first">FIRST</span>
+          <span class="brand-part-steps">STEPS</span>
+        </span>
+      </a>
+
+      <nav class="site-navigation" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <!-- 1. Home with Home 2 in dropdown -->
+          <li class="nav-item nav-dropdown">
+            <a href="index.html" class="nav-link nav-dropdown-toggle">
+              <span>Home</span>
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-item">Home 1 (Hospital Sanctuary) <span class="item-badge">Core</span></a>
+              <a href="home-services.html" class="dropdown-item">Home 2 (Clinical Care)</a>
+            </div>
+          </li>
+
+          <!-- 2. About -->
+          <li class="nav-item">
+            <a href="about.html" class="nav-link active">About</a>
+          </li>
+
+          <!-- 3. Services -->
+          <li class="nav-item">
+            <a href="services.html" class="nav-link">Services</a>
+          </li>
+
+          <!-- 4. Doctors -->
+          <li class="nav-item">
+            <a href="doctors.html" class="nav-link">Doctors</a>
+          </li>
+
+          <!-- 5. Pricing -->
+          <li class="nav-item">
+            <a href="appointment.html#insurance-billing" class="nav-link">Pricing</a>
+          </li>
+
+          <!-- 6. Blog -->
+          <li class="nav-item">
+            <a href="blog.html" class="nav-link">Blog</a>
+          </li>
+
+          <!-- 7. Contact -->
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+
+          <!-- 8. Dashboard -->
+          <li class="nav-item">
+            <a href="dashboard.html" class="nav-link">Dashboard</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions: Theme Toggle, RTL, Login, Book Appointment -->
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" aria-label="Toggle light/dark mode" title="Switch Theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="rtl-toggle-btn" aria-label="Toggle RTL layout" title="Switch RTL / LTR">RTL</button>
+        <a href="login.html" class="nav-btn-login">
+          <svg class="nav-btn-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+            <polyline points="10 17 15 12 10 7"></polyline>
+            <line x1="15" y1="12" x2="3" y2="12"></line>
+          </svg>
+          <span>Login</span>
+        </a>
+        <a href="appointment.html" class="btn btn-primary nav-btn-cta">
+          <svg class="nav-btn-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <span>Book Appointment</span>
+        </a>
+        <button class="mobile-nav-toggle" aria-label="Open mobile menu" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       PAGE HERO — BESPOKE SANCTUARY HERITAGE ARCHITECTURE
+       ========================================================================== -->
+  <section class="hero-section hero-bg-about" id="about-hero" style="border-bottom: 1px solid var(--border-blush);">
+    <div class="container hero-grid">
+      <!-- Left Column: Heritage Story & Clinical Vows -->
+      <div class="hero-content">
+        <div class="hero-live-badge">
+          <span class="live-dot"></span>
+          <span>Est. 2011 • Founded by Board-Certified Pediatricians</span>
+        </div>
+
+        <h1 class="hero-title" style="font-size: 2.9rem; line-height: 1.18;">
+          EVERY FIRST STEP DESERVES<br>
+          <span class="hero-gradient-accent">Medicine Prescribed with Empathy &amp; Heart.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          First Steps was founded to replace cold, sterile examination rooms with warm, unhurried, family-centered pediatric wellness. Where child laughter is heard, doctor consultations are unhurried, and parents leave empowered.
+        </p>
+
+        <div class="hero-actions">
+          <a href="appointment.html" class="btn btn-primary btn-lg" data-open-appointment>
+            Book a Clinic Tour or Visit
+          </a>
+          <a href="doctors.html" class="btn btn-secondary btn-lg">
+            Meet Our Medical Faculty
+          </a>
+        </div>
+
+        <!-- 3 Sanctuary Pillars Quick-Row -->
+        <div class="hero-service-chips">
+          <span class="service-chip">
+            <span>🧸</span> Child-Paced Medicine
+          </span>
+          <span class="service-chip">
+            <span>👂</span> Parent Intuition First
+          </span>
+          <span class="service-chip">
+            <span>🌸</span> Sensory-Calm Suites
+          </span>
+        </div>
+      </div>
+
+      <!-- Right Column: Interactive Sanctuary Heritage Compass Widget -->
+      <div class="hero-creed-card" data-compass>
+        <div class="pathway-header">
+          <div>
+            <span class="pathway-tag">Clinical Heritage Compass</span>
+            <h3 class="pathway-title">The Sanctuary Principles</h3>
+            <p class="pathway-subtitle">Select a pillar to explore our founding pediatric philosophy:</p>
+          </div>
+        </div>
+
+        <!-- Interactive Compass Tab Bar -->
+        <div class="compass-tab-bar" role="tablist">
+          <button class="compass-tab-btn active" data-compass-tab="creed" type="button" role="tab" aria-selected="true">
+            <span>🩺</span> Sanctuary Creed
+          </button>
+          <button class="compass-tab-btn" data-compass-tab="vows" type="button" role="tab" aria-selected="false">
+            <span>🛡️</span> 3 Clinical Vows
+          </button>
+          <button class="compass-tab-btn" data-compass-tab="sensory" type="button" role="tab" aria-selected="false">
+            <span>🧸</span> Sensory Standard
+          </button>
+        </div>
+
+        <!-- Dynamic Panel 1: Sanctuary Creed -->
+        <div class="compass-panel active" data-compass-panel="creed" role="tabpanel">
+          <div class="creed-quote-box">
+            <p class="creed-quote-text">
+              “A pediatrician is not merely an evaluator of symptoms, but a trusted ally walking beside parents through their child's most formative milestones.”
+            </p>
+            <div style="margin-top: 0.65rem; font-size: 0.8rem; font-weight: 700; color: var(--brand-lavender-dark);">
+              — Dr. Maya Carter, MD, FAAP • Chief Medical Officer
+            </div>
+          </div>
+          <div style="font-size: 0.825rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 1.25rem;">
+            Serving over 15,000 children across 15 years with an unwavering commitment to non-restraint and gentle discovery.
+          </div>
+        </div>
+
+        <!-- Dynamic Panel 2: 3 Clinical Vows -->
+        <div class="compass-panel" data-compass-panel="vows" role="tabpanel">
+          <div class="creed-promises-list">
+            <div class="creed-promise-item">
+              <span class="creed-promise-icon">🛡️</span>
+              <span><strong>Child Autonomy:</strong> We never force, rush, or restrain during checks.</span>
+            </div>
+            <div class="creed-promise-item">
+              <span class="creed-promise-icon">🧬</span>
+              <span><strong>Clinical Rigor:</strong> 100% AAP evidence-based diagnostic protocols.</span>
+            </div>
+            <div class="creed-promise-item">
+              <span class="creed-promise-icon">🕒</span>
+              <span><strong>Dedicated Time:</strong> 45 minutes of unrushed doctor conversation.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dynamic Panel 3: Sensory Standards -->
+        <div class="compass-panel" data-compass-panel="sensory" role="tabpanel">
+          <div class="creed-promises-list">
+            <div class="creed-promise-item">
+              <span class="creed-promise-icon">🧸</span>
+              <span><strong>Zero Cold Stethoscopes:</strong> Instrument warming pads &amp; toy inspection.</span>
+            </div>
+            <div class="creed-promise-item">
+              <span class="creed-promise-icon">🌿</span>
+              <span><strong>Circadian Soft Lighting:</strong> Anti-glare suites tailored to infant eyes.</span>
+            </div>
+            <div class="creed-promise-item">
+              <span class="creed-promise-icon">🐝</span>
+              <span><strong>Buzzy® Vibration Protocol:</strong> Cold sensory blocking for painless vaccines.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Heritage Metric Strip -->
+        <div class="pathway-footer-slot">
+          <div class="pathway-footer-slot-text">
+            <span class="live-dot"></span>
+            <span>15,000+ Little Ones Cared For Since 2011</span>
+          </div>
+          <span style="font-size: 0.8rem; font-weight: 700; color: #047857;">4.9★ Trust</span>
+        </div>
+
+        <a href="appointment.html" class="btn btn-primary" style="width: 100%; text-align: center;" data-open-appointment>
+          Experience Our Sanctuary in Person
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SEGMENT 2: GUIDING PRINCIPLES & VALUES
+       ========================================================================== -->
+  <section class="section-padding" style="background-color: var(--surface-card-alt); border-top: 1px solid var(--border-blush); border-bottom: 1px solid var(--border-blush);" id="values">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Guiding Principles</span>
+        <h2 class="section-title">What Defines The First Steps Experience</h2>
+        <p class="section-desc">We measure our success not by patient volume, but by the trust, laughter, and lifelong vitality of your family.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; align-items: stretch;">
+        <div class="service-card">
+          <div class="service-icon-box">♥</div>
+          <h3 class="service-card-title">Unhurried Time</h3>
+          <p class="service-card-desc">Every well-child visit is dedicated 30 to 45 minutes. Parents never leave with unanswered questions or feeling rushed.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon-box">🛡️</div>
+          <h3 class="service-card-title">Gentle Protocols</h3>
+          <p class="service-card-desc">From sensory toys and warm stethoscopes to sweet oral drops and calm distraction during vaccinations, comfort comes first.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon-box">📈</div>
+          <h3 class="service-card-title">Modern Digital Ease</h3>
+          <p class="service-card-desc">Real-time WHO growth percentiles, 24/7 doctor messaging, and automatic immunization records via our private Family Portal.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SEGMENT 3: CHILD-FIRST SENSORY ARCHITECTURE (WITH UNIQUE IMAGE)
+       ========================================================================== -->
+  <section class="section-padding" style="background-color: var(--bg-primary);" id="sensory-architecture">
+    <div class="container">
+      <div class="feature-split-grid">
+        <div class="feature-split-img-box">
+          <img src="assets/images/about_sensory_room.jpg" alt="Child playing with wooden sensory blocks in First Steps developmental play suite" width="600" height="420" loading="lazy">
+          <div class="feature-floating-badge">
+            <span class="badge-icon">🧸</span>
+            <div>
+              <div class="badge-text-title">Sensory Integration Suite</div>
+              <div class="badge-text-sub">Montessori-inspired, calming materials</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <span class="section-tag">Environment Design</span>
+          <h2 style="font-size: 2.3rem; margin-bottom: 1.25rem; font-family: var(--font-heading);">
+            Spaces Designed Specifically For Little Senses
+          </h2>
+          <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem;">
+            Traditional clinic waiting rooms often over-stimulate tired infants and anxious toddlers. At First Steps, our facility is engineered with non-toxic blonde wood finishes, acoustic sound dampening, and interactive sensory wall stations that turn waiting into creative play.
+          </p>
+
+          <ul class="checklist-bullet-list">
+            <li>
+              <span class="check-icon">✓</span>
+              <span><strong>Separated Air Corridors:</strong> Dedicated well-infant zones physically isolated from acute sick visits.</span>
+            </li>
+            <li>
+              <span class="check-icon">✓</span>
+              <span><strong>Warm Examination Beds:</strong> Temperature-controlled padded surfaces so babies never touch cold vinyl.</span>
+            </li>
+            <li>
+              <span class="check-icon">✓</span>
+              <span><strong>Low-Luminescence Natural Light:</strong> Non-glare skylights that reduce infant sensory distress.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SEGMENT 4: CLINICAL LEADERSHIP & TEAM (3 DOCTORS CARDS + INTERDISCIPLINARY CARE)
+       ========================================================================== -->
+  <section class="section-padding" style="background-color: var(--surface-card-alt); border-top: 1px solid var(--border-blush); border-bottom: 1px solid var(--border-blush);" id="clinical-team">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Clinical Leadership</span>
+        <h2 class="section-title">Meet Our Lead Pediatricians</h2>
+        <p class="section-desc">Board-certified specialists bringing unhurried time, empathetic clinical excellence, and academic precision to every visit.</p>
+      </div>
+
+      <!-- FOUNDING PHYSICIANS CARDS -->
+      <div class="doctors-grid">
+        <!-- Doctor 1: Dr. Emily Miller -->
+        <div class="doctor-card">
+          <div class="doctor-card-img-wrap">
+            <img src="assets/images/about_doctor_1.jpg" alt="Dr. Emily Miller, Associate Pediatrician & Fellow" width="400" height="300" loading="lazy">
+            <span class="doctor-badge-status">Accepting Patients</span>
+          </div>
+          <div class="doctor-card-body">
+            <h3 class="doctor-card-name">Dr. Emily Miller, MD</h3>
+            <div class="doctor-card-position">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
+              <span>Associate Pediatrician &amp; Infant Wellness Fellow</span>
+            </div>
+
+            <div class="doctor-exp-box">
+              <div class="doctor-exp-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div class="doctor-exp-content">
+                <strong>6+ Years Clinical Practice</strong>
+                <span>Pediatric Fellow • Columbia University Medical Center</span>
+              </div>
+            </div>
+
+            <p class="doctor-card-bio">
+              Specializing in infant colic soothing, sleep-wake architecture, pediatric digestive comfort, and guiding first-time parents through everyday clinical milestones.
+            </p>
+
+            <div class="doctor-tags">
+              <span class="doctor-tag-pill">Infant Nutrition</span>
+              <span class="doctor-tag-pill">Sleep Science</span>
+              <span class="doctor-tag-pill">Family Coaching</span>
+            </div>
+
+            <div class="doctor-card-action">
+              <a href="appointment.html?doctor=miller" class="btn btn-primary" style="width: 100%; text-align: center;" data-open-appointment>
+                Book with Dr. Miller →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Doctor 2: Dr. Arjun Sharma -->
+        <div class="doctor-card">
+          <div class="doctor-card-img-wrap">
+            <img src="assets/images/about_doctor_2.jpg" alt="Dr. Arjun Sharma, Clinical Associate in Immunization & Allergy" width="400" height="300" loading="lazy">
+            <span class="doctor-badge-status">Accepting Patients</span>
+          </div>
+          <div class="doctor-card-body">
+            <h3 class="doctor-card-name">Dr. Arjun Sharma, MBBS, DCH</h3>
+            <div class="doctor-card-position">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              <span>Clinical Associate in Pediatric Immunization &amp; Allergy</span>
+            </div>
+
+            <div class="doctor-exp-box">
+              <div class="doctor-exp-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div class="doctor-exp-content">
+                <strong>7+ Years Clinical Practice</strong>
+                <span>Pediatric Fellow • Stanford Children's Health</span>
+              </div>
+            </div>
+
+            <p class="doctor-card-bio">
+              Specializing in custom catch-up immunization roadmaps, needle-phobia desensitization, travel vaccines, and our signature painless injection protocol.
+            </p>
+
+            <div class="doctor-tags">
+              <span class="doctor-tag-pill">Painless Injections</span>
+              <span class="doctor-tag-pill">Child Allergy Care</span>
+              <span class="doctor-tag-pill">Catch-Up Schedules</span>
+            </div>
+
+            <div class="doctor-card-action">
+              <a href="appointment.html?doctor=sharma" class="btn btn-primary" style="width: 100%; text-align: center;" data-open-appointment>
+                Book with Dr. Sharma →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interdisciplinary Staff Collaboration Grid -->
+      <div class="feature-split-grid" style="margin-top: 3.5rem;">
+        <div>
+          <span class="section-tag">Care Team Collaboration</span>
+          <h2 style="font-size: 2.2rem; margin-bottom: 1.25rem; font-family: var(--font-heading);">
+            Pediatricians, Specialized Nurses &amp; Child Therapists
+          </h2>
+          <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem;">
+            Optimal childhood health requires continuous teamwork. Our board-certified physicians collaborate daily with certified lactation specialists, pediatric physical therapists, and registered pediatric nurses to ensure every facet of your child’s physical and emotional wellness is nurtured.
+          </p>
+
+          <div style="background: var(--surface-white); border: 1px solid var(--border-blush); border-radius: var(--radius-md); padding: 1.25rem; margin-bottom: 1.5rem;">
+            <strong style="color: var(--text-main); display: block; margin-bottom: 0.5rem;">Our Interdisciplinary Staff Includes:</strong>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; font-size: 0.9rem; color: var(--text-muted);">
+              <div>• Board-Certified MDs (FAAP)</div>
+              <div>• Certified Lactation Consultants (IBCLC)</div>
+              <div>• Pediatric Nurse Practitioners (CPNP)</div>
+              <div>• Developmental Speech Pathologists</div>
+            </div>
+          </div>
+          <a href="services.html" class="btn btn-secondary">Explore Our Programs →</a>
+        </div>
+
+        <div class="feature-split-img-box">
+          <img src="assets/images/about_pediatric_team.jpg" alt="Compassionate pediatric healthcare team smiling warmly at First Steps clinic" width="600" height="420" loading="lazy">
+          <div class="feature-floating-badge">
+            <span class="badge-icon">🩺</span>
+            <div>
+              <div class="badge-text-title">Dedicated Pediatric Team</div>
+              <div class="badge-text-sub">Continuous, connected family guidance</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SEGMENT 5: SAFETY, INFECTION CONTROL & ACCREDITATIONS
+       ========================================================================== -->
+  <section class="section-padding" style="background-color: var(--bg-primary);" id="safety-accreditation">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Gold Standard Safety</span>
+        <h2 class="section-title">Infection Prevention &amp; Clinical Accreditations</h2>
+        <p class="section-desc">We maintain medical hygiene standards that exceed general outpatient requirements to protect your infant’s developing immune system.</p>
+      </div>
+
+      <div class="segment-cards-3col">
+        <div class="service-card">
+          <div class="service-icon-box">💨</div>
+          <h3 class="service-card-title">Hospital-Grade HEPA 14</h3>
+          <p class="service-card-desc">Air changes happen every 6 minutes with multi-stage UV-C sterilization, capturing 99.97% of airborne pathogens.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon-box">🏅</div>
+          <h3 class="service-card-title">AAP Accredited Protocols</h3>
+          <p class="service-card-desc">Every screening, vaccination schedule, and developmental curve follows rigorous American Academy of Pediatrics benchmarks.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon-box">🧼</div>
+          <h3 class="service-card-title">Eco-Safe Disinfection</h3>
+          <p class="service-card-desc">Examination rooms and wooden play materials are sanitized between every child using non-toxic, hypoallergenic medical cleansers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       HIGHLIGHTED INSIGHTS HOOK SECTION (User Requirement)
+       ========================================================================== -->
+  <section class="section-padding" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-blush);">
+    <div class="container">
+      <div class="insights-hook-card">
+        <div class="insights-hook-grid">
+          <div>
+            <div class="insights-hook-badge">
+              <span>🧬</span> Clinical Research &amp; Evidence-Based Medicine
+            </div>
+            <h2 class="insights-hook-title">
+              EXPLORE OUR CLINICAL INSIGHTS &amp; PEDIATRIC STUDIES
+            </h2>
+            <p class="insights-hook-desc">
+              Curious about how our medical faculty makes clinical decisions? Dive into our comprehensive Clinical Insights Hub — featuring parent-accessible guides on newborn immunity, WHO growth percentiles, sensory wellness, and developmental research.
+            </p>
+            <a href="insights.html" class="btn-insights-highlight">
+              <span>View Clinical Insights &amp; Research</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <div class="insights-hook-topics">
+            <strong style="color: #FFFFFF; font-size: 1.05rem; display: block; margin-bottom: 0.5rem;">
+              Hospital Clinical Data &amp; Guides:
+            </strong>
+            <div class="insights-hook-topic-item">
+              <div class="insights-hook-topic-icon">📈</div>
+              <div>
+                <strong>Evidence-Based Growth Metrics</strong>
+                <div style="font-size: 0.8rem; color: rgba(255, 255, 255, 0.75);">Understanding baby percentile jumps &amp; nutrition</div>
+              </div>
+            </div>
+            <div class="insights-hook-topic-item">
+              <div class="insights-hook-topic-icon">🧸</div>
+              <div>
+                <strong>Sensory-Calm Clinical Protocols</strong>
+                <div style="font-size: 0.8rem; color: rgba(255, 255, 255, 0.75);">How low-stimulus suites lower vital sign cortisol by 34%</div>
+              </div>
+            </div>
+            <div class="insights-hook-topic-item">
+              <div class="insights-hook-topic-icon">🛡️</div>
+              <div>
+                <strong>Gentle Immunization Safety Whitepaper</strong>
+                <div style="font-size: 0.8rem; color: rgba(255, 255, 255, 0.75);">Clinical data on pain-reduced pediatric injections</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SEGMENT 6: PARENT TESTIMONIALS & CLINIC EXPERIENCES
+       ========================================================================== -->
+  <section class="section-padding" style="background-color: var(--surface-card-alt); border-top: 1px solid var(--border-blush); border-bottom: 1px solid var(--border-blush);" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Parent Experiences</span>
+        <h2 class="section-title">What Families Say About First Steps</h2>
+        <p class="section-desc">Real experiences from parents who trust our physicians with their children's vital milestones.</p>
+      </div>
+
+      <div class="segment-cards-3col">
+        <!-- Testimonial 1 -->
+        <div class="service-card" style="display: flex; flex-direction: column;">
+          <div style="color: var(--brand-lavender); font-size: 1.25rem; margin-bottom: 0.85rem; letter-spacing: 2px;">★★★★★</div>
+          <p style="font-style: italic; color: var(--text-main); line-height: 1.65; margin-bottom: 1.5rem; flex-grow: 1;">
+            “Switching to Dr. Miller transformed our doctor visits. Oliver used to tremble during routine visits, but her gentle soothing, sensory play suites, and unrushed care made him feel safe and calm.”
+          </p>
+          <div style="display: flex; align-items: center; gap: 0.85rem; border-top: 1px solid var(--border-blush); padding-top: 1rem; margin-top: auto;">
+            <img src="assets/images/about_parent_1.jpg" alt="Sarah Jenkins" width="46" height="46" style="width: 46px; height: 46px; border-radius: 50%; object-fit: cover; object-position: center top; border: 2px solid var(--brand-lavender); flex-shrink: 0;">
+            <div>
+              <div style="font-weight: 700; color: var(--text-main); font-size: 0.95rem;">Sarah Jenkins</div>
+              <div style="font-size: 0.8rem; color: var(--text-light);">Mother of Oliver (14 months)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="service-card" style="display: flex; flex-direction: column;">
+          <div style="color: var(--brand-lavender); font-size: 1.25rem; margin-bottom: 0.85rem; letter-spacing: 2px;">★★★★★</div>
+          <p style="font-style: italic; color: var(--text-main); line-height: 1.65; margin-bottom: 1.5rem; flex-grow: 1;">
+            “Dr. Arjun Sharma gave our family absolute reassurance during our twins' immunization visits. Detailed explanations, painless injection protocols, and kindness every step of the way.”
+          </p>
+          <div style="display: flex; align-items: center; gap: 0.85rem; border-top: 1px solid var(--border-blush); padding-top: 1rem; margin-top: auto;">
+            <img src="assets/images/about_parent_2.jpg" alt="Marcus Hayes" width="46" height="46" style="width: 46px; height: 46px; border-radius: 50%; object-fit: cover; object-position: center top; border: 2px solid var(--brand-lavender); flex-shrink: 0;">
+            <div>
+              <div style="font-weight: 700; color: var(--text-main); font-size: 0.95rem;">Marcus Hayes</div>
+              <div style="font-size: 0.8rem; color: var(--text-light);">Father of Leo &amp; Maya (3 years)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="service-card" style="display: flex; flex-direction: column;">
+          <div style="color: var(--brand-lavender); font-size: 1.25rem; margin-bottom: 0.85rem; letter-spacing: 2px;">★★★★★</div>
+          <p style="font-style: italic; color: var(--text-main); line-height: 1.65; margin-bottom: 1.5rem; flex-grow: 1;">
+            “The developmental and feeding guidance from Dr. Carter helped Sofia overcome infant feeding difficulties in weeks. We couldn't imagine partnering with any other pediatric clinic.”
+          </p>
+          <div style="display: flex; align-items: center; gap: 0.85rem; border-top: 1px solid var(--border-blush); padding-top: 1rem; margin-top: auto;">
+            <img src="assets/images/about_parent_3.jpg" alt="Elena Vasquez" width="46" height="46" style="width: 46px; height: 46px; border-radius: 50%; object-fit: cover; object-position: center top; border: 2px solid var(--brand-lavender); flex-shrink: 0;">
+            <div>
+              <div style="font-weight: 700; color: var(--text-main); font-size: 0.95rem;">Elena Vasquez</div>
+              <div style="font-size: 0.8rem; color: var(--text-light);">Mother of Sofia (6 months)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SEGMENT 7: COMMUNITY WELLNESS & WORKSHOPS
+       ========================================================================== -->
+  <section class="section-padding" style="background-color: var(--bg-secondary);" id="community-workshops">
+    <div class="container">
+      <div style="background: var(--surface-white); border: 2px solid var(--border-blush); border-radius: var(--radius-xl); padding: 3.5rem 3rem; box-shadow: var(--shadow-md); text-align: center; max-width: 900px; margin: 0 auto;">
+        <span class="section-tag">Community Partnership</span>
+        <h2 style="font-size: 2.3rem; margin-bottom: 1rem; font-family: var(--font-heading);">
+          Complimentary Monthly Parent Workshops
+        </h2>
+        <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.7; max-width: 680px; margin: 0 auto 2rem;">
+          From newborn CPR and baby-led weaning classes to toddler sleep troubleshooting, we host free interactive workshops for all neighborhood parents.
+        </p>
+
+        <div style="display: flex; justify-content: center; gap: 1.25rem; flex-wrap: wrap;">
+          <a href="appointment.html" class="btn btn-primary btn-lg" data-open-appointment>Book First Well-Child Visit</a>
+          <a href="contact.html" class="btn btn-secondary btn-lg">Ask a Question / Tour Clinic</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       STANDARDIZED PRE-FOOTER CTA SECTION
+       ========================================================================== -->
+  <section class="section-padding cta-banner-section" style="background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--surface-white) 100%); border-top: 1px solid var(--border-blush); border-bottom: 1px solid var(--border-blush); text-align: center;">
+    <div class="container" style="max-width: 780px;">
+      <span class="section-tag">Healthy Beginnings Start Here</span>
+      <h2 style="font-size: 2.6rem; margin-bottom: 1.15rem; font-family: var(--font-heading);">
+        Give Your Child The Gentlest Healthcare Journey.
+      </h2>
+      <p style="font-size: 1.05rem; color: var(--text-muted); margin-bottom: 2.25rem; line-height: 1.7;">
+        New patient appointments available this week. Schedule a welcoming milestone checkup with our compassionate pediatric team today.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 1.25rem; flex-wrap: wrap;">
+        <a href="appointment.html" class="btn btn-primary btn-lg" data-open-appointment>Book an Appointment</a>
+        <a href="contact.html" class="btn btn-secondary btn-lg">Contact Front Desk</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PROFESSIONAL FOOTER (Compact & Clean)
+       ========================================================================== -->
+      <footer class="site-footer">
+    <div class="container footer-grid">
+      <!-- Col 1: Hospital Brand & Accreditations -->
+      <div class="footer-col footer-brand">
+        <a href="index.html" class="first-steps-logo">
+          <img src="assets/images/first_steps_logo.svg" alt="First Steps Logo" class="logo-icon-svg" width="40" height="40">
+          <span class="logo-brand-name">
+            <span class="brand-part-first">FIRST</span>
+            <span class="brand-part-steps">STEPS</span>
+          </span>
+        </a>
+        <span class="logo-tagline">Gentle Care • Healthy Beginnings</span>
+        <p class="footer-tagline">
+          Dedicated children's hospital and pediatric wellness sanctuary supporting your family from first newborn checkup to adolescent milestone care.
+        </p>
+        <div class="footer-accreditations">
+          <span class="footer-accred-badge">🏥 AAP Affiliated</span>
+          <span class="footer-accred-badge">🔒 HIPAA Secure</span>
+          <span class="footer-accred-badge">🧸 Sensory-Calm</span>
+        </div>
+        <div class="footer-social-row">
+          <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z"/></svg>
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22.336 22.336 0 0 0 14.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202h3.312z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Col 2: Clinical Navigation (100% Uniform with Navbar) -->
+      <div class="footer-col">
+        <h4 class="footer-title">Clinical Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home (Sanctuary)</a></li>
+          <li><a href="home-services.html">Home (Clinical Care)</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="doctors.html">Doctors</a></li>
+          <li><a href="appointment.html#insurance-billing">Pricing</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Pediatric Programs -->
+      <div class="footer-col">
+        <h4 class="footer-title">Pediatric Programs</h4>
+        <ul class="footer-links">
+          <li><a href="services.html#clinical-services">Newborn &amp; Infant Wing</a></li>
+          <li><a href="services.html#clinical-services">Vaccination &amp; Immunization</a></li>
+          <li><a href="services.html#clinical-services">Developmental Screening</a></li>
+          <li><a href="services.html#clinical-services">On-Site Diagnostic Lab</a></li>
+          <li><a href="insights.html">Clinical Insights &amp; Research</a></li>
+          <li><a href="appointment.html">Book Urgent Care Slot</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Emergency & Hours Widget -->
+      <div class="footer-col">
+        <h4 class="footer-title">Emergency &amp; Hours</h4>
+        <div class="footer-hours-card">
+          <div class="footer-hour-item">
+            <span class="footer-hour-label">Mon–Sat</span>
+            <span class="footer-hour-val">8:00 AM – 7:00 PM</span>
+          </div>
+          <div class="footer-hour-item">
+            <span class="footer-hour-label">Sunday</span>
+            <span class="footer-hour-val">9:00 AM – 2:00 PM</span>
+          </div>
+          <div class="footer-hour-item" style="border-bottom: none; padding-top: 0.5rem;">
+            <span class="footer-emergency-pill">🟢 24/7 On-Call Pediatrician</span>
+          </div>
+        </div>
+        <a href="tel:18005557837" class="footer-phone-cta">
+          <span class="phone-icon">📞</span>
+          <div class="phone-details">
+            <span class="phone-label">Urgent Pediatric Care</span>
+            <span class="phone-number">(555) 321-KIDS (5437)</span>
+          </div>
+        </a>
+        <a href="appointment.html" class="btn btn-primary footer-btn-cta" data-open-appointment>
+          <svg class="nav-btn-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <span>Book Appointment</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Footer Bottom Bar -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-flex">
+        <p>&copy; 2026 First Steps Pediatric Clinic &amp; Children's Wellness Center. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Care</a>
+          <a href="#">Patient Rights</a>
+          <a href="#">Notice of Privacy Practices</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

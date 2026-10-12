@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Growth Chart &amp; Percentiles — FIRST STEPS Family Portal</title>
+  <meta name="description" content="Detailed WHO and CDC pediatric growth curves, historical weight and height logs, and pediatrician percentile assessments for Liam Carter.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <div class="portal-layout">
+    <!-- Top Right Corner Actions (Theme Toggle & RTL Layout Switch) -->
+    <div class="portal-top-actions">
+      <button class="theme-toggle-btn" aria-label="Toggle light/dark mode" title="Switch Theme">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+      <button class="rtl-toggle-btn" aria-label="Toggle RTL layout" title="Switch RTL / LTR">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m16 8 4 4-4 4M8 16l-4-4 4-4M4 12h16"/>
+        </svg>
+        RTL
+      </button>
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="portal-sidebar">
+      <div style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border-blush);">
+        <a href="index.html" class="first-steps-logo" style="text-decoration: none;" aria-label="First Steps Pediatric Clinic Home">
+          <img src="assets/images/first_steps_logo.svg" alt="First Steps Logo" class="logo-icon-svg" width="34" height="34">
+          <span class="logo-brand-name" style="font-size: 1.1rem;">
+            <span class="brand-part-first">FIRST</span>
+            <span class="brand-part-steps">STEPS</span>
+          </span>
+        </a>
+      </div>
+
+      <div class="portal-user-card">
+        <div class="user-avatar">
+          <img src="assets/images/avatar_liam_chen.jpg" alt="Liam Carter">
+        </div>
+        <div class="user-details">
+          <div class="user-name">Liam Carter</div>
+          <div class="child-tag">14 Months • Dr. Maya Carter</div>
+        </div>
+      </div>
+
+      <ul class="portal-menu">
+        <li><a href="dashboard.html" class="portal-menu-link"><span>📊</span> Overview</a></li>
+        <li><a href="dashboard-growth.html" class="portal-menu-link active"><span>📈</span> Growth Chart</a></li>
+        <li><a href="dashboard-vaccines.html" class="portal-menu-link"><span>💉</span> Vaccine Timeline</a></li>
+        <li><a href="dashboard-milestones.html" class="portal-menu-link"><span>👣</span> Milestones Checklist</a></li>
+        <li><a href="dashboard-prescriptions.html" class="portal-menu-link"><span>🩺</span> Prescriptions &amp; Meds</a></li>
+        <li><a href="dashboard-labs.html" class="portal-menu-link"><span>📋</span> Lab Results</a></li>
+        <li><a href="dashboard-messages.html" class="portal-menu-link"><span>💬</span> Messages</a></li>
+        <li><a href="dashboard-billing.html" class="portal-menu-link"><span>💳</span> Billing &amp; Insurance</a></li>
+        <li><a href="dashboard-settings.html" class="portal-menu-link"><span>⚙️</span> Portal Settings</a></li>
+      </ul>
+
+      <div class="portal-sidebar-widget">
+        <strong style="color: var(--brand-lavender-dark); display: block; margin-bottom: 0.25rem;">Next Milestone Visit</strong>
+        <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 0.75rem;">15-Month Checkup Due in 26 days</p>
+        <button class="btn btn-primary btn-sm" style="width: 100%; font-size: 0.78rem;" data-open-appointment>Reserve Slot</button>
+      </div>
+
+      <!-- 24/7 Nurse Triage & Support -->
+      <div class="portal-sidebar-support-card">
+        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem;">
+          <span style="font-size: 1.1rem;">🩺</span>
+          <strong style="color: var(--text-main); font-size: 0.825rem;">24/7 Nurse Triage</strong>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.75rem; margin-bottom: 0.4rem; line-height: 1.35;">On-call pediatric triage for fever &amp; urgent care.</p>
+        <a href="tel:5550192273" class="sidebar-contact-pill">📞 (555) 019-CARE</a>
+      </div>
+
+      <!-- Clinic Live Status Pill -->
+      <div class="portal-sidebar-status-pill">
+        <span>📍 Main Campus</span>
+        <span style="color: #10B981; font-weight: 700;">● Open till 7 PM</span>
+      </div>
+    </aside>
+
+    <!-- Main Content Area: Growth -->
+    <main class="portal-content-area">
+      <!-- Portal Header Banner -->
+      <div class="portal-header hero-bg-dashboard" style="border-radius: var(--radius-lg); padding: 2.25rem; margin-bottom: 2rem; border: 1px solid var(--border-blush);">
+        <div>
+          <div class="child-friendly-badge" style="margin-bottom: 0.65rem;">
+            <span>📈</span> National Pediatric Growth Registry
+          </div>
+          <h1 class="portal-title">WHO &amp; CDC Growth Curves</h1>
+          <p class="portal-subtitle">Continuous tracking of Liam's weight, height, and head circumference percentiles.</p>
+        </div>
+        <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+          <button class="btn btn-secondary btn-sm" onclick="window.print()">📥 Print Growth Curves</button>
+          <button class="btn btn-primary btn-sm" onclick="alert('Home Measurement modal opened. Enter current weight and height.')">+ Log Measurement</button>
+        </div>
+      </div>
+
+      <div class="dashboard-grid">
+        <!-- Interactive Chart Card -->
+        <div class="col-8">
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <div>
+                <h2 class="dash-card-title"><span>📊</span> Percentile Velocity Curve</h2>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.15rem;">Plotted against World Health Organization (WHO) infant benchmarks.</p>
+              </div>
+              <div style="display: flex; gap: 0.5rem;">
+                <button class="btn btn-secondary btn-sm active" data-chart-metric="both" style="padding: 0.35rem 0.75rem; font-size: 0.75rem;">All Curves</button>
+                <button class="btn btn-secondary btn-sm" data-chart-metric="weight" style="padding: 0.35rem 0.75rem; font-size: 0.75rem;">Weight (kg)</button>
+                <button class="btn btn-secondary btn-sm" data-chart-metric="height" style="padding: 0.35rem 0.75rem; font-size: 0.75rem;">Height (cm)</button>
+              </div>
+            </div>
+
+            <div class="chart-legend" style="margin: 0.75rem 0 1rem 0;">
+              <div class="legend-item">
+                <span class="legend-dot-weight"></span>
+                <span>Weight: <strong>10.2 kg (64th Percentile)</strong></span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-dot-height"></span>
+                <span>Height: <strong>76.8 cm (62nd Percentile)</strong></span>
+              </div>
+            </div>
+
+            <div class="chart-container" id="growthChartCanvas">
+              <!-- Rendered by main.js -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Pediatrician Growth Evaluation -->
+        <div class="col-4">
+          <div class="dash-card" style="height: 100%;">
+            <h2 class="dash-card-title" style="font-size: 1.15rem;"><span>🩺</span> Physician Evaluation</h2>
+            <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem;">
+              <img src="assets/images/avatar_dashboard_dr_carter.jpg" alt="Dr. Maya Carter" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid var(--border-blush);">
+              <div>
+                <strong style="color: var(--text-main); font-size: 0.95rem; display: block;">Dr. Maya Carter, MD</strong>
+                <span style="font-size: 0.8rem; color: var(--text-muted);">Lead Pediatrician</span>
+              </div>
+            </div>
+            <div style="background: var(--bg-primary); border-radius: var(--radius-md); padding: 1rem; border: 1px solid var(--border-blush); margin-bottom: 1rem;">
+              <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.55; margin: 0;">
+                "Liam has maintained a steady 62nd–64th percentile trajectory throughout his first year. No crossing of major percentile channels. Head circumference and motor velocity align with developmental goals."
+              </p>
+            </div>
+            <div style="font-size: 0.8rem; color: #10B981; font-weight: 700;">
+              ✓ Status: Optimal Physical Growth
+            </div>
+          </div>
+        </div>
+
+        <!-- Historical Measurement Log Table -->
+        <div class="col-12">
+          <div class="dash-card">
+            <h2 class="dash-card-title"><span>📋</span> Measurement History Table</h2>
+            <div style="overflow-x: auto; margin-top: 0.75rem;">
+              <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem; text-align: left;">
+                <thead>
+                  <tr style="border-bottom: 2px solid var(--border-blush); color: var(--text-muted);">
+                    <th style="padding: 0.75rem 1rem;">Milestone</th>
+                    <th style="padding: 0.75rem 1rem;">Date</th>
+                    <th style="padding: 0.75rem 1rem;">Weight</th>
+                    <th style="padding: 0.75rem 1rem;">Height</th>
+                    <th style="padding: 0.75rem 1rem;">Head Circ.</th>
+                    <th style="padding: 0.75rem 1rem;">CDC Percentile</th>
+                    <th style="padding: 0.75rem 1rem;">Attending Provider</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="border-bottom: 1px solid var(--border-blush);">
+                    <td style="padding: 0.75rem 1rem; font-weight: 700;">12 Months</td>
+                    <td style="padding: 0.75rem 1rem;">12 Aug 2026</td>
+                    <td style="padding: 0.75rem 1rem;">10.2 kg (22.5 lbs)</td>
+                    <td style="padding: 0.75rem 1rem;">76.8 cm (30.2 in)</td>
+                    <td style="padding: 0.75rem 1rem;">46.5 cm</td>
+                    <td style="padding: 0.75rem 1rem;"><span style="color: #10B981; font-weight: 700;">64th %</span></td>
+                    <td style="padding: 0.75rem 1rem;">Dr. Maya Carter, MD</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--border-blush);">
+                    <td style="padding: 0.75rem 1rem; font-weight: 700;">9 Months</td>
+                    <td style="padding: 0.75rem 1rem;">10 May 2026</td>
+                    <td style="padding: 0.75rem 1rem;">9.3 kg (20.5 lbs)</td>
+                    <td style="padding: 0.75rem 1rem;">72.5 cm (28.5 in)</td>
+                    <td style="padding: 0.75rem 1rem;">45.2 cm</td>
+                    <td style="padding: 0.75rem 1rem;"><span style="color: #10B981; font-weight: 700;">62nd %</span></td>
+                    <td style="padding: 0.75rem 1rem;">Dr. Julian Reed, DO</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--border-blush);">
+                    <td style="padding: 0.75rem 1rem; font-weight: 700;">6 Months</td>
+                    <td style="padding: 0.75rem 1rem;">14 Feb 2026</td>
+                    <td style="padding: 0.75rem 1rem;">8.1 kg (17.8 lbs)</td>
+                    <td style="padding: 0.75rem 1rem;">68.1 cm (26.8 in)</td>
+                    <td style="padding: 0.75rem 1rem;">43.8 cm</td>
+                    <td style="padding: 0.75rem 1rem;"><span style="color: #10B981; font-weight: 700;">60th %</span></td>
+                    <td style="padding: 0.75rem 1rem;">Dr. Maya Carter, MD</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid var(--border-blush);">
+                    <td style="padding: 0.75rem 1rem; font-weight: 700;">4 Months</td>
+                    <td style="padding: 0.75rem 1rem;">15 Dec 2025</td>
+                    <td style="padding: 0.75rem 1rem;">6.9 kg (15.2 lbs)</td>
+                    <td style="padding: 0.75rem 1rem;">64.0 cm (25.2 in)</td>
+                    <td style="padding: 0.75rem 1rem;">42.1 cm</td>
+                    <td style="padding: 0.75rem 1rem;"><span style="color: #10B981; font-weight: 700;">58th %</span></td>
+                    <td style="padding: 0.75rem 1rem;">Dr. Maya Carter, MD</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 0.75rem 1rem; font-weight: 700;">Birth</td>
+                    <td style="padding: 0.75rem 1rem;">12 Aug 2025</td>
+                    <td style="padding: 0.75rem 1rem;">3.4 kg (7.5 lbs)</td>
+                    <td style="padding: 0.75rem 1rem;">50.0 cm (19.7 in)</td>
+                    <td style="padding: 0.75rem 1rem;">35.0 cm</td>
+                    <td style="padding: 0.75rem 1rem;"><span style="color: #10B981; font-weight: 700;">50th %</span></td>
+                    <td style="padding: 0.75rem 1rem;">Hospital Labor &amp; Delivery</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Clinical Content to Fill Lower Space -->
+        <div class="col-6" style="margin-top: 1.5rem;">
+          <div class="dash-card">
+            <h3 class="dash-card-title" style="font-size: 1.1rem;"><span>📊</span> Understanding WHO/CDC Growth Velocity</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 0.85rem;">
+              Percentiles measure your baby’s individual growth curve over time, not a competition. A consistent percentile channel between the 10th and 90th percentiles indicates healthy genetic trajectory and optimal nutrition.
+            </p>
+            <div style="background: var(--bg-primary); border-radius: var(--radius-md); padding: 0.85rem; border: 1px solid var(--border-blush); font-size: 0.8rem; color: var(--text-main);">
+              ✓ <strong>Liam's Velocity:</strong> Steady tracking along the 62nd–64th channel with excellent proportional head circumference growth.
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6" style="margin-top: 1.5rem;">
+          <div class="dash-card">
+            <h3 class="dash-card-title" style="font-size: 1.1rem;"><span>👩‍⚕️</span> Attending Physician Notes (12-Mo Visit)</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 0.85rem;">
+              "Liam continues to demonstrate robust linear growth and healthy weight gain. Muscle tone in lower extremities is well-developed for early steps. Transition to whole cow's milk (16–20 oz daily) is proceeding smoothly with zero gastrointestinal sensitivities."
+            </p>
+            <div style="font-size: 0.8rem; color: var(--brand-lavender-dark); font-weight: 700;">
+              — Dr. Maya Carter, MD, FAAP • Lead Pediatrician
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

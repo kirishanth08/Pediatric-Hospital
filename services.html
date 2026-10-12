@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Well-Child Visits &amp; Vaccinations — FIRST STEPS | Children's Hospital &amp; Wellness Center</title>
+  <meta name="description" content="Explore First Steps comprehensive pediatric healthcare programs: AAP-aligned Well-Child Visits, gentle zero-pain vaccinations, developmental screenings, and point-of-care laboratory diagnostics.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       NAVBAR BRANDING
+       ========================================================================== -->
+    <header class="site-header">
+    <div class="container navbar-container">
+      <a href="index.html" class="first-steps-logo" aria-label="First Steps Pediatric Clinic Home">
+        <img src="assets/images/first_steps_logo.svg" alt="First Steps Logo" class="logo-icon-svg" width="40" height="40">
+        <span class="logo-brand-name">
+          <span class="brand-part-first">FIRST</span>
+          <span class="brand-part-steps">STEPS</span>
+        </span>
+      </a>
+
+      <nav class="site-navigation" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <!-- 1. Home with Home 2 in dropdown -->
+          <li class="nav-item nav-dropdown">
+            <a href="index.html" class="nav-link nav-dropdown-toggle">
+              <span>Home</span>
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-item">Home 1 (Hospital Sanctuary) <span class="item-badge">Core</span></a>
+              <a href="home-services.html" class="dropdown-item">Home 2 (Clinical Care)</a>
+            </div>
+          </li>
+
+          <!-- 2. About -->
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About</a>
+          </li>
+
+          <!-- 3. Services -->
+          <li class="nav-item">
+            <a href="services.html" class="nav-link active">Services</a>
+          </li>
+
+          <!-- 4. Doctors -->
+          <li class="nav-item">
+            <a href="doctors.html" class="nav-link">Doctors</a>
+          </li>
+
+          <!-- 5. Pricing -->
+          <li class="nav-item">
+            <a href="appointment.html#insurance-billing" class="nav-link">Pricing</a>
+          </li>
+
+          <!-- 6. Blog -->
+          <li class="nav-item">
+            <a href="blog.html" class="nav-link">Blog</a>
+          </li>
+
+          <!-- 7. Contact -->
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+
+          <!-- 8. Dashboard -->
+          <li class="nav-item">
+            <a href="dashboard.html" class="nav-link">Dashboard</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions: Theme Toggle, RTL, Login, Book Appointment -->
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" aria-label="Toggle light/dark mode" title="Switch Theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="rtl-toggle-btn" aria-label="Toggle RTL layout" title="Switch RTL / LTR">RTL</button>
+        <a href="login.html" class="nav-btn-login">
+          <svg class="nav-btn-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+            <polyline points="10 17 15 12 10 7"></polyline>
+            <line x1="15" y1="12" x2="3" y2="12"></line>
+          </svg>
+          <span>Login</span>
+        </a>
+        <a href="appointment.html" class="btn btn-primary nav-btn-cta">
+          <svg class="nav-btn-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <span>Book Appointment</span>
+        </a>
+        <button class="mobile-nav-toggle" aria-label="Open mobile menu" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       PAGE HERO — BESPOKE CLINICAL SERVICES ARCHITECTURE
+       ========================================================================== -->
+  <section class="hero-section hero-bg-services" id="hero" style="border-bottom: 1px solid var(--border-blush);">
+    <div class="container hero-grid">
+      <!-- Left Column: Editorial Clinical Presentation & Direct Jump Chips -->
+      <div class="hero-content">
+        <div class="hero-live-badge">
+          <span class="live-dot"></span>
+          <span>Pediatric Clinical Suites • Open for Consultations</span>
+        </div>
+
+        <h1 class="hero-title" style="font-size: 2.9rem; line-height: 1.18;">
+          GENTLE CLINICAL CARE FOR GROWING BODIES.<br>
+          <span class="hero-gradient-accent">Unhurried Medical Visits &amp; Zero-Tears Protocols.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          From peaceful newborn well-checks to gentle milestone immunizations, we combine AAP medical rigor with soothing sensory-calm exam suites. Designed so children feel safe and parents feel completely heard.
+        </p>
+
+        <div class="hero-actions">
+          <a href="appointment.html" class="btn btn-primary btn-lg" data-open-appointment>
+            Schedule a Gentle Visit
+          </a>
+          <a href="#vaccinations" class="btn btn-secondary btn-lg">
+            Our Vaccine Protocol
+          </a>
+        </div>
+
+        <!-- Interactive Direct Service Jump Chips -->
+        <div class="hero-service-chips">
+          <a href="#well-child" class="service-chip">
+            <span>👶</span> Well-Child Checkups
+          </a>
+          <a href="#vaccinations" class="service-chip">
+            <span>💉</span> Painless Vaccines
+          </a>
+          <a href="#child-sanctuary" class="service-chip">
+            <span>🧠</span> Developmental Screening
+          </a>
+          <a href="appointment.html" class="service-chip">
+            <span>🔬</span> Rapid Diagnostic Lab
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Interactive Clinical Protocol Navigator Widget -->
+      <div class="hero-clinical-pathway-card" data-compass>
+        <div class="pathway-header">
+          <div>
+            <span class="pathway-tag">The First Steps Standard</span>
+            <h3 class="pathway-title">4-Phase Sanctuary Protocol</h3>
+            <p class="pathway-subtitle">Select each clinical phase to view our fear-free standard:</p>
+          </div>
+        </div>
+
+        <!-- Interactive Compass Tab Bar -->
+        <div class="compass-tab-bar" role="tablist">
+          <button class="compass-tab-btn active" data-compass-tab="phase1" type="button" role="tab" aria-selected="true">
+            <span>🧸</span> Phase 1: Welcome
+          </button>
+          <button class="compass-tab-btn" data-compass-tab="phase2" type="button" role="tab" aria-selected="false">
+            <span>🩺</span> Phase 2: Consult
+          </button>
+          <button class="compass-tab-btn" data-compass-tab="phase3" type="button" role="tab" aria-selected="false">
+            <span>🐝</span> Phase 3: Vaccines
+          </button>
+          <button class="compass-tab-btn" data-compass-tab="phase4" type="button" role="tab" aria-selected="false">
+            <span>📊</span> Phase 4: Sync &amp; Lab
+          </button>
+        </div>
+
+        <!-- Dynamic Panel 1: Sensory Welcome -->
+        <div class="compass-panel active" data-compass-panel="phase1" role="tabpanel">
+          <div class="creed-quote-box" style="margin-bottom: 1rem;">
+            <p style="font-size: 0.95rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.35rem;">
+              Phase 1 • Warm Sensory Welcome &amp; Instrument Warmers
+            </p>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0; line-height: 1.5;">
+              No cold stethoscopes. We let little ones inspect child-safe tools, explore the tactile play area, and acclimate before clinical checks begin.
+            </p>
+          </div>
+          <div style="font-size: 0.8rem; color: var(--brand-lavender); font-weight: 700; margin-bottom: 1.25rem;">
+            ⏱️ Average Time: 10 mins • Child Comfort Standard: 100% Calm
+          </div>
+        </div>
+
+        <!-- Dynamic Panel 2: Physician Consultation -->
+        <div class="compass-panel" data-compass-panel="phase2" role="tabpanel">
+          <div class="creed-quote-box" style="margin-bottom: 1rem;">
+            <p style="font-size: 0.95rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.35rem;">
+              Phase 2 • Unhurried 45-Minute Physician Consultation
+            </p>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0; line-height: 1.5;">
+              4x the national average. Ample time for complete head-to-toe milestone exams, lactation advice, sleep guidance, and open parent discussions.
+            </p>
+          </div>
+          <div style="font-size: 0.8rem; color: var(--brand-lavender); font-weight: 700; margin-bottom: 1.25rem;">
+            ⏱️ Full 45 Mins • Attending Pediatrician + Dedicated Fellow
+          </div>
+        </div>
+
+        <!-- Dynamic Panel 3: Pain-Free Immunization -->
+        <div class="compass-panel" data-compass-panel="phase3" role="tabpanel">
+          <div class="creed-quote-box" style="margin-bottom: 1rem;">
+            <p style="font-size: 0.95rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.35rem;">
+              Phase 3 • Buzzy® Vibration Pain-Free Immunization
+            </p>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0; line-height: 1.5;">
+              Zero-tears clinical protocol using high-frequency cooling vibration to block pain gate signals, administered while resting safely in parent lap.
+            </p>
+          </div>
+          <div style="font-size: 0.8rem; color: var(--brand-lavender); font-weight: 700; margin-bottom: 1.25rem;">
+            🐝 Gate-Control Theory • 96% Pain Reduction Observed
+          </div>
+        </div>
+
+        <!-- Dynamic Panel 4: Digital Sync & Lab -->
+        <div class="compass-panel" data-compass-panel="phase4" role="tabpanel">
+          <div class="creed-quote-box" style="margin-bottom: 1rem;">
+            <p style="font-size: 0.95rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.35rem;">
+              Phase 4 • Same-Day Digital Charting &amp; Lab Sync
+            </p>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0; line-height: 1.5;">
+              Instant CDC milestone growth percentiles, vaccination certificates, and rapid lab results synced directly to your secure parent portal.
+            </p>
+          </div>
+          <div style="font-size: 0.8rem; color: var(--brand-lavender); font-weight: 700; margin-bottom: 1.25rem;">
+            ⚡ 15-Minute Rapid Lab • Instant Parent App Sync
+          </div>
+        </div>
+
+        <!-- Live Faculty Availability Bar -->
+        <div class="pathway-footer-slot">
+          <div class="pathway-footer-slot-text">
+            <span class="live-dot"></span>
+            <span>Faculty On Duty: Dr. Maya Carter &amp; Dr. Julian Reed</span>
+          </div>
+          <span style="font-size: 0.8rem; font-weight: 700; color: #047857;">Open Today</span>
+        </div>
+
+        <a href="appointment.html" class="btn btn-primary" style="width: 100%; text-align: center;" data-open-appointment>
+          Book Consultation for Your Child
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       INNOVATIVE SEGMENT 1: COMPREHENSIVE WELL-CHILD VISITS (EDITORIAL 40:60 RATIO)
+       ========================================================================== -->
+  <section class="section-padding" id="well-child" style="background-color: var(--surface-card-alt); border-bottom: 1px solid var(--border-blush);">
+    <div class="container">
+      <div class="editorial-split-4060">
+        <!-- Content Column (40% Ratio) -->
+        <div>
+          <span class="child-friendly-badge">Core Foundation</span>
+          <h2 style="font-size: 2.4rem; margin-bottom: 1rem; font-family: var(--font-heading);">
+            1. Comprehensive Well-Child Visits
+          </h2>
+          <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem;">
+            A well-child checkup at First Steps is never a rushed 10-minute glance. We dedicate 35 to 45 minutes to every appointment so parents can openly discuss sleep cycles, feeding concerns, and developmental milestones in a calm, welcoming space.
+          </p>
+
+          <div style="background: var(--surface-white); border: 1.5px solid var(--border-blush); border-radius: var(--radius-lg); padding: 1.5rem; margin-bottom: 1.75rem;">
+            <strong style="color: var(--text-main); font-size: 1.05rem; display: block; margin-bottom: 0.75rem;">
+              What Happens During A Well-Child Visit:
+            </strong>
+            <ul class="checklist-bullet-list">
+              <li><span class="check-icon">✓</span> <strong>Gentle Head-to-Toe Exam:</strong> Reflexes, cardiac auscultation with pre-warmed instruments, abdominal palpation, and ear/vision checks.</li>
+              <li><span class="check-icon">✓</span> <strong>Growth Analytics:</strong> Height, weight, and head circumference plotted on official WHO and CDC percentile curves in your Family Portal.</li>
+              <li><span class="check-icon">✓</span> <strong>Neurodevelopmental Milestones:</strong> Play-based screening of speech, fine motor coordination, and social cues.</li>
+              <li><span class="check-icon">✓</span> <strong>Parental Dialogue:</strong> Nutrition advice, sleep rhythm coaching, safety prevention, and emotional support for the entire family.</li>
+            </ul>
+          </div>
+
+          <a href="appointment.html?service=well-child" class="btn btn-primary" data-open-appointment>
+            Schedule Well-Child Checkup
+          </a>
+        </div>
+
+        <!-- Innovative Visual & Schedule Matrix (60% Ratio) -->
+        <div>
+          <div class="hospital-photo-frame" style="height: 300px; margin-bottom: 1.5rem;">
+            <img src="assets/images/newborn_wellness.jpg" alt="Newborn baby resting comfortably during pediatric well-child exam" loading="lazy">
+          </div>
+
+          <strong style="display: block; font-size: 1.1rem; color: var(--text-main); margin-bottom: 0.75rem;">
+            AAP Recommended Well-Child Visit Schedule:
+          </strong>
+
+          <!-- Milestone Matrix Cards -->
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+            <div class="wellchild-timeline-card">
+              <span style="font-size: 0.76rem; font-weight: 700; color: var(--brand-lavender); text-transform: uppercase;">Newborn Transition</span>
+              <strong style="display: block; font-size: 1.05rem; color: var(--text-main); margin: 0.2rem 0;">3–5 Days &amp; 1 Month</strong>
+              <p style="font-size: 0.82rem; color: var(--text-muted); margin: 0;">Lactation support, umbilical check, safe swaddling &amp; non-invasive bilirubin screening.</p>
+            </div>
+
+            <div class="wellchild-timeline-card">
+              <span style="font-size: 0.76rem; font-weight: 700; color: var(--brand-lavender); text-transform: uppercase;">Infant Milestones</span>
+              <strong style="display: block; font-size: 1.05rem; color: var(--text-main); margin: 0.2rem 0;">2, 4 &amp; 6 Months</strong>
+              <p style="font-size: 0.82rem; color: var(--text-muted); margin: 0;">Head control, rolling milestones, iron nutrition, and peaceful immunization boosters.</p>
+            </div>
+
+            <div class="wellchild-timeline-card">
+              <span style="font-size: 0.76rem; font-weight: 700; color: var(--brand-lavender); text-transform: uppercase;">Toddler Leaps</span>
+              <strong style="display: block; font-size: 1.05rem; color: var(--text-main); margin: 0.2rem 0;">9, 12 &amp; 18 Months</strong>
+              <p style="font-size: 0.82rem; color: var(--text-muted); margin: 0;">Walking balance, pincer grasp, first words, sensory regulation, and fingerstick hemoglobin.</p>
+            </div>
+
+            <div class="wellchild-timeline-card">
+              <span style="font-size: 0.76rem; font-weight: 700; color: var(--brand-lavender); text-transform: uppercase;">Preschool &amp; Youth</span>
+              <strong style="display: block; font-size: 1.05rem; color: var(--text-main); margin: 0.2rem 0;">24 Months &amp; Annual</strong>
+              <p style="font-size: 0.82rem; color: var(--text-muted); margin: 0;">Vision &amp; audiometry screening, school readiness, behavioral confidence &amp; sports physicals.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       INNOVATIVE SEGMENT 2: COMFORT-FOCUSED VACCINATIONS (EDITORIAL 60:40 RATIO)
+       ========================================================================== -->
+  <section class="section-padding" id="vaccinations" style="background-color: var(--bg-secondary); border-bottom: 1px solid var(--border-blush);">
+    <div class="container">
+      <div class="editorial-split-6040">
+        <!-- Visual & Comfort Protocol Steps (60% Ratio) -->
+        <div>
+          <div class="hospital-photo-frame" style="height: 320px; margin-bottom: 1.75rem;">
+            <img src="assets/images/vaccination_care.jpg" alt="Gentle pediatric nurse giving vaccination with soft toy distraction" loading="lazy">
+          </div>
+
+          <strong style="display: block; font-size: 1.15rem; color: var(--text-main); margin-bottom: 1rem;">
+            Our 4-Step Zero-Pain Comfort Protocol:
+          </strong>
+
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+            <div class="vaccine-comfort-step-card">
+              <div class="comfort-step-number">01</div>
+              <strong style="color: var(--text-main); font-size: 0.95rem; display: block; margin-bottom: 0.25rem;">Tactile Vibration &amp; Cooling</strong>
+              <p style="color: var(--text-muted); font-size: 0.82rem; margin: 0;">Buzzy vibrating cold pads block pain signals from traveling to the brain using gate control theory.</p>
+            </div>
+
+            <div class="vaccine-comfort-step-card">
+              <div class="comfort-step-number">02</div>
+              <strong style="color: var(--text-main); display: block; font-size: 0.95rem; margin-bottom: 0.25rem;">Sweet-Ease Drops</strong>
+              <p style="color: var(--text-muted); font-size: 0.82rem; margin: 0;">For infants under 6 months, oral sucrose drops naturally trigger endorphin release to soothe comfort.</p>
+            </div>
+
+            <div class="vaccine-comfort-step-card">
+              <div class="comfort-step-number">03</div>
+              <strong style="color: var(--text-main); font-size: 0.95rem; display: block; margin-bottom: 0.25rem;">Parent-Lap Swaddling</strong>
+              <p style="color: var(--text-muted); font-size: 0.82rem; margin: 0;">No restraining tables. Children sit comfortably on mom or dad’s lap receiving warm hugs throughout.</p>
+            </div>
+
+            <div class="vaccine-comfort-step-card">
+              <div class="comfort-step-number">04</div>
+              <strong style="color: var(--text-main); font-size: 0.95rem; display: block; margin-bottom: 0.25rem;">Celebration &amp; Medals</strong>
+              <p style="color: var(--text-muted); font-size: 0.82rem; margin: 0;">Every child receives a bravery medal, colorful sticker, and heartfelt applause from our clinical team.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content Column (40% Ratio) -->
+        <div>
+          <span class="child-friendly-badge">Gentle Immunization</span>
+          <h2 style="font-size: 2.4rem; margin-bottom: 1rem; font-family: var(--font-heading);">
+            2. Comfort-Focused Pediatric Vaccinations
+          </h2>
+          <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem;">
+            Vaccines are essential to shield children from preventable illness, but the experience should never create lasting medical trauma. Under the leadership of <strong>Dr. Julian Reed</strong> (Preventive Health &amp; Immunology Chair), our nurses specialize in pain-minimized delivery.
+          </p>
+
+          <div style="background: var(--surface-white); border: 1.5px solid var(--border-blush); border-radius: var(--radius-lg); padding: 1.5rem; margin-bottom: 1.75rem;">
+            <strong style="color: var(--text-main); font-size: 1rem; display: block; margin-bottom: 0.5rem;">
+              CDC &amp; AAP Aligned Immunization Schedule:
+            </strong>
+            <ul class="checklist-bullet-list" style="font-size: 0.88rem;">
+              <li><span class="check-icon">✓</span> <strong>Birth to 2 Months:</strong> Hep B, Rotavirus, DTaP, Hib, PCV15, IPV</li>
+              <li><span class="check-icon">✓</span> <strong>4 to 6 Months:</strong> Second &amp; third booster doses, annual influenza</li>
+              <li><span class="check-icon">✓</span> <strong>12 to 15 Months:</strong> MMR (Measles, Mumps, Rubella), Varicella, Hep A</li>
+              <li><span class="check-icon">✓</span> <strong>4 to 6 Years:</strong> Pre-kindergarten school readiness boosters</li>
+            </ul>
+          </div>
+
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="appointment.html?service=vaccinations" class="btn btn-primary" data-open-appointment>
+              Book Vaccine Session
+            </a>
+            <a href="doctors.html" class="btn btn-secondary">
+              Meet Dr. Julian Reed
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       INNOVATIVE SEGMENT 3: DEVELOPMENTAL THERAPY & IN-HOUSE DIAGNOSTICS
+       ========================================================================== -->
+  <section class="section-padding" id="therapy" style="background-color: var(--bg-primary); border-bottom: 1px solid var(--border-blush);">
+    <div class="container">
+      <div class="section-header">
+        <span class="child-friendly-badge">Advanced Clinical Capabilities</span>
+        <h2 class="section-title">Specialized Therapy &amp; Diagnostic Suites</h2>
+        <p class="section-desc">
+          Beyond routine checkups, our hospital wellness center hosts comprehensive on-site therapy gyms and point-of-care laboratory suites.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: stretch;">
+        <!-- Card 1: Motor & Sensory Therapy -->
+        <div class="hospital-card-glow" style="display: flex; flex-direction: column;">
+          <div class="hospital-photo-frame" style="height: 240px; margin-bottom: 1.5rem;">
+            <img src="assets/images/services_therapy_room.jpg" alt="Pediatric motor development and sensory gym suite">
+          </div>
+          <span class="child-friendly-badge" style="font-size: 0.75rem;">Department of Developmental Pediatrics</span>
+          <h3 style="font-size: 1.6rem; margin-bottom: 0.75rem; font-family: var(--font-heading);">
+            Pediatric Motor &amp; Sensory Therapy
+          </h3>
+          <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.65; margin-bottom: 1.25rem; flex-grow: 1;">
+            Led by Dr. Alexei Rostov and Dr. Clara Bennett, our padded sensory gyms help infants and young children master rolling, crawling, walking, and sensory balance through joyful play equipment.
+          </p>
+          <ul class="checklist-bullet-list" style="font-size: 0.88rem; margin-bottom: 1.5rem;">
+            <li><span class="check-icon">✓</span> Torticollis &amp; infant head shape corrective therapy</li>
+            <li><span class="check-icon">✓</span> Vestibular balance, toe-walking &amp; coordination</li>
+            <li><span class="check-icon">✓</span> Sensory integration play therapy for neurodivergent youth</li>
+          </ul>
+          <a href="appointment.html?service=screening" class="btn btn-secondary" style="align-self: flex-start;" data-open-appointment>Book Developmental Evaluation</a>
+        </div>
+
+        <!-- Card 2: Point of Care Lab -->
+        <div class="hospital-card-glow" style="display: flex; flex-direction: column;">
+          <div class="hospital-photo-frame" style="height: 240px; margin-bottom: 1.5rem;">
+            <img src="assets/images/services_diagnostic_lab.jpg" alt="In-house pediatric rapid diagnostic laboratory">
+          </div>
+          <span class="child-friendly-badge" style="font-size: 0.75rem;">Department of Clinical Diagnostics</span>
+          <h3 style="font-size: 1.6rem; margin-bottom: 0.75rem; font-family: var(--font-heading);">
+            In-House Pediatric Diagnostic Suite
+          </h3>
+          <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.65; margin-bottom: 1.25rem; flex-grow: 1;">
+            No waiting days for anxious lab results. Our hospital diagnostic facility provides rapid, accurate tests designed specifically for pediatric micro-samples with zero adult intimidation.
+          </p>
+          <ul class="checklist-bullet-list" style="font-size: 0.88rem; margin-bottom: 1.5rem;">
+            <li><span class="check-icon">✓</span> 10-Minute Rapid PCR: Strep, Flu A/B, RSV, and COVID-19</li>
+            <li><span class="check-icon">✓</span> Needle-free transcutaneous jaundice bilirubinometer</li>
+            <li><span class="check-icon">✓</span> Gentle micro-capillary fingerstick iron &amp; lead screening</li>
+          </ul>
+          <a href="appointment.html?service=urgent" class="btn btn-secondary" style="align-self: flex-start;" data-open-appointment>Schedule Rapid Lab Assessment</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       HIGHLIGHTED INSIGHTS HOOK SECTION
+       ========================================================================== -->
+  <section class="section-padding" style="background-color: var(--surface-card-alt); border-top: 1px solid var(--border-blush); border-bottom: 1px solid var(--border-blush);">
+    <div class="container">
+      <div class="insights-hook-card">
+        <div class="insights-hook-grid">
+          <div>
+            <div class="insights-hook-badge">
+              <span>🧬</span> Clinical Insights &amp; Guidelines
+            </div>
+            <h2 class="insights-hook-title">
+              WANT TO DIVE DEEPER INTO PEDIATRIC HEALTH DATA?
+            </h2>
+            <p class="insights-hook-desc">
+              Explore our clinical research repository to understand developmental milestone percentiles, immunization antibody mechanics, and sensory therapy protocols written by our physicians.
+            </p>
+            <a href="insights.html" class="btn-insights-highlight">
+              <span>Explore Pediatric Insights Hub</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <div class="insights-hook-topics">
+            <strong style="color: #FFFFFF; font-size: 1.05rem; display: block; margin-bottom: 0.5rem;">
+              Featured Clinical Articles:
+            </strong>
+            <div class="insights-hook-topic-item">
+              <div class="insights-hook-topic-icon">👶</div>
+              <div>
+                <strong>Well-Child Visit Frequency &amp; Developmental Milestones</strong>
+                <div style="font-size: 0.8rem; color: rgba(255, 255, 255, 0.75);">AAP recommendations &amp; cognitive leap tracking</div>
+              </div>
+            </div>
+            <div class="insights-hook-topic-item">
+              <div class="insights-hook-topic-icon">💉</div>
+              <div>
+                <strong>The Science Behind Pain-Free Immunization</strong>
+                <div style="font-size: 0.8rem; color: rgba(255, 255, 255, 0.75);">Vibration gating &amp; reducing pediatric stress hormones</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PARENT FAQ SECTION
+       ========================================================================== -->
+  <section class="section-padding" style="background-color: var(--bg-primary);" id="services-faq">
+    <div class="container" style="max-width: 860px;">
+      <div class="section-header">
+        <span class="child-friendly-badge">Parent Questions</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-desc">Everything you need to know about our hospital wellness appointments and care protocols.</p>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 1rem;">
+        <div class="sanctuary-feature-card">
+          <div class="sanctuary-icon-box">🕒</div>
+          <div>
+            <strong style="color: var(--text-main); font-size: 1.05rem; display: block; margin-bottom: 0.35rem;">
+              How long does a Well-Child Visit take?
+            </strong>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0; line-height: 1.6;">
+              Unlike standard clinics that rush through appointments in 10 minutes, our well-child visits are scheduled for a full 35 to 45 minutes. This ensures ample unhurried time for thorough physical checks, developmental screenings, and addressing all parental questions.
+            </p>
+          </div>
+        </div>
+
+        <div class="sanctuary-feature-card">
+          <div class="sanctuary-icon-box">🌸</div>
+          <div>
+            <strong style="color: var(--text-main); font-size: 1.05rem; display: block; margin-bottom: 0.35rem;">
+              What if my child is terrified of shots and needles?
+            </strong>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0; line-height: 1.6;">
+              Our nurses are specifically certified in the Zero-Pain Comfort Protocol. We use topical numbing, vibration gate therapy (Buzzy), and playful distractions so most children barely notice the injection. We also allow children to stay swaddled on a parent’s lap throughout.
+            </p>
+          </div>
+        </div>
+
+        <div class="sanctuary-feature-card">
+          <div class="sanctuary-icon-box">📋</div>
+          <div>
+            <strong style="color: var(--text-main); font-size: 1.05rem; display: block; margin-bottom: 0.35rem;">
+              Do you accept our health insurance for visits and vaccinations?
+            </strong>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0; line-height: 1.6;">
+              Yes! First Steps is in-network with major commercial health insurance providers, Medicaid, and child health plans. Well-child checkups and CDC-scheduled immunizations are typically covered at 100% with no co-pay under preventive healthcare guidelines.
+            </p>
+          </div>
+        </div>
+
+        <div class="sanctuary-feature-card">
+          <div class="sanctuary-icon-box">📱</div>
+          <div>
+            <strong style="color: var(--text-main); font-size: 1.05rem; display: block; margin-bottom: 0.35rem;">
+              Can I access my child's growth charts and vaccine records online?
+            </strong>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0; line-height: 1.6;">
+              Yes. All measurements, percentiles, and official immunization records with downloadable school/daycare certificates are instantly synced to your secure Family Portal dashboard.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PROFESSIONAL FOOTER
+       ========================================================================== -->
+      <footer class="site-footer">
+    <div class="container footer-grid">
+      <!-- Col 1: Hospital Brand & Accreditations -->
+      <div class="footer-col footer-brand">
+        <a href="index.html" class="first-steps-logo">
+          <img src="assets/images/first_steps_logo.svg" alt="First Steps Logo" class="logo-icon-svg" width="40" height="40">
+          <span class="logo-brand-name">
+            <span class="brand-part-first">FIRST</span>
+            <span class="brand-part-steps">STEPS</span>
+          </span>
+        </a>
+        <span class="logo-tagline">Gentle Care • Healthy Beginnings</span>
+        <p class="footer-tagline">
+          Dedicated children's hospital and pediatric wellness sanctuary supporting your family from first newborn checkup to adolescent milestone care.
+        </p>
+        <div class="footer-accreditations">
+          <span class="footer-accred-badge">🏥 AAP Affiliated</span>
+          <span class="footer-accred-badge">🔒 HIPAA Secure</span>
+          <span class="footer-accred-badge">🧸 Sensory-Calm</span>
+        </div>
+        <div class="footer-social-row">
+          <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z"/></svg>
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22.336 22.336 0 0 0 14.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202h3.312z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Col 2: Clinical Navigation (100% Uniform with Navbar) -->
+      <div class="footer-col">
+        <h4 class="footer-title">Clinical Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home (Sanctuary)</a></li>
+          <li><a href="home-services.html">Home (Clinical Care)</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="doctors.html">Doctors</a></li>
+          <li><a href="appointment.html#insurance-billing">Pricing</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Pediatric Programs -->
+      <div class="footer-col">
+        <h4 class="footer-title">Pediatric Programs</h4>
+        <ul class="footer-links">
+          <li><a href="services.html#clinical-services">Newborn &amp; Infant Wing</a></li>
+          <li><a href="services.html#clinical-services">Vaccination &amp; Immunization</a></li>
+          <li><a href="services.html#clinical-services">Developmental Screening</a></li>
+          <li><a href="services.html#clinical-services">On-Site Diagnostic Lab</a></li>
+          <li><a href="insights.html">Clinical Insights &amp; Research</a></li>
+          <li><a href="appointment.html">Book Urgent Care Slot</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Emergency & Hours Widget -->
+      <div class="footer-col">
+        <h4 class="footer-title">Emergency &amp; Hours</h4>
+        <div class="footer-hours-card">
+          <div class="footer-hour-item">
+            <span class="footer-hour-label">Mon–Sat</span>
+            <span class="footer-hour-val">8:00 AM – 7:00 PM</span>
+          </div>
+          <div class="footer-hour-item">
+            <span class="footer-hour-label">Sunday</span>
+            <span class="footer-hour-val">9:00 AM – 2:00 PM</span>
+          </div>
+          <div class="footer-hour-item" style="border-bottom: none; padding-top: 0.5rem;">
+            <span class="footer-emergency-pill">🟢 24/7 On-Call Pediatrician</span>
+          </div>
+        </div>
+        <a href="tel:18005557837" class="footer-phone-cta">
+          <span class="phone-icon">📞</span>
+          <div class="phone-details">
+            <span class="phone-label">Urgent Pediatric Care</span>
+            <span class="phone-number">(555) 321-KIDS (5437)</span>
+          </div>
+        </a>
+        <a href="appointment.html" class="btn btn-primary footer-btn-cta" data-open-appointment>
+          <svg class="nav-btn-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <span>Book Appointment</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Footer Bottom Bar -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-flex">
+        <p>&copy; 2026 First Steps Pediatric Clinic &amp; Children's Wellness Center. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Care</a>
+          <a href="#">Patient Rights</a>
+          <a href="#">Notice of Privacy Practices</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Appointment Modal -->
+  <dialog class="custom-modal" id="appointmentModal">
+    <div class="modal-content-card">
+      <button class="modal-close-btn" data-close-modal aria-label="Close dialog">✕</button>
+      <div style="margin-bottom: 1.5rem;">
+        <span class="child-friendly-badge">Gentle Care Booking</span>
+        <h3 style="font-size: 1.5rem; font-family: var(--font-heading);">Schedule a Pediatric Visit</h3>
+      </div>
+      <form id="bookingModalForm" novalidate>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div class="form-group">
+            <label class="form-label" for="svcChild">Child's Full Name</label>
+            <input type="text" id="svcChild" name="childName" class="form-input name-input" required placeholder="e.g. Liam Miller" pattern="^[A-Za-z\s.'-]+$" title="Please enter letters only (no numbers)">
+            <span class="form-hint" style="font-size: 0.78rem; color: var(--text-muted); display: block; margin-top: 0.25rem;">Letters only (no numbers)</span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="svcPhone">Parent Contact Phone</label>
+            <input type="tel" id="svcPhone" name="parentPhone" class="form-input phone-input" placeholder="(555) 000-0000" required pattern="^(\+?[0-9\s\-()]{10,20})$" title="Please enter a valid phone number (digits only)">
+            <span class="form-hint" style="font-size: 0.78rem; color: var(--text-muted); display: block; margin-top: 0.25rem;">Digits only (e.g. 555-012-3456)</span>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div class="form-group">
+            <label class="form-label" for="svcDOB">Child's Date of Birth (DOB)</label>
+            <input type="date" id="svcDOB" name="childDOB" class="form-input dob-input" required>
+            <span class="form-hint" style="font-size: 0.78rem; color: var(--text-muted); display: block; margin-top: 0.25rem;">Birth date (cannot be future)</span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="svcAge">Child's Age</label>
+            <input type="text" id="svcAge" name="childAge" class="form-input age-input" placeholder="e.g. 14 Months" required>
+            <span class="form-hint" style="font-size: 0.78rem; color: var(--text-muted); display: block; margin-top: 0.25rem;">Auto-calculated or enter age</span>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div class="form-group">
+            <label class="form-label" for="modalServiceSelect">Service</label>
+            <select id="modalServiceSelect" class="form-select">
+              <option value="well-child">Comprehensive Well-Child Visit</option>
+              <option value="vaccinations">Comfort-First Immunization</option>
+              <option value="screening">Developmental &amp; Sensory Screening</option>
+              <option value="nutrition">Pediatric Nutrition &amp; Lactation</option>
+              <option value="pediatric-urgent">Same-Day Urgent Care</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="modalDoctorSelect">Attending Physician</label>
+            <select id="modalDoctorSelect" class="form-select">
+              <option value="Dr. Maya Carter">Dr. Maya Carter, MD, FAAP (Chief of Pediatrics)</option>
+              <option value="Dr. Emily Miller">Dr. Emily Miller, MD (Infant Associate)</option>
+              <option value="Dr. Julian Reed">Dr. Julian Reed, MD, PhD (Preventive Health Chair)</option>
+              <option value="Dr. Arjun Sharma">Dr. Arjun Sharma, MBBS, DCH (Immunization Associate)</option>
+              <option value="Dr. Alexei Rostov">Dr. Alexei Rostov, MD, PhD (Neurodevelopment Chair)</option>
+              <option value="Dr. Clara Bennett">Dr. Clara Bennett, MS, OTR/L (Developmental Associate)</option>
+              <option value="Dr. Monica Vance">Dr. Monica Vance, MD (Child Life &amp; Sensory Director)</option>
+              <option value="Chloe Laurent">Chloe Laurent, RN, CPNP (Wellness Practitioner)</option>
+              <option value="First Available">First Available Pediatrician</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="svcDate">Preferred Date</label>
+          <input type="date" id="svcDate" class="form-input" required>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.75rem;">Confirm Appointment</button>
+      </form>
+    </div>
+  </dialog>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
