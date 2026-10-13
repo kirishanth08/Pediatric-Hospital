@@ -6,7 +6,7 @@
   <title>Well-Child Visits &amp; Vaccinations — FIRST STEPS | Children's Hospital &amp; Wellness Center</title>
   <meta name="description" content="Explore First Steps comprehensive pediatric healthcare programs: AAP-aligned Well-Child Visits, gentle zero-pain vaccinations, developmental screenings, and point-of-care laboratory diagnostics.">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=4.0">
 </head>
 <body>
 
@@ -54,10 +54,6 @@
             <a href="doctors.html" class="nav-link">Doctors</a>
           </li>
 
-          <!-- 5. Pricing -->
-          <li class="nav-item">
-            <a href="appointment.html#insurance-billing" class="nav-link">Pricing</a>
-          </li>
 
           <!-- 6. Blog -->
           <li class="nav-item">
@@ -119,144 +115,148 @@
     <div class="container hero-grid">
       <!-- Left Column: Editorial Clinical Presentation & Direct Jump Chips -->
       <div class="hero-content">
-        <div class="hero-live-badge">
-          <span class="live-dot"></span>
+        <div class="hero-live-badge" style="margin-bottom: 0.5rem; padding: 0.25rem 0.75rem; font-size: 0.76rem;">
+          <span class="live-dot" style="width: 7px; height: 7px;"></span>
           <span>Pediatric Clinical Suites • Open for Consultations</span>
         </div>
 
-        <h1 class="hero-title" style="font-size: 2.9rem; line-height: 1.18;">
-          GENTLE CLINICAL CARE FOR GROWING BODIES.<br>
-          <span class="hero-gradient-accent">Unhurried Medical Visits &amp; Zero-Tears Protocols.</span>
+        <h1 class="hero-title" style="font-size: 2.15rem; line-height: 1.2; margin-bottom: 0.55rem; color: var(--text-main);">
+          Gentle Clinical Care for Growing Bodies.
+          <span class="hero-gradient-accent" style="display: block; font-size: 1.35rem; margin-top: 0.2rem; font-weight: 700; color: var(--brand-lavender-dark);">
+            Unhurried Medical Visits &amp; Zero-Tears Protocols.
+          </span>
         </h1>
 
-        <p class="hero-subtitle">
-          From peaceful newborn well-checks to gentle milestone immunizations, we combine AAP medical rigor with soothing sensory-calm exam suites. Designed so children feel safe and parents feel completely heard.
+        <p class="hero-subtitle" style="font-size: 0.92rem; line-height: 1.5; margin-bottom: 0.85rem; color: var(--text-muted); max-width: 520px;">
+          From peaceful newborn checks to gentle milestone immunizations, we combine AAP medical rigor with soothing sensory-calm suites so children feel safe and parents feel heard.
         </p>
 
-        <div class="hero-actions">
-          <a href="appointment.html" class="btn btn-primary btn-lg" data-open-appointment>
+        <div class="hero-actions" style="margin-bottom: 0.85rem; gap: 0.65rem;">
+          <a href="appointment.html" class="btn btn-primary" style="height: 42px !important; min-height: 42px !important; padding: 0 1.35rem !important; font-size: 0.86rem !important;" data-open-appointment>
             Schedule a Gentle Visit
           </a>
-          <a href="#vaccinations" class="btn btn-secondary btn-lg">
+          <a href="#vaccinations" class="btn btn-secondary" style="height: 42px !important; min-height: 42px !important; padding: 0 1.2rem !important; font-size: 0.86rem !important;">
             Our Vaccine Protocol
           </a>
         </div>
 
         <!-- Interactive Direct Service Jump Chips -->
-        <div class="hero-service-chips">
-          <a href="#well-child" class="service-chip">
-            <span>👶</span> Well-Child Checkups
+        <div class="hero-service-chips" style="display: flex; gap: 0.35rem; flex-wrap: wrap;">
+          <a href="#well-child" class="service-chip" style="padding: 0.25rem 0.6rem; font-size: 0.75rem;">
+            <span>👶</span> Well-Child
           </a>
-          <a href="#vaccinations" class="service-chip">
+          <a href="#vaccinations" class="service-chip" style="padding: 0.25rem 0.6rem; font-size: 0.75rem;">
             <span>💉</span> Painless Vaccines
           </a>
-          <a href="#child-sanctuary" class="service-chip">
-            <span>🧠</span> Developmental Screening
+          <a href="#child-sanctuary" class="service-chip" style="padding: 0.25rem 0.6rem; font-size: 0.75rem;">
+            <span>🧠</span> Developmental
           </a>
-          <a href="appointment.html" class="service-chip">
-            <span>🔬</span> Rapid Diagnostic Lab
+          <a href="appointment.html" class="service-chip" style="padding: 0.25rem 0.6rem; font-size: 0.75rem;">
+            <span>🔬</span> Rapid Lab
           </a>
         </div>
       </div>
 
-      <!-- Right Column: Interactive Clinical Protocol Navigator Widget -->
+      <!-- Right Column: Streamlined Interactive Clinical Protocol Navigator Widget -->
       <div class="hero-clinical-pathway-card" data-compass>
-        <div class="pathway-header">
+        <div class="pathway-header" style="margin-bottom: 0.55rem; padding-bottom: 0.5rem; display: flex; justify-content: space-between; align-items: center; width: 100%;">
           <div>
-            <span class="pathway-tag">The First Steps Standard</span>
-            <h3 class="pathway-title">4-Phase Sanctuary Protocol</h3>
-            <p class="pathway-subtitle">Select each clinical phase to view our fear-free standard:</p>
+            <span class="pathway-tag" style="font-size: 0.68rem; padding: 0.15rem 0.5rem; margin-bottom: 0.2rem; display: inline-block;">The First Steps Standard</span>
+            <h3 class="pathway-title" style="font-size: 1.15rem; margin: 0; line-height: 1.2; color: var(--text-main);">4-Phase Sanctuary Protocol</h3>
           </div>
+          <span style="font-size: 0.7rem; color: #047857; font-weight: 700; background: rgba(16, 185, 129, 0.12); padding: 0.2rem 0.5rem; border-radius: var(--radius-pill); white-space: nowrap;">AAP Certified</span>
         </div>
 
         <!-- Interactive Compass Tab Bar -->
-        <div class="compass-tab-bar" role="tablist">
-          <button class="compass-tab-btn active" data-compass-tab="phase1" type="button" role="tab" aria-selected="true">
-            <span>🧸</span> Phase 1: Welcome
+        <div class="compass-tab-bar" role="tablist" style="margin: 0.4rem 0 0.55rem; padding: 0.25rem; gap: 0.25rem;">
+          <button class="compass-tab-btn active" data-compass-tab="phase1" type="button" role="tab" aria-selected="true" style="padding: 0.35rem 0.5rem; font-size: 0.75rem;">
+            <span>🧸</span> Phase 1
           </button>
-          <button class="compass-tab-btn" data-compass-tab="phase2" type="button" role="tab" aria-selected="false">
-            <span>🩺</span> Phase 2: Consult
+          <button class="compass-tab-btn" data-compass-tab="phase2" type="button" role="tab" aria-selected="false" style="padding: 0.35rem 0.5rem; font-size: 0.75rem;">
+            <span>🩺</span> Phase 2
           </button>
-          <button class="compass-tab-btn" data-compass-tab="phase3" type="button" role="tab" aria-selected="false">
-            <span>🐝</span> Phase 3: Vaccines
+          <button class="compass-tab-btn" data-compass-tab="phase3" type="button" role="tab" aria-selected="false" style="padding: 0.35rem 0.5rem; font-size: 0.75rem;">
+            <span>🐝</span> Phase 3
           </button>
-          <button class="compass-tab-btn" data-compass-tab="phase4" type="button" role="tab" aria-selected="false">
-            <span>📊</span> Phase 4: Sync &amp; Lab
+          <button class="compass-tab-btn" data-compass-tab="phase4" type="button" role="tab" aria-selected="false" style="padding: 0.35rem 0.5rem; font-size: 0.75rem;">
+            <span>📊</span> Phase 4
           </button>
         </div>
 
         <!-- Dynamic Panel 1: Sensory Welcome -->
         <div class="compass-panel active" data-compass-panel="phase1" role="tabpanel">
-          <div class="creed-quote-box" style="margin-bottom: 1rem;">
-            <p style="font-size: 0.95rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.35rem;">
+          <div class="creed-quote-box" style="margin-bottom: 0.45rem; padding: 0.55rem 0.75rem;">
+            <strong style="font-size: 0.85rem; color: var(--text-main); display: block; margin-bottom: 0.15rem;">
               Phase 1 • Warm Sensory Welcome &amp; Instrument Warmers
-            </p>
-            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0; line-height: 1.5;">
-              No cold stethoscopes. We let little ones inspect child-safe tools, explore the tactile play area, and acclimate before clinical checks begin.
+            </strong>
+            <p style="font-size: 0.76rem; color: var(--text-muted); margin: 0; line-height: 1.4;">
+              No cold instruments. Children inspect child-safe tools in tactile suites and acclimate comfortably before exams.
             </p>
           </div>
-          <div style="font-size: 0.8rem; color: var(--brand-lavender); font-weight: 700; margin-bottom: 1.25rem;">
-            ⏱️ Average Time: 10 mins • Child Comfort Standard: 100% Calm
+          <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.72rem; margin-bottom: 0.55rem; padding: 0.3rem 0.6rem; background: var(--surface-card-alt); border-radius: var(--radius-sm);">
+            <span style="color: var(--text-muted);">⏱️ Avg Time: <strong>10 mins</strong></span>
+            <span style="color: var(--brand-lavender-dark); font-weight: 700;">100% Calm Standard</span>
           </div>
         </div>
 
         <!-- Dynamic Panel 2: Physician Consultation -->
         <div class="compass-panel" data-compass-panel="phase2" role="tabpanel">
-          <div class="creed-quote-box" style="margin-bottom: 1rem;">
-            <p style="font-size: 0.95rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.35rem;">
+          <div class="creed-quote-box" style="margin-bottom: 0.45rem; padding: 0.55rem 0.75rem;">
+            <strong style="font-size: 0.85rem; color: var(--text-main); display: block; margin-bottom: 0.15rem;">
               Phase 2 • Unhurried 45-Minute Physician Consultation
-            </p>
-            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0; line-height: 1.5;">
-              4x the national average. Ample time for complete head-to-toe milestone exams, lactation advice, sleep guidance, and open parent discussions.
+            </strong>
+            <p style="font-size: 0.76rem; color: var(--text-muted); margin: 0; line-height: 1.4;">
+              4x national average. Comprehensive milestone check, unhurried parent answers, and complete nutritional guidance.
             </p>
           </div>
-          <div style="font-size: 0.8rem; color: var(--brand-lavender); font-weight: 700; margin-bottom: 1.25rem;">
-            ⏱️ Full 45 Mins • Attending Pediatrician + Dedicated Fellow
+          <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.72rem; margin-bottom: 0.55rem; padding: 0.3rem 0.6rem; background: var(--surface-card-alt); border-radius: var(--radius-sm);">
+            <span style="color: var(--text-muted);">⏱️ Full <strong>45 Mins</strong></span>
+            <span style="color: var(--brand-lavender-dark); font-weight: 700;">Attending + Fellow</span>
           </div>
         </div>
 
         <!-- Dynamic Panel 3: Pain-Free Immunization -->
         <div class="compass-panel" data-compass-panel="phase3" role="tabpanel">
-          <div class="creed-quote-box" style="margin-bottom: 1rem;">
-            <p style="font-size: 0.95rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.35rem;">
+          <div class="creed-quote-box" style="margin-bottom: 0.45rem; padding: 0.55rem 0.75rem;">
+            <strong style="font-size: 0.85rem; color: var(--text-main); display: block; margin-bottom: 0.15rem;">
               Phase 3 • Buzzy® Vibration Pain-Free Immunization
-            </p>
-            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0; line-height: 1.5;">
-              Zero-tears clinical protocol using high-frequency cooling vibration to block pain gate signals, administered while resting safely in parent lap.
+            </strong>
+            <p style="font-size: 0.76rem; color: var(--text-muted); margin: 0; line-height: 1.4;">
+              Zero-tears clinical standard using high-frequency cooling vibration to block pain gate signals in parent's lap.
             </p>
           </div>
-          <div style="font-size: 0.8rem; color: var(--brand-lavender); font-weight: 700; margin-bottom: 1.25rem;">
-            🐝 Gate-Control Theory • 96% Pain Reduction Observed
+          <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.72rem; margin-bottom: 0.55rem; padding: 0.3rem 0.6rem; background: var(--surface-card-alt); border-radius: var(--radius-sm);">
+            <span style="color: var(--text-muted);">🐝 Gate-Control Theory</span>
+            <span style="color: var(--brand-lavender-dark); font-weight: 700;">96% Pain Reduction</span>
           </div>
         </div>
 
         <!-- Dynamic Panel 4: Digital Sync & Lab -->
         <div class="compass-panel" data-compass-panel="phase4" role="tabpanel">
-          <div class="creed-quote-box" style="margin-bottom: 1rem;">
-            <p style="font-size: 0.95rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.35rem;">
+          <div class="creed-quote-box" style="margin-bottom: 0.45rem; padding: 0.55rem 0.75rem;">
+            <strong style="font-size: 0.85rem; color: var(--text-main); display: block; margin-bottom: 0.15rem;">
               Phase 4 • Same-Day Digital Charting &amp; Lab Sync
-            </p>
-            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0; line-height: 1.5;">
-              Instant CDC milestone growth percentiles, vaccination certificates, and rapid lab results synced directly to your secure parent portal.
+            </strong>
+            <p style="font-size: 0.76rem; color: var(--text-muted); margin: 0; line-height: 1.4;">
+              Instant CDC milestone curves, official vaccine records, and rapid lab diagnostics synced straight to parent app.
             </p>
           </div>
-          <div style="font-size: 0.8rem; color: var(--brand-lavender); font-weight: 700; margin-bottom: 1.25rem;">
-            ⚡ 15-Minute Rapid Lab • Instant Parent App Sync
+          <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.72rem; margin-bottom: 0.55rem; padding: 0.3rem 0.6rem; background: var(--surface-card-alt); border-radius: var(--radius-sm);">
+            <span style="color: var(--text-muted);">⚡ 15-Minute Rapid Lab</span>
+            <span style="color: var(--brand-lavender-dark); font-weight: 700;">Instant App Sync</span>
           </div>
         </div>
 
-        <!-- Live Faculty Availability Bar -->
-        <div class="pathway-footer-slot">
-          <div class="pathway-footer-slot-text">
-            <span class="live-dot"></span>
-            <span>Faculty On Duty: Dr. Maya Carter &amp; Dr. Julian Reed</span>
+        <!-- Sleek Unified Faculty & Action Bar -->
+        <div style="display: flex; justify-content: space-between; align-items: center; gap: 0.65rem; padding-top: 0.5rem; border-top: 1px solid var(--border-blush);">
+          <div style="display: flex; align-items: center; gap: 0.35rem; font-size: 0.74rem; color: #064E3B; font-weight: 700;">
+            <span class="live-dot" style="width: 7px; height: 7px;"></span>
+            <span>Faculty On Duty: Dr. Carter &amp; Dr. Reed</span>
           </div>
-          <span style="font-size: 0.8rem; font-weight: 700; color: #047857;">Open Today</span>
+          <a href="appointment.html" class="btn btn-primary" style="height: 38px !important; min-height: 38px !important; padding: 0 1.15rem !important; font-size: 0.82rem !important; white-space: nowrap;" data-open-appointment>
+            Book Visit
+          </a>
         </div>
-
-        <a href="appointment.html" class="btn btn-primary" style="width: 100%; text-align: center;" data-open-appointment>
-          Book Consultation for Your Child
-        </a>
       </div>
     </div>
   </section>
@@ -619,19 +619,16 @@
         </div>
       </div>
 
-      <!-- Col 2: Clinical Navigation (100% Uniform with Navbar) -->
+      <!-- Col 2: Clinical Navigation -->
       <div class="footer-col">
         <h4 class="footer-title">Clinical Navigation</h4>
         <ul class="footer-links">
-          <li><a href="index.html">Home (Sanctuary)</a></li>
-          <li><a href="home-services.html">Home (Clinical Care)</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="doctors.html">Doctors</a></li>
-          <li><a href="appointment.html#insurance-billing">Pricing</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="dashboard.html">Dashboard</a></li>
         </ul>
       </div>
 
@@ -768,6 +765,6 @@
     </div>
   </dialog>
 
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js?v=4.0"></script>
 </body>
 </html>

@@ -6,7 +6,7 @@
   <title>Billing &amp; Pediatric Insurance — FIRST STEPS Family Portal</title>
   <meta name="description" content="View verified pediatric health insurance coverage, itemized visit statements, and payment methods for Liam Carter.">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=4.0">
 </head>
 <body>
 
@@ -269,6 +269,37 @@
     </main>
   </div>
 
-  <script src="assets/js/main.js"></script>
+    <!-- Appointment Modal -->
+  <dialog class="custom-modal" id="appointmentModal">
+    <div class="modal-content-card">
+      <button class="modal-close-btn" data-close-modal aria-label="Close dialog">✕</button>
+      <h3 style="font-size: 1.5rem; font-family: var(--font-heading); margin-bottom: 0.5rem;">Schedule Next Milestone</h3>
+      <form id="bookingModalForm">
+        <div class="form-group">
+          <label class="form-label" for="dashChild">Child Name</label>
+          <input type="text" id="dashChild" name="childName" class="form-input" value="Liam Carter" readonly>
+          <span class="form-hint" style="font-size: 0.78rem; color: var(--text-muted); display: block; margin-top: 0.25rem;">14 Months • Attending: Dr. Maya Carter, MD</span>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="modalServiceSelect">Pediatric Service</label>
+          <select id="modalServiceSelect" class="form-select">
+            <option value="well-child" selected>15-Month Milestone Visit (Routine Well-Child)</option>
+            <option value="vaccinations">MMR &amp; Varicella Vaccine Booster</option>
+            <option value="screening">Developmental &amp; Speech Screening</option>
+            <option value="sick">Urgent Pediatric Check</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="dashDate">Preferred Date</label>
+          <input type="date" id="dashDate" class="form-input" required>
+          <span class="form-hint" style="font-size: 0.78rem; color: var(--text-muted); display: block; margin-top: 0.25rem;">Suggested: 26 days from now (15-month milestone)</span>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">Confirm Appointment Slot</button>
+      </form>
+    </div>
+  </dialog>
+
+<script src="assets/js/main.js?v=4.0"></script>
+  <script src="assets/js/dashboard.js?v=4.0"></script>
 </body>
 </html>

@@ -4,9 +4,9 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  try { initMobileNav(); } catch (err) { console.error('Mobile nav error:', err); }
   try { initThemeToggle(); } catch (err) { console.error('Theme toggle error:', err); }
   try { initRtlToggle(); } catch (err) { console.error('RTL toggle error:', err); }
-  try { initMobileNav(); } catch (err) { console.error('Mobile nav error:', err); }
   try { initAppointmentModal(); } catch (err) { console.error('Appointment modal error:', err); }
   try { initGrowthChart(); } catch (err) { console.error('Growth chart error:', err); }
   try { initVaccinationFilter(); } catch (err) { console.error('Vaccination filter error:', err); }
@@ -94,12 +94,48 @@ function initRtlToggle() {
    MOBILE NAVIGATION
    ========================================================================== */
 function initMobileNav() {
+  const siteHeader = document.querySelector('.site-header');
+  if (siteHeader) {
+    document.body.classList.add('has-fixed-header');
+    const updateHeaderOffset = () => {
+      document.body.style.paddingTop = siteHeader.offsetHeight + 'px';
+    };
+    updateHeaderOffset();
+    window.addEventListener('resize', updateHeaderOffset);
+  }
+
   const toggleBtn = document.querySelector('.mobile-nav-toggle');
   const navLinks = document.querySelector('.nav-links');
   const MENU_ICON = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>';
   const CLOSE_ICON = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>';
 
   if (toggleBtn && navLinks) {
+    // Inject mobile drawer actions if not already present
+    if (!navLinks.querySelector('.mobile-drawer-actions-item')) {
+      const drawerItem = document.createElement('li');
+      drawerItem.className = 'mobile-drawer-actions-item';
+      drawerItem.innerHTML = `
+        <div class="mobile-drawer-actions">
+          <div class="mobile-drawer-toggles-row">
+            <button type="button" class="theme-toggle-btn mobile-theme-btn" aria-label="Toggle light/dark mode" title="Switch Theme">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+              <span>Theme</span>
+            </button>
+            <button type="button" class="rtl-toggle-btn mobile-rtl-btn" aria-label="Toggle RTL layout" title="Switch RTL / LTR">RTL</button>
+          </div>
+          <a href="login.html" class="nav-btn-login mobile-drawer-btn-login">
+            <svg class="nav-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg>
+            <span>Family Portal Login</span>
+          </a>
+          <a href="appointment.html" class="btn btn-primary nav-btn-cta mobile-drawer-btn-cta" data-open-appointment>
+            <svg class="nav-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            <span>Book Appointment</span>
+          </a>
+        </div>
+      `;
+      navLinks.appendChild(drawerItem);
+    }
+
     toggleBtn.innerHTML = MENU_ICON;
     toggleBtn.addEventListener('click', () => {
       const isOpen = navLinks.classList.toggle('show');
@@ -129,24 +165,46 @@ function initAppointmentModal() {
   const closeButtons = document.querySelectorAll('[data-close-modal]');
   const bookingForm = document.getElementById('bookingModalForm');
 
-  if (!modal) return;
+  if (!modal) {
+    openButtons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.location.href = 'appointment.html';
+      });
+    });
+    return;
+  }
 
   openButtons.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      const servicePreset = btn.getAttribute('data-service-preset');
+      const servicePreset = btn.getAttribute('data-service-preset') || 'well-child';
       const doctorPreset = btn.getAttribute('data-doctor-preset');
       
-      if (servicePreset && document.getElementById('modalServiceSelect')) {
+      if (document.getElementById('modalServiceSelect')) {
         document.getElementById('modalServiceSelect').value = servicePreset;
       }
       if (doctorPreset && document.getElementById('modalDoctorSelect')) {
         document.getElementById('modalDoctorSelect').value = doctorPreset;
       }
 
-      if (typeof modal.showModal === 'function') {
-        modal.showModal();
-      } else {
+      // Pre-fill milestone date (e.g. 26 days from now) if empty
+      const dateInput = modal.querySelector('input[type="date"]:not(.dob-input)');
+      if (dateInput && !dateInput.value) {
+        const d = new Date();
+        d.setDate(d.getDate() + 26);
+        dateInput.value = d.toISOString().split('T')[0];
+      }
+
+      try {
+        if (typeof modal.showModal === 'function') {
+          if (!modal.open) {
+            modal.showModal();
+          }
+        } else {
+          modal.setAttribute('open', '');
+        }
+      } catch (err) {
         modal.setAttribute('open', '');
       }
     });
@@ -164,31 +222,29 @@ function initAppointmentModal() {
 
   // Light dismiss on backdrop click
   modal.addEventListener('click', (e) => {
-    const dialogDimensions = modal.getBoundingClientRect();
-    if (
-      e.clientX < dialogDimensions.left ||
-      e.clientX > dialogDimensions.right ||
-      e.clientY < dialogDimensions.top ||
-      e.clientY > dialogDimensions.bottom
-    ) {
-      modal.close();
+    if (e.target === modal) {
+      if (typeof modal.close === 'function') {
+        modal.close();
+      } else {
+        modal.removeAttribute('open');
+      }
     }
   });
 
-    // Handle Booking submission with strict validation
+  // Handle Booking submission with strict validation
   if (bookingForm) {
     bookingForm.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      const nameInput = bookingForm.querySelector('.name-input, input[name="childName"], input[id*="Child"], input[id*="Name"]');
+      const nameInput = bookingForm.querySelector('.name-input, input[name="childName"], #dashChild, input[id="childName"], input[id*="ChildName"], input[id*="ParentName"]');
       const phoneInput = bookingForm.querySelector('.phone-input, input[type="tel"], input[name="parentPhone"], input[id*="Phone"]');
       const dobInput = bookingForm.querySelector('.dob-input, input[name="childDOB"], input[id*="DOB"]');
       const ageInput = bookingForm.querySelector('.age-input, input[name="childAge"], input[id*="Age"]');
 
       let hasError = false;
 
-      // 1. Validate Child Name (letters only, no numbers)
-      if (nameInput) {
+      // 1. Validate Child Name (letters only, no numbers - skip if readOnly preset)
+      if (nameInput && !nameInput.readOnly) {
         const val = nameInput.value.trim();
         if (/[0-9]/.test(val)) {
           showFieldNotice(nameInput, 'Child name accepts letters only (no numbers).');
@@ -277,11 +333,11 @@ function initAppointmentModal() {
         saveBookedAppointment(apptObj);
 
         bookingForm.innerHTML = `
-          <div style="text-align: center; padding: 2rem 1rem; color: var(--text-main);">
-            <div style="width: 64px; height: 64px; background: var(--brand-lavender); color: #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem; font-size: 2rem;">✓</div>
-            <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; font-family: var(--font-heading); color: var(--text-main);">Appointment Confirmed!</h3>
-            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">We have reserved a gentle consultation for <strong>${childNameVal}</strong>. A confirmation email and SMS reminder have been sent to your family.</p>
-            <div class="booking-confirmed-details-card">
+          <div style="text-align: center; padding: 0.5rem 0; color: var(--text-main);">
+            <div style="width: 56px; height: 56px; background: var(--brand-lavender); color: #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.75rem;">✓</div>
+            <h3 style="font-size: 1.45rem; margin-bottom: 0.4rem; font-family: var(--font-heading); color: var(--text-main);">Appointment Confirmed!</h3>
+            <p style="color: var(--text-muted); margin-bottom: 1.25rem; font-size: 0.92rem; line-height: 1.5;">We have reserved a gentle consultation for <strong>${childNameVal}</strong>. A confirmation email and SMS reminder have been sent to your family.</p>
+            <div class="booking-confirmed-details-card" style="margin-bottom: 1.25rem;">
               <strong class="clinic-confirmed-title">First Steps Family Clinic</strong>
               <div class="clinic-confirmed-doc">${docVal} • Pediatric Wellness Center</div>
               <div class="clinic-confirmed-meta" style="margin-top: 0.35rem; font-size: 0.9rem;">Date: <strong>${dateVal}</strong> • Reference: <strong>#${apptObj.id}</strong></div>
@@ -289,10 +345,13 @@ function initAppointmentModal() {
             </div>
             <div style="display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap;">
               <a href="dashboard.html" class="btn btn-primary">View in Family Dashboard →</a>
-              <button class="btn btn-secondary" onclick="document.getElementById('appointmentModal').close(); location.reload();">Done &amp; Return</button>
+              <button type="button" class="btn btn-secondary" onclick="document.getElementById('appointmentModal').close(); location.reload();">Done &amp; Return</button>
             </div>
           </div>
         `;
+
+        const modalCard = modal.querySelector('.modal-content-card');
+        if (modalCard) modalCard.scrollTop = 0;
       }, 900);
     });
   }
@@ -530,19 +589,29 @@ window.removeFieldNotice = removeFieldNotice;
 function isNameField(el) {
   if (!el || el.tagName !== 'INPUT' || el.readOnly || el.disabled) return false;
   const type = (el.type || '').toLowerCase();
-  if (['email', 'password', 'hidden', 'checkbox', 'radio', 'date', 'tel', 'number'].includes(type)) return false;
+  if (['email', 'password', 'hidden', 'checkbox', 'radio', 'date', 'tel', 'number', 'search'].includes(type)) return false;
   const cls = (el.className || '').toLowerCase();
   const name = (el.name || '').toLowerCase();
   const id = (el.id || '').toLowerCase();
   const placeholder = (el.placeholder || '').toLowerCase();
+
+  // Explicitly reject age, dob, date, phone, service, time, or months fields
+  if (cls.includes('age') || name.includes('age') || id.includes('age') ||
+      cls.includes('dob') || name.includes('dob') || id.includes('dob') ||
+      cls.includes('date') || name.includes('date') || id.includes('date') ||
+      cls.includes('phone') || name.includes('phone') || id.includes('phone') ||
+      placeholder.includes('month') || placeholder.includes('year') || placeholder.includes('age')) {
+    return false;
+  }
+
   return cls.includes('name-input') ||
          name.includes('name') ||
-         name.includes('parent') ||
-         name.includes('child') ||
-         name.includes('guardian') ||
+         name === 'parent' ||
+         name === 'guardian' ||
+         (name.includes('child') && !name.includes('age') && !name.includes('dob')) ||
          id.includes('name') ||
-         id.includes('parent') ||
-         id.includes('child') ||
+         id === 'parent' ||
+         (id.includes('child') && !id.includes('age') && !id.includes('dob')) ||
          placeholder.includes('name') ||
          placeholder.includes('carter') ||
          placeholder.includes('miller');
@@ -584,7 +653,9 @@ function isAgeField(el) {
   const cls = (el.className || '').toLowerCase();
   const name = (el.name || '').toLowerCase();
   const id = (el.id || '').toLowerCase();
-  return cls.includes('age-input') || name.includes('age') || id.includes('age');
+  const placeholder = (el.placeholder || '').toLowerCase();
+  return cls.includes('age-input') || name.includes('age') || id.includes('age') ||
+         placeholder.includes('month') || placeholder.includes('year') || placeholder.includes('age');
 }
 
 /* ==========================================================================
@@ -792,7 +863,7 @@ function initFormSmartValidation() {
 
     const allInputs = form.querySelectorAll('input');
     for (const input of allInputs) {
-      if (isNameField(input)) {
+      if (isNameField(input) && !input.readOnly) {
         const val = input.value.trim();
         if (/[0-9]/.test(val)) {
           e.preventDefault();

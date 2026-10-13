@@ -6,7 +6,7 @@
   <title>Contact Us — FIRST STEPS | Gentle Care. Healthy Beginnings.</title>
   <meta name="description" content="Reach First Steps Pediatric Clinic. Visit our welcoming location at 124 Blossom Hill Way or connect with our pediatric care team directly.">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=4.0">
 </head>
 <body>
 
@@ -52,10 +52,6 @@
             <a href="doctors.html" class="nav-link">Doctors</a>
           </li>
 
-          <!-- 5. Pricing -->
-          <li class="nav-item">
-            <a href="appointment.html#insurance-billing" class="nav-link">Pricing</a>
-          </li>
 
           <!-- 6. Blog -->
           <li class="nav-item">
@@ -135,6 +131,9 @@
           <a href="tel:18005557837" class="btn btn-primary btn-lg">
             Call Desk: (800) 555-STEP
           </a>
+          <a href="#clinic-map" class="btn btn-secondary btn-lg">
+            🗺️ Campus Map &amp; Directions
+          </a>
           <a href="#inquiry-form" class="btn btn-secondary btn-lg">
             Send Message Online
           </a>
@@ -142,15 +141,18 @@
 
         <!-- Quick Access Service Chips -->
         <div class="hero-service-chips">
+          <a href="#clinic-map" class="service-chip" style="font-weight: 800; color: var(--brand-lavender-dark) !important;">
+            <span>🗺️</span> Campus Map &amp; Navigation
+          </a>
           <a href="tel:18005557838" class="service-chip" style="color: #DC2626 !important; font-weight: 800;">
             <span>🚨</span> 24/7 Overnight Triage
           </a>
           <span class="service-chip">
-            <span>🅿️</span> Free Valet &amp; Stroller Ramp
+            <span>🅿️</span> Free Valet &amp; Ramp
           </span>
-          <span class="service-chip">
-            <span>📍</span> Children's Pavilion Suite 100
-          </span>
+          <a href="#clinic-map" class="service-chip">
+            <span>📍</span> 124 Blossom Hill Way • Suite 200
+          </a>
         </div>
       </div>
 
@@ -175,8 +177,11 @@
           <button class="compass-tab-btn active" data-compass-tab="campus" type="button" role="tab" aria-selected="true">
             <span>🏥</span> Pavilion
           </button>
+          <button class="compass-tab-btn" data-compass-tab="map" type="button" role="tab" aria-selected="false">
+            <span>🗺️</span> Map
+          </button>
           <button class="compass-tab-btn" data-compass-tab="triage" type="button" role="tab" aria-selected="false">
-            <span>🚨</span> Triage Hotline
+            <span>🚨</span> Triage
           </button>
           <button class="compass-tab-btn" data-compass-tab="parking" type="button" role="tab" aria-selected="false">
             <span>🅿️</span> Valet &amp; Ramp
@@ -199,6 +204,25 @@
                 <strong>Walk-In &amp; Consultation Hours</strong>
                 <span>Mon – Fri: 8:00 AM – 7:00 PM • Sat: 9:00 AM – 3:00 PM</span>
               </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dynamic Panel: Interactive Map Preview -->
+        <div class="compass-panel" data-compass-panel="map" role="tabpanel">
+          <div style="background: var(--bg-primary); border: 1px solid var(--border-blush); border-radius: var(--radius-md); padding: 0.85rem; margin-bottom: 1rem;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.35rem;">
+              <strong style="color: var(--text-main); font-size: 0.92rem;">📍 124 Blossom Hill Way</strong>
+              <span style="font-size: 0.72rem; color: #10B981; font-weight: 700;">● Open Today</span>
+            </div>
+            <p style="font-size: 0.82rem; color: var(--text-muted); margin: 0 0 0.65rem 0; line-height: 1.45;">Suite 200, San Jose, CA 95123 • Medical Arts District</p>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <a href="#clinic-map" class="btn btn-primary btn-sm" style="flex: 1; text-align: center; height: 36px !important; min-height: 36px !important; font-size: 0.8rem !important;">
+                Explore Map Below ↓
+              </a>
+              <a href="https://maps.google.com/?q=124+Blossom+Hill+Rd,+San+Jose,+CA+95123" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="flex: 1; text-align: center; height: 36px !important; min-height: 36px !important; font-size: 0.8rem !important;">
+                Directions ↗
+              </a>
             </div>
           </div>
         </div>
@@ -247,11 +271,95 @@
   </section>
 
   <!-- ==========================================================================
-       SEGMENT 2: DIRECT INQUIRY & COORDINATION FORM
+       SEGMENT 2: INTERACTIVE CLINIC LOCATION & CAMPUS MAP
+       ========================================================================== -->
+  <section class="section-padding" style="background-color: var(--bg-secondary);" id="clinic-map">
+    <div class="container" style="max-width: 1080px;">
+      <div class="section-header" style="margin-bottom: 2rem;">
+        <span class="section-tag">Interactive Campus Navigation</span>
+        <h2 class="section-title">Find First Steps Pediatric Clinic</h2>
+        <p class="section-desc">
+          Conveniently situated in the Medical Arts District with dedicated family parking, level curb stroller ramps, and direct elevator access.
+        </p>
+      </div>
+
+      <div style="background: var(--surface-white); border: 2px solid var(--border-blush); border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-md);">
+        <!-- Map Header Info Bar -->
+        <div style="padding: 1.25rem 1.75rem; border-bottom: 1px solid var(--border-blush); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; background: var(--bg-primary);">
+          <div>
+            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem; flex-wrap: wrap;">
+              <span style="font-size: 1.25rem;">🏥</span>
+              <strong style="color: var(--text-main); font-size: 1.15rem; font-family: var(--font-heading);">First Steps Pediatric Clinic</strong>
+              <span style="background: rgba(16, 185, 129, 0.12); color: #10B981; font-weight: 700; font-size: 0.75rem; padding: 0.2rem 0.6rem; border-radius: var(--radius-pill);">🟢 Open Today</span>
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.88rem; margin: 0;">📍 124 Blossom Hill Way, Suite 200, San Jose, CA 95123 • GPS: 37.2519° N, 121.8384° W</p>
+          </div>
+          <div style="display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap;">
+            <a href="https://maps.google.com/?q=124+Blossom+Hill+Rd,+San+Jose,+CA+95123" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+              Google Maps ↗
+            </a>
+            <a href="https://maps.apple.com/?address=124+Blossom+Hill+Rd,+San+Jose,+CA+95123" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+              Apple Maps ↗
+            </a>
+            <button type="button" class="btn btn-secondary btn-sm" onclick="navigator.clipboard.writeText('124 Blossom Hill Way, Suite 200, San Jose, CA 95123'); this.innerHTML='Copied! ✓'; setTimeout(() => this.innerHTML='📋 Copy Address', 2000);">
+              📋 Copy Address
+            </button>
+            <a href="tel:8005557837" class="btn btn-secondary btn-sm">
+              📞 (800) 555-STEP
+            </a>
+          </div>
+        </div>
+
+        <!-- Embedded Interactive Google Map -->
+        <div class="clinic-map-frame-box" style="position: relative; width: 100%; height: 440px; background: #e5e3df;">
+          <iframe 
+            title="First Steps Pediatric Clinic Interactive Map"
+            src="https://maps.google.com/maps?q=124%20Blossom%20Hill%20Rd,%20San%20Jose,%20CA%2095123&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+            width="100%" 
+            height="100%" 
+            style="border: 0; display: block;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+        <!-- Transit, Parking & Access Feature Badges -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; padding: 1.75rem; border-top: 1px solid var(--border-blush); background: var(--surface-white);">
+          <div style="display: flex; gap: 0.85rem; align-items: flex-start;">
+            <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--bg-secondary); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0;">🚗</div>
+            <div>
+              <strong style="color: var(--text-main); font-size: 0.95rem; display: block; margin-bottom: 0.2rem;">Free Validated Parking</strong>
+              <p style="font-size: 0.825rem; color: var(--text-muted); margin: 0; line-height: 1.45;">Reserved wide family parking stalls directly fronting the South pediatric entrance.</p>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 0.85rem; align-items: flex-start;">
+            <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--bg-secondary); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0;">🚆</div>
+            <div>
+              <strong style="color: var(--text-main); font-size: 0.95rem; display: block; margin-bottom: 0.2rem;">Rapid Transit Access</strong>
+              <p style="font-size: 0.825rem; color: var(--text-muted); margin: 0; line-height: 1.45;">2-minute walk from Blossom Hill transit terminal with street-level elevator exits.</p>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 0.85rem; align-items: flex-start;">
+            <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--bg-secondary); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0;">🚼</div>
+            <div>
+              <strong style="color: var(--text-main); font-size: 0.95rem; display: block; margin-bottom: 0.2rem;">Stroller Friendly &amp; ADA</strong>
+              <p style="font-size: 0.825rem; color: var(--text-muted); margin: 0; line-height: 1.45;">Automatic double doors, level curb cuts, and zero stair barriers into the clinic.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SEGMENT 3: DIRECT INQUIRY & COORDINATION FORM
        ========================================================================== -->
   <section class="section-padding" style="background-color: var(--surface-card-alt); border-top: 1px solid var(--border-blush); border-bottom: 1px solid var(--border-blush);" id="inquiry-form">
     <div class="container">
-      <div style="display: grid; grid-template-columns: 1fr 1.25fr; gap: 3.5rem; align-items: flex-start;">
+      <div class="contact-form-layout-grid" style="display: grid; grid-template-columns: 1fr 1.25fr; gap: 3.5rem; align-items: flex-start;">
         <div>
           <span class="section-tag">Care Coordination</span>
           <h2 style="font-size: 2.2rem; font-family: var(--font-heading); margin-bottom: 1rem; color: var(--text-main);">
@@ -272,7 +380,7 @@
 
         <div style="background: var(--surface-white); border: 2px solid var(--border-blush); border-radius: var(--radius-xl); padding: 2.5rem; box-shadow: var(--shadow-md);">
           <form id="contactForm" onsubmit="event.preventDefault(); handleContactSubmit(this);">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+            <div class="form-row-2col" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
               <div class="form-group" style="margin-bottom: 0;">
                 <label class="form-label" for="contactParent">Parent Name</label>
                 <input type="text" id="contactParent" name="parentName" class="form-input name-input" placeholder="e.g. Sarah Carter" required pattern="^[A-Za-z\s.'-]+$" title="Please enter letters only (no numbers)">
@@ -285,7 +393,7 @@
               </div>
             </div>
 
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+            <div class="form-row-2col" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
               <div class="form-group" style="margin-bottom: 0;">
                 <label class="form-label" for="contactChildDOB">Child's Date of Birth (DOB)</label>
                 <input type="date" id="contactChildDOB" name="childDOB" class="form-input dob-input" required>
@@ -298,7 +406,7 @@
               </div>
             </div>
 
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+            <div class="form-row-2col" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
               <div class="form-group" style="margin-bottom: 0;">
                 <label class="form-label" for="contactEmail">Email Address</label>
                 <input type="email" id="contactEmail" class="form-input" placeholder="sarah@example.com" required>
@@ -430,83 +538,7 @@
     </div>
   </section>
 
-  <!-- ==========================================================================
-       SEGMENT 5: INTERACTIVE CLINIC LOCATION & MAP
-       ========================================================================== -->
-  <section class="section-padding" style="background-color: var(--bg-secondary);" id="clinic-map">
-    <div class="container" style="max-width: 1040px;">
-      <div class="section-header" style="margin-bottom: 2.25rem;">
-        <span class="section-tag">Interactive Clinic Location</span>
-        <h2 class="section-title">Find First Steps Pediatric Clinic</h2>
-        <p class="section-desc">
-          Conveniently situated in the Medical Arts District with dedicated family parking, level curb stroller ramps, and direct elevator access.
-        </p>
-      </div>
-
-      <div style="background: var(--surface-white); border: 2px solid var(--border-blush); border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-md);">
-        <!-- Map Header Info Bar -->
-        <div style="padding: 1.5rem 2rem; border-bottom: 1px solid var(--border-blush); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; background: var(--bg-primary);">
-          <div>
-            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem;">
-              <span style="font-size: 1.25rem;">🏥</span>
-              <strong style="color: var(--text-main); font-size: 1.15rem; font-family: var(--font-heading);">First Steps Pediatric Clinic</strong>
-              <span style="background: rgba(16, 185, 129, 0.12); color: #10B981; font-weight: 700; font-size: 0.75rem; padding: 0.2rem 0.6rem; border-radius: var(--radius-pill);">Open Today</span>
-            </div>
-            <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0;">📍 124 Blossom Hill Way, Suite 200, San Jose, CA 95123</p>
-          </div>
-          <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
-            <a href="tel:8005557837" class="btn btn-secondary btn-sm">
-              📞 (800) 555-STEP
-            </a>
-            <a href="https://maps.google.com/?q=124+Blossom+Hill+Rd,+San+Jose,+CA+95123" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-              Get Driving Directions ↗
-            </a>
-          </div>
-        </div>
-
-        <!-- Embedded Interactive Map -->
-        <div style="position: relative; width: 100%; height: 440px; background: #e5e3df;">
-          <iframe 
-            title="First Steps Pediatric Clinic Interactive Map"
-            src="https://maps.google.com/maps?q=124%20Blossom%20Hill%20Rd,%20San%20Jose,%20CA%2095123&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-            width="100%" 
-            height="100%" 
-            style="border: 0; display: block;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
-
-        <!-- Transit & Parking Badges Below Map -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; padding: 2rem; border-top: 1px solid var(--border-blush); background: var(--surface-white);">
-          <div style="display: flex; gap: 0.85rem; align-items: flex-start;">
-            <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--bg-secondary); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0;">🚗</div>
-            <div>
-              <strong style="color: var(--text-main); font-size: 0.95rem; display: block; margin-bottom: 0.2rem;">Free Validated Parking</strong>
-              <p style="font-size: 0.825rem; color: var(--text-muted); margin: 0; line-height: 1.45;">Reserved wide family parking stalls directly fronting the South pediatric entrance.</p>
-            </div>
-          </div>
-
-          <div style="display: flex; gap: 0.85rem; align-items: flex-start;">
-            <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--bg-secondary); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0;">🚆</div>
-            <div>
-              <strong style="color: var(--text-main); font-size: 0.95rem; display: block; margin-bottom: 0.2rem;">Rapid Transit Access</strong>
-              <p style="font-size: 0.825rem; color: var(--text-muted); margin: 0; line-height: 1.45;">2-minute walk from Blossom Hill transit terminal with street-level elevator exits.</p>
-            </div>
-          </div>
-
-          <div style="display: flex; gap: 0.85rem; align-items: flex-start;">
-            <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--bg-secondary); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0;">🚼</div>
-            <div>
-              <strong style="color: var(--text-main); font-size: 0.95rem; display: block; margin-bottom: 0.2rem;">Stroller Friendly &amp; ADA</strong>
-              <p style="font-size: 0.825rem; color: var(--text-muted); margin: 0; line-height: 1.45;">Automatic double doors, level curb cuts, and zero stair barriers into the clinic.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  
 
   <!-- ==========================================================================
        STANDARDIZED PRE-FOOTER CTA SECTION
@@ -563,19 +595,16 @@
         </div>
       </div>
 
-      <!-- Col 2: Clinical Navigation (100% Uniform with Navbar) -->
+      <!-- Col 2: Clinical Navigation -->
       <div class="footer-col">
         <h4 class="footer-title">Clinical Navigation</h4>
         <ul class="footer-links">
-          <li><a href="index.html">Home (Sanctuary)</a></li>
-          <li><a href="home-services.html">Home (Clinical Care)</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="doctors.html">Doctors</a></li>
-          <li><a href="appointment.html#insurance-billing">Pricing</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="dashboard.html">Dashboard</a></li>
         </ul>
       </div>
 
@@ -641,6 +670,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js?v=4.0"></script>
 </body>
 </html>
