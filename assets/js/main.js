@@ -1153,7 +1153,7 @@ window.handleSocialLogin = function(provider) {
 function initGrowthChart() {
   const chartWrapper = document.getElementById('growthChartCanvas');
   const metricToggles = document.querySelectorAll('[data-chart-metric]');
-  if (!chartWrapper) return;
+  if (!chartWrapper || document.querySelector('.portal-layout')) return;
 
   const datasetWeight = [
     { month: '0m', val: 3.4, pct: '50th' },

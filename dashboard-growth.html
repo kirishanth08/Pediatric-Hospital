@@ -86,7 +86,7 @@
     <!-- Main Content Area: Growth -->
     <main class="portal-content-area">
       <!-- Portal Header Banner -->
-      <div class="portal-header hero-bg-dashboard" style="border-radius: var(--radius-lg); padding: 2.25rem; margin-bottom: 2rem; border: 1px solid var(--border-blush);">
+      <div class="portal-header hero-bg-dashboard" style="border-radius: var(--radius-lg); padding: 2.25rem; margin-bottom: 2rem; border: 1px solid var(--border-blush); overflow: hidden; position: relative;">
         <div>
           <div class="child-friendly-badge" style="margin-bottom: 0.65rem;">
             <span>📈</span> National Pediatric Growth Registry
@@ -225,26 +225,31 @@
         </div>
 
         <!-- Additional Clinical Content to Fill Lower Space -->
-        <div class="col-6" style="margin-top: 1.5rem;">
-          <div class="dash-card">
-            <h3 class="dash-card-title" style="font-size: 1.1rem;"><span>📊</span> Understanding WHO/CDC Growth Velocity</h3>
-            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 0.85rem;">
-              Percentiles measure your baby’s individual growth curve over time, not a competition. A consistent percentile channel between the 10th and 90th percentiles indicates healthy genetic trajectory and optimal nutrition.
-            </p>
-            <div style="background: var(--bg-primary); border-radius: var(--radius-md); padding: 0.85rem; border: 1px solid var(--border-blush); font-size: 0.8rem; color: var(--text-main);">
+        <!-- Additional Clinical Content at Bottom -->
+        <div class="col-6">
+          <div class="dash-card" style="height: 100%; display: flex; flex-direction: column; justify-content: space-between; border-radius: var(--radius-lg);">
+            <div>
+              <h3 class="dash-card-title" style="font-size: 1.1rem; margin-bottom: 0.75rem;"><span>📊</span> Understanding WHO/CDC Growth Velocity</h3>
+              <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1rem;">
+                Percentiles measure your baby’s individual growth curve over time, not a competition. A consistent percentile channel between the 10th and 90th percentiles indicates healthy genetic trajectory and optimal nutrition.
+              </p>
+            </div>
+            <div style="background: var(--bg-primary); border-radius: var(--radius-md); padding: 0.85rem 1rem; border: 1px solid var(--border-blush); font-size: 0.8rem; color: var(--text-main);">
               ✓ <strong>Liam's Velocity:</strong> Steady tracking along the 62nd–64th channel with excellent proportional head circumference growth.
             </div>
           </div>
         </div>
 
-        <div class="col-6" style="margin-top: 1.5rem;">
-          <div class="dash-card">
-            <h3 class="dash-card-title" style="font-size: 1.1rem;"><span>👩‍⚕️</span> Attending Physician Notes (12-Mo Visit)</h3>
-            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 0.85rem;">
-              "Liam continues to demonstrate robust linear growth and healthy weight gain. Muscle tone in lower extremities is well-developed for early steps. Transition to whole cow's milk (16–20 oz daily) is proceeding smoothly with zero gastrointestinal sensitivities."
-            </p>
-            <div style="font-size: 0.8rem; color: var(--brand-lavender-dark); font-weight: 700;">
-              — Dr. Maya Carter, MD, FAAP • Lead Pediatrician
+        <div class="col-6">
+          <div class="dash-card" style="height: 100%; display: flex; flex-direction: column; justify-content: space-between; border-radius: var(--radius-lg);">
+            <div>
+              <h3 class="dash-card-title" style="font-size: 1.1rem; margin-bottom: 0.75rem;"><span>👩‍⚕️</span> Attending Physician Notes (12-Mo Visit)</h3>
+              <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1rem;">
+                "Liam continues to demonstrate robust linear growth and healthy weight gain. Muscle tone in lower extremities is well-developed for early steps. Transition to whole cow's milk (16–20 oz daily) is proceeding smoothly with zero gastrointestinal sensitivities."
+              </p>
+            </div>
+            <div style="background: var(--bg-primary); border-radius: var(--radius-md); padding: 0.85rem 1rem; border: 1px solid var(--border-blush); font-size: 0.8rem; color: var(--brand-lavender-dark); font-weight: 700;">
+              ✓ <strong>Care Attending:</strong> Dr. Maya Carter, MD, FAAP • Lead Pediatrician
             </div>
           </div>
         </div>

@@ -249,7 +249,7 @@
 
         <!-- Sleek Unified Faculty & Action Bar -->
         <div style="display: flex; justify-content: space-between; align-items: center; gap: 0.65rem; padding-top: 0.5rem; border-top: 1px solid var(--border-blush);">
-          <div style="display: flex; align-items: center; gap: 0.35rem; font-size: 0.74rem; color: #064E3B; font-weight: 700;">
+          <div class="faculty-duty-status">
             <span class="live-dot" style="width: 7px; height: 7px;"></span>
             <span>Faculty On Duty: Dr. Carter &amp; Dr. Reed</span>
           </div>
@@ -531,54 +531,82 @@
         <p class="section-desc">Everything you need to know about our hospital wellness appointments and care protocols.</p>
       </div>
 
-      <div style="display: flex; flex-direction: column; gap: 1rem;">
-        <div class="sanctuary-feature-card">
-          <div class="sanctuary-icon-box">🕒</div>
-          <div>
-            <strong style="color: var(--text-main); font-size: 1.05rem; display: block; margin-bottom: 0.35rem;">
-              How long does a Well-Child Visit take?
-            </strong>
-            <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0; line-height: 1.6;">
+      <div class="faq-accordion">
+        <details class="faq-item" open>
+          <summary class="faq-question">
+            <div class="faq-question-content">
+              <span class="faq-icon-bubble">🕒</span>
+              <span class="faq-question-text">How long does a Well-Child Visit take?</span>
+            </div>
+            <span class="faq-chevron" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </span>
+          </summary>
+          <div class="faq-answer">
+            <p>
               Unlike standard clinics that rush through appointments in 10 minutes, our well-child visits are scheduled for a full 35 to 45 minutes. This ensures ample unhurried time for thorough physical checks, developmental screenings, and addressing all parental questions.
             </p>
           </div>
-        </div>
+        </details>
 
-        <div class="sanctuary-feature-card">
-          <div class="sanctuary-icon-box">🌸</div>
-          <div>
-            <strong style="color: var(--text-main); font-size: 1.05rem; display: block; margin-bottom: 0.35rem;">
-              What if my child is terrified of shots and needles?
-            </strong>
-            <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0; line-height: 1.6;">
+        <details class="faq-item">
+          <summary class="faq-question">
+            <div class="faq-question-content">
+              <span class="faq-icon-bubble">🌸</span>
+              <span class="faq-question-text">What if my child is terrified of shots and needles?</span>
+            </div>
+            <span class="faq-chevron" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </span>
+          </summary>
+          <div class="faq-answer">
+            <p>
               Our nurses are specifically certified in the Zero-Pain Comfort Protocol. We use topical numbing, vibration gate therapy (Buzzy), and playful distractions so most children barely notice the injection. We also allow children to stay swaddled on a parent’s lap throughout.
             </p>
           </div>
-        </div>
+        </details>
 
-        <div class="sanctuary-feature-card">
-          <div class="sanctuary-icon-box">📋</div>
-          <div>
-            <strong style="color: var(--text-main); font-size: 1.05rem; display: block; margin-bottom: 0.35rem;">
-              Do you accept our health insurance for visits and vaccinations?
-            </strong>
-            <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0; line-height: 1.6;">
+        <details class="faq-item">
+          <summary class="faq-question">
+            <div class="faq-question-content">
+              <span class="faq-icon-bubble">📋</span>
+              <span class="faq-question-text">Do you accept our health insurance for visits and vaccinations?</span>
+            </div>
+            <span class="faq-chevron" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </span>
+          </summary>
+          <div class="faq-answer">
+            <p>
               Yes! First Steps is in-network with major commercial health insurance providers, Medicaid, and child health plans. Well-child checkups and CDC-scheduled immunizations are typically covered at 100% with no co-pay under preventive healthcare guidelines.
             </p>
           </div>
-        </div>
+        </details>
 
-        <div class="sanctuary-feature-card">
-          <div class="sanctuary-icon-box">📱</div>
-          <div>
-            <strong style="color: var(--text-main); font-size: 1.05rem; display: block; margin-bottom: 0.35rem;">
-              Can I access my child's growth charts and vaccine records online?
-            </strong>
-            <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0; line-height: 1.6;">
+        <details class="faq-item">
+          <summary class="faq-question">
+            <div class="faq-question-content">
+              <span class="faq-icon-bubble">📱</span>
+              <span class="faq-question-text">Can I access my child's growth charts and vaccine records online?</span>
+            </div>
+            <span class="faq-chevron" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </span>
+          </summary>
+          <div class="faq-answer">
+            <p>
               Yes. All measurements, percentiles, and official immunization records with downloadable school/daycare certificates are instantly synced to your secure Family Portal dashboard.
             </p>
           </div>
-        </div>
+        </details>
       </div>
     </div>
   </section>
