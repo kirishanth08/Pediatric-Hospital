@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Family Portal Account — FIRST STEPS Pediatric Clinic</title>
+  <meta name="description" content="Register for your First Steps Family Portal account to securely access your child's immunization timelines, pediatric growth curves, and direct messaging with our pediatricians.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css?v=4.0">
+</head>
+<body>
+
+  <!-- Top Right Utility Actions: Theme Toggle & RTL Switch -->
+  <div class="portal-top-actions">
+    <button class="theme-toggle-btn" aria-label="Toggle light/dark mode" title="Switch Theme">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+      </svg>
+    </button>
+    <button class="rtl-toggle-btn" aria-label="Toggle RTL layout" title="Switch RTL / LTR">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="m16 8 4 4-4 4M8 16l-4-4 4-4M4 12h16"/>
+      </svg>
+      RTL
+    </button>
+  </div>
+
+  <!-- Focused Single Auth Layout -->
+  <div class="auth-single-layout" style="padding: 2.5rem 1rem;">
+    <div class="auth-single-card" style="max-width: 540px;">
+      <!-- Company Logo & Brand Name at Top of Form -->
+      <div class="auth-brand-header">
+        <a href="index.html" class="first-steps-logo" aria-label="First Steps Pediatric Clinic Home">
+          <img src="assets/images/first_steps_logo.svg" alt="First Steps Logo" class="logo-icon-svg" width="46" height="46">
+          <span class="logo-brand-name" style="font-size: 1.45rem;">
+            <span class="brand-part-first">FIRST</span>
+            <span class="brand-part-steps">STEPS</span>
+          </span>
+        </a>
+        <div class="auth-tagline">Gentle Care • Healthy Beginnings</div>
+        <h1 class="auth-card-title">Create Family Portal Account</h1>
+        <p class="auth-card-desc">Join our secure patient portal to view clinical health records, schedule unhurried visits, and track pediatric milestones.</p>
+      </div>
+
+      <!-- Prominent Inline Success Message -->
+      <div id="signupSuccessAlert" class="auth-success-alert" style="display: none;" role="alert">
+        <div class="auth-alert-head">
+          <span class="auth-alert-icon">✓</span>
+          <span id="signupSuccessTitle">Registration Successful!</span>
+        </div>
+        <p id="signupSuccessMsg" class="auth-alert-body" style="margin-bottom: 1rem;">
+          Welcome to First Steps! Your family portal account is ready.
+        </p>
+        <a href="dashboard.html" class="btn btn-primary btn-sm" style="width: 100%; text-align: center; justify-content: center;">
+          Go to Patient Dashboard →
+        </a>
+      </div>
+
+      <!-- Google & Apple Social Login Options -->
+      <div class="social-login-group">
+        <button type="button" class="btn-social btn-google" id="btnGoogleSignup" onclick="handleSocialSignup('Google')">
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+          </svg>
+          Sign up with Google
+        </button>
+        <button type="button" class="btn-social btn-apple" id="btnAppleSignup" onclick="handleSocialSignup('Apple')">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.75 1.04-1.8 0.93-2.85-.9.04-1.99.6-2.63 1.35-.56.65-1.05 1.71-.92 2.74 1.01.08 2.04-.51 2.62-1.24z"/>
+          </svg>
+          Sign up with Apple
+        </button>
+      </div>
+
+      <!-- Visual Form Divider -->
+      <div class="auth-divider">
+        <span>or register with email</span>
+      </div>
+
+      <!-- The Sign Up Form -->
+      <form id="signupForm" onsubmit="event.preventDefault(); handleSignupSubmit(this);">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div class="form-group">
+            <label class="form-label" for="parentFirstName">Parent First Name</label>
+            <input type="text" id="parentFirstName" class="form-input" placeholder="Sarah" required autocomplete="given-name">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="parentLastName">Parent Last Name</label>
+            <input type="text" id="parentLastName" class="form-input" placeholder="Carter" required autocomplete="family-name">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="signupEmail">Parent Email Address</label>
+          <input type="email" id="signupEmail" class="form-input" placeholder="sarah.carter@example.com" required autocomplete="email">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="signupPhone">Primary Phone Number</label>
+          <input type="tel" id="signupPhone" class="form-input" placeholder="(555) 234-5678" required autocomplete="tel">
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1.4fr 1fr; gap: 1rem;">
+          <div class="form-group">
+            <label class="form-label" for="childName">Child's Full Name</label>
+            <input type="text" id="childName" class="form-input" placeholder="Liam Carter" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="childDob">Child's Date of Birth</label>
+            <input type="date" id="childDob" class="form-input" required>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div class="form-group">
+            <label class="form-label" for="signupPassword">Password</label>
+            <input type="password" id="signupPassword" class="form-input" placeholder="Min. 8 characters" required minlength="8" autocomplete="new-password">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="signupPasswordConfirm">Confirm Password</label>
+            <input type="password" id="signupPasswordConfirm" class="form-input" placeholder="Re-enter password" required minlength="8" autocomplete="new-password">
+          </div>
+        </div>
+
+        <div style="margin-bottom: 1.5rem; font-size: 0.85rem;">
+          <label style="display: flex; align-items: flex-start; gap: 0.6rem; cursor: pointer; color: var(--text-muted); line-height: 1.45;">
+            <input type="checkbox" required checked style="accent-color: var(--brand-lavender); margin-top: 0.2rem;">
+            <span>I agree to the <a href="#" style="color: var(--link-color); text-decoration: underline;">Terms of Care</a> and acknowledge the <a href="#" style="color: var(--link-color); text-decoration: underline;">HIPAA Privacy Practices</a> of First Steps Pediatric Clinic.</span>
+          </label>
+        </div>
+
+        <button type="submit" id="signupSubmitBtn" class="btn btn-primary" style="width: 100%;">
+          Create Account &amp; Access Family Portal
+        </button>
+      </form>
+
+      <!-- Card Footer Assistance Link -->
+      <div style="text-align: center; margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--border-blush); font-size: 0.9rem; color: var(--text-muted);">
+        Already have an account? <a href="login.html" style="color: var(--brand-lavender); font-weight: 700; text-decoration: underline;">Sign In Here</a>
+      </div>
+
+      <div class="auth-card-footer" style="margin-top: 1.25rem;">
+        Need assistance? <a href="index.html">Return to Clinic Home</a> or call <a href="tel:18005557837">(800) 555-STEP</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js?v=4.0"></script>
+  <script>
+    function handleSocialSignup(provider) {
+      const alertBox = document.getElementById('signupSuccessAlert');
+      const title = document.getElementById('signupSuccessTitle');
+      const msg = document.getElementById('signupSuccessMsg');
+      const form = document.getElementById('signupForm');
+      if (alertBox) {
+        alertBox.style.display = 'block';
+        title.textContent = 'Account Created via ' + provider + '!';
+        msg.innerHTML = 'Welcome to First Steps! Your <strong>' + provider + '</strong> identity has been securely linked to Liam Carter\'s health profile.';
+        if (form) form.style.display = 'none';
+        window.scrollTo({ top: alertBox.offsetTop - 40, behavior: 'smooth' });
+      }
+    }
+
+    function handleSignupSubmit(form) {
+      const pwd = document.getElementById('signupPassword').value;
+      const pwdConfirm = document.getElementById('signupPasswordConfirm').value;
+      if (pwd !== pwdConfirm) {
+        alert('Passwords do not match. Please re-enter.');
+        return;
+      }
+      const pName = document.getElementById('parentFirstName').value;
+      const cName = document.getElementById('childName').value;
+      const alertBox = document.getElementById('signupSuccessAlert');
+      const title = document.getElementById('signupSuccessTitle');
+      const msg = document.getElementById('signupSuccessMsg');
+      if (alertBox) {
+        alertBox.style.display = 'block';
+        title.textContent = 'Account Created Successfully!';
+        msg.innerHTML = 'Welcome, ' + pName + '! Your family portal profile for <strong>' + cName + '</strong> has been activated.';
+        form.style.display = 'none';
+        window.scrollTo({ top: alertBox.offsetTop - 40, behavior: 'smooth' });
+      }
+    }
+  </script>
+</body>
+</html>
+

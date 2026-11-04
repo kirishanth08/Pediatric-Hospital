@@ -8,7 +8,7 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="assets/css/style.css?v=4.0">
 </head>
-<body>
+<body class="page-blog">
 
   <!-- NAVBAR -->
     <header class="site-header">
@@ -220,14 +220,18 @@
           <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem;">
             Moving from breast milk or formula to table foods is one of early parenting's most exciting chapters. Learn Dr. Maya Carter's gentle pacing method for introducing pureed root vegetables, soft avocado wedges, and early peanut proteins safely.
           </p>
-          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
-            <img src="assets/images/avatar_blog_dr_carter.jpg" alt="Dr. Maya Carter, MD, FAAP" width="44" height="44" style="width: 44px; height: 44px; border-radius: 50%; object-fit: cover; border: 2px solid var(--border-blush); flex-shrink: 0;">
-            <div>
-              <strong style="color: var(--text-main); display: block;">Dr. Maya Carter, MD, FAAP</strong>
-              <span style="font-size: 0.8rem; color: var(--text-muted);">Lead Pediatrician &amp; Infant Nutrition Chair</span>
+
+          <!-- Single Line: Doctor Info & CTA with Proper Spacing & Padding -->
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; margin-top: 1.75rem; padding-top: 1.25rem; border-top: 1px solid var(--border-blush);">
+            <div style="display: flex; align-items: center; gap: 0.85rem;">
+              <img src="assets/images/avatar_blog_dr_carter.jpg" alt="Dr. Maya Carter, MD, FAAP" width="48" height="48" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid var(--border-blush); flex-shrink: 0;">
+              <div>
+                <strong style="color: var(--text-main); display: block; font-size: 0.98rem; line-height: 1.25;">Dr. Maya Carter, MD, FAAP</strong>
+                <span style="font-size: 0.825rem; color: var(--text-muted); line-height: 1.25;">Lead Pediatrician &amp; Infant Nutrition Chair</span>
+              </div>
             </div>
+            <a href="blog-details.html?id=starting-solids" class="btn btn-primary" style="flex-shrink: 0; padding: 0 1.6rem !important; height: 46px !important; min-height: 46px !important; font-size: 0.9rem !important;">Read Complete Guide →</a>
           </div>
-          <a href="blog-details.html?id=starting-solids" class="btn btn-primary">Read Complete Guide →</a>
         </div>
       </div>
     </div>
@@ -244,27 +248,27 @@
         <p class="section-desc">Practical advice on sleep routines, milestones, and pediatric development.</p>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2.5rem;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 2rem;">
 
         <!-- Article 1: Sleep Routine (Unique Image) -->
         <article class="service-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
           <a href="blog-details.html?id=sleep-regression" style="display: block; overflow: hidden;">
             <img src="assets/images/blog_sleep_routine.jpg" alt="Peaceful sleeping baby in safe crib environment" style="height: 220px; width: 100%; object-fit: cover; object-position: center top; transition: transform var(--transition-smooth);">
           </a>
-          <div style="padding: 1.75rem; display: flex; flex-direction: column; flex-grow: 1;">
+          <div style="padding: 1.35rem 1.35rem; display: flex; flex-direction: column; flex-grow: 1;">
             <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.75rem;">
               <span style="background: rgba(133, 92, 150, 0.1); color: var(--brand-lavender); padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 700;">Infant Sleep</span>
               <span style="font-size: 0.8rem; color: var(--text-light);">5 min read</span>
             </div>
-            <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem; font-family: var(--font-heading); min-height: 3.5rem; display: flex; align-items: flex-start; line-height: 1.35;">
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem; font-family: var(--font-heading); min-height: 3.2rem; display: flex; align-items: flex-start; line-height: 1.35;">
               <a href="blog-details.html?id=sleep-regression" style="color: inherit; text-decoration: none;">The 4-Month Sleep Regression: Normal Biology vs Sleep Training</a>
             </h3>
             <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.25rem; flex-grow: 1; line-height: 1.5;">
               Why circadian rhythm development shifts your infant's sleep cycles and how gentle bed-time routines soothe overstimulated nervous systems.
             </p>
-            <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border-blush); padding-top: 1rem; margin-top: auto;">
-              <span style="font-size: 0.825rem; font-weight: 700; color: var(--text-main);">Dr. Julian Reed, MD, PhD</span>
-              <a href="blog-details.html?id=sleep-regression" class="service-card-link">Read Guide →</a>
+            <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border-blush); padding-top: 1rem; margin-top: auto; gap: 0.75rem;">
+              <span style="font-size: 0.84rem; font-weight: 600; color: var(--text-main); white-space: nowrap;">Dr. Julian Reed, MD</span>
+              <a href="blog-details.html?id=sleep-regression" class="service-card-link" style="white-space: nowrap; flex-shrink: 0; font-weight: 600; font-size: 0.84rem;">Read Guide →</a>
             </div>
           </div>
         </article>
@@ -274,20 +278,20 @@
           <a href="blog-details.html?id=crawling-to-steps" style="display: block; overflow: hidden;">
             <img src="assets/images/developmental_play.jpg" alt="Child therapist using wooden blocks with toddler" style="height: 220px; width: 100%; object-fit: cover; object-position: center top; transition: transform var(--transition-smooth);">
           </a>
-          <div style="padding: 1.75rem; display: flex; flex-direction: column; flex-grow: 1;">
+          <div style="padding: 1.35rem 1.35rem; display: flex; flex-direction: column; flex-grow: 1;">
             <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.75rem;">
               <span style="background: rgba(133, 92, 150, 0.1); color: var(--brand-lavender); padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 700;">Milestones</span>
               <span style="font-size: 0.8rem; color: var(--text-light);">6 min read</span>
             </div>
-            <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem; font-family: var(--font-heading); min-height: 3.5rem; display: flex; align-items: flex-start; line-height: 1.35;">
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem; font-family: var(--font-heading); min-height: 3.2rem; display: flex; align-items: flex-start; line-height: 1.35;">
               <a href="blog-details.html?id=crawling-to-steps" style="color: inherit; text-decoration: none;">From Crawling to First Steps: The Physical Journey</a>
             </h3>
             <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.25rem; flex-grow: 1; line-height: 1.5;">
               Understanding balance coordination, bare-foot play benefits, and when to expect those exciting first independent steps between 9 and 15 months.
             </p>
-            <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border-blush); padding-top: 1rem; margin-top: auto;">
-              <span style="font-size: 0.825rem; font-weight: 700; color: var(--text-main);">Dr. Clara Bennett, MS, OTR/L</span>
-              <a href="blog-details.html?id=crawling-to-steps" class="service-card-link">Read Guide →</a>
+            <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border-blush); padding-top: 1rem; margin-top: auto; gap: 0.75rem;">
+              <span style="font-size: 0.84rem; font-weight: 600; color: var(--text-main); white-space: nowrap;">Dr. Clara Bennett, OTR/L</span>
+              <a href="blog-details.html?id=crawling-to-steps" class="service-card-link" style="white-space: nowrap; flex-shrink: 0; font-weight: 600; font-size: 0.84rem;">Read Guide →</a>
             </div>
           </div>
         </article>
@@ -297,20 +301,20 @@
           <a href="blog-details.html?id=who-percentiles" style="display: block; overflow: hidden;">
             <img src="assets/images/growth_monitoring.jpg" alt="Pediatrician measuring cheerful toddler against clinic wall ruler" style="height: 220px; width: 100%; object-fit: cover; object-position: center top; transition: transform var(--transition-smooth);">
           </a>
-          <div style="padding: 1.75rem; display: flex; flex-direction: column; flex-grow: 1;">
+          <div style="padding: 1.35rem 1.35rem; display: flex; flex-direction: column; flex-grow: 1;">
             <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.75rem;">
               <span style="background: rgba(133, 92, 150, 0.1); color: var(--brand-lavender); padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 700;">Growth</span>
               <span style="font-size: 0.8rem; color: var(--text-light);">4 min read</span>
             </div>
-            <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem; font-family: var(--font-heading); min-height: 3.5rem; display: flex; align-items: flex-start; line-height: 1.35;">
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem; font-family: var(--font-heading); min-height: 3.2rem; display: flex; align-items: flex-start; line-height: 1.35;">
               <a href="blog-details.html?id=who-percentiles" style="color: inherit; text-decoration: none;">Demystifying WHO Percentiles: Why "50th" Is Not a Grade</a>
             </h3>
             <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.25rem; flex-grow: 1; line-height: 1.5;">
               A healthy curve is about steady personal momentum, not competing with standard percentiles. How our doctors assess your child’s unique vitality.
             </p>
-            <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border-blush); padding-top: 1rem; margin-top: auto;">
-              <span style="font-size: 0.825rem; font-weight: 700; color: var(--text-main);">Dr. Maya Carter, MD, FAAP</span>
-              <a href="blog-details.html?id=who-percentiles" class="service-card-link">Read Guide →</a>
+            <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border-blush); padding-top: 1rem; margin-top: auto; gap: 0.75rem;">
+              <span style="font-size: 0.84rem; font-weight: 600; color: var(--text-main); white-space: nowrap;">Dr. Maya Carter, MD</span>
+              <a href="blog-details.html?id=who-percentiles" class="service-card-link" style="white-space: nowrap; flex-shrink: 0; font-weight: 600; font-size: 0.84rem;">Read Guide →</a>
             </div>
           </div>
         </article>
@@ -320,20 +324,20 @@
           <a href="blog-details.html?id=fever-fears" style="display: block; overflow: hidden;">
             <img src="assets/images/blog_fever_thermometer.jpg" alt="Gentle pediatrician checking toddler temperature with ear thermometer" style="height: 220px; width: 100%; object-fit: cover; object-position: center top; transition: transform var(--transition-smooth);">
           </a>
-          <div style="padding: 1.75rem; display: flex; flex-direction: column; flex-grow: 1;">
+          <div style="padding: 1.35rem 1.35rem; display: flex; flex-direction: column; flex-grow: 1;">
             <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.75rem;">
               <span style="background: rgba(133, 92, 150, 0.1); color: var(--brand-lavender); padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 700;">Urgent Care</span>
               <span style="font-size: 0.8rem; color: var(--text-light);">5 min read</span>
             </div>
-            <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem; font-family: var(--font-heading); min-height: 3.5rem; display: flex; align-items: flex-start; line-height: 1.35;">
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem; font-family: var(--font-heading); min-height: 3.2rem; display: flex; align-items: flex-start; line-height: 1.35;">
               <a href="blog-details.html?id=fever-fears" style="color: inherit; text-decoration: none;">Fever Fears Decoded: When to Treat &amp; When to Call Your Doctor</a>
             </h3>
             <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.25rem; flex-grow: 1; line-height: 1.5;">
               Why temperature is the immune system's natural defense, how to recognize genuine distress, and safe dosage protocols for infants and toddlers.
             </p>
-            <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border-blush); padding-top: 1rem; margin-top: auto;">
-              <span style="font-size: 0.825rem; font-weight: 700; color: var(--text-main);">Dr. Maya Carter, MD, FAAP</span>
-              <a href="blog-details.html?id=fever-fears" class="service-card-link">Read Guide →</a>
+            <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border-blush); padding-top: 1rem; margin-top: auto; gap: 0.75rem;">
+              <span style="font-size: 0.84rem; font-weight: 600; color: var(--text-main); white-space: nowrap;">Dr. Maya Carter, MD</span>
+              <a href="blog-details.html?id=fever-fears" class="service-card-link" style="white-space: nowrap; flex-shrink: 0; font-weight: 600; font-size: 0.84rem;">Read Guide →</a>
             </div>
           </div>
         </article>
@@ -343,20 +347,20 @@
           <a href="blog-details.html?id=speech-milestones" style="display: block; overflow: hidden;">
             <img src="assets/images/blog_speech_language.jpg" alt="Pediatrician using flashcards and gestures to encourage toddler communication" style="height: 220px; width: 100%; object-fit: cover; object-position: center top; transition: transform var(--transition-smooth);">
           </a>
-          <div style="padding: 1.75rem; display: flex; flex-direction: column; flex-grow: 1;">
+          <div style="padding: 1.35rem 1.35rem; display: flex; flex-direction: column; flex-grow: 1;">
             <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.75rem;">
               <span style="background: rgba(133, 92, 150, 0.1); color: var(--brand-lavender); padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 700;">Communication</span>
               <span style="font-size: 0.8rem; color: var(--text-light);">6 min read</span>
             </div>
-            <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem; font-family: var(--font-heading); min-height: 3.5rem; display: flex; align-items: flex-start; line-height: 1.35;">
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem; font-family: var(--font-heading); min-height: 3.2rem; display: flex; align-items: flex-start; line-height: 1.35;">
               <a href="blog-details.html?id=speech-milestones" style="color: inherit; text-decoration: none;">Speech &amp; Language Milestones: First Words, Gestures &amp; Bonding</a>
             </h3>
             <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.25rem; flex-grow: 1; line-height: 1.5;">
               Everyday play routines, interactive picture books, and key developmental speech markers between 12 and 36 months to nurture healthy language.
             </p>
-            <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border-blush); padding-top: 1rem; margin-top: auto;">
-              <span style="font-size: 0.825rem; font-weight: 700; color: var(--text-main);">Dr. Julian Reed, MD, PhD</span>
-              <a href="blog-details.html?id=speech-milestones" class="service-card-link">Read Guide →</a>
+            <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border-blush); padding-top: 1rem; margin-top: auto; gap: 0.75rem;">
+              <span style="font-size: 0.84rem; font-weight: 600; color: var(--text-main); white-space: nowrap;">Dr. Julian Reed, MD</span>
+              <a href="blog-details.html?id=speech-milestones" class="service-card-link" style="white-space: nowrap; flex-shrink: 0; font-weight: 600; font-size: 0.84rem;">Read Guide →</a>
             </div>
           </div>
         </article>
@@ -366,20 +370,20 @@
           <a href="blog-details.html?id=seasonal-immunity" style="display: block; overflow: hidden;">
             <img src="assets/images/blog_seasonal_immunity.jpg" alt="Pediatric nurse showing child colorful immunity fruits and healthy foods chart" style="height: 220px; width: 100%; object-fit: cover; object-position: center top; transition: transform var(--transition-smooth);">
           </a>
-          <div style="padding: 1.75rem; display: flex; flex-direction: column; flex-grow: 1;">
+          <div style="padding: 1.35rem 1.35rem; display: flex; flex-direction: column; flex-grow: 1;">
             <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.75rem;">
               <span style="background: rgba(133, 92, 150, 0.1); color: var(--brand-lavender); padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 700;">Immunity</span>
               <span style="font-size: 0.8rem; color: var(--text-light);">4 min read</span>
             </div>
-            <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem; font-family: var(--font-heading); min-height: 3.5rem; display: flex; align-items: flex-start; line-height: 1.35;">
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem; font-family: var(--font-heading); min-height: 3.2rem; display: flex; align-items: flex-start; line-height: 1.35;">
               <a href="blog-details.html?id=seasonal-immunity" style="color: inherit; text-decoration: none;">Building Super-Immunity: Seasonal Protection &amp; Daycare Wellness</a>
             </h3>
             <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.25rem; flex-grow: 1; line-height: 1.5;">
               Evidence-based nutrition strategies, gut microbiome support, hand hygiene habits, and daycare illness prevention for resilient immune systems.
             </p>
-            <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border-blush); padding-top: 1rem; margin-top: auto;">
-              <span style="font-size: 0.825rem; font-weight: 700; color: var(--text-main);">Chloe Laurent, RN, CPNP</span>
-              <a href="blog-details.html?id=seasonal-immunity" class="service-card-link">Read Guide →</a>
+            <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border-blush); padding-top: 1rem; margin-top: auto; gap: 0.75rem;">
+              <span style="font-size: 0.84rem; font-weight: 600; color: var(--text-main); white-space: nowrap;">Chloe Laurent, CPNP</span>
+              <a href="blog-details.html?id=seasonal-immunity" class="service-card-link" style="white-space: nowrap; flex-shrink: 0; font-weight: 600; font-size: 0.84rem;">Read Guide →</a>
             </div>
           </div>
         </article>
@@ -430,7 +434,7 @@
   <section class="section-padding" style="background-color: var(--bg-primary);" id="bookshelf">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Recommended Reading</span>
+        <span class="section-tag" style="font-size: 0.74rem; padding: 0.25rem 0.75rem; font-weight: 600; letter-spacing: 0.05em;">Recommended Reading</span>
         <h2 class="section-title">The First Steps Pediatric Bookshelf</h2>
         <p class="section-desc">Curated books trusted and recommended by our physicians for every developmental stage.</p>
       </div>
@@ -438,21 +442,21 @@
       <div class="segment-cards-3col">
         <div class="service-card">
           <div class="service-icon-box">📖</div>
-          <span class="badge-pill" style="font-size: 0.75rem;">Newborns 0-6 Mo</span>
+          <span class="badge-pill" style="font-size: 0.72rem; padding: 0.25rem 0.65rem; margin-bottom: 0.75rem; font-weight: 600;">Newborns 0-6 Mo</span>
           <h3 class="service-card-title">Caring for Your Baby and Young Child</h3>
           <p class="service-card-desc">The official American Academy of Pediatrics encyclopedia. Complete birth to age 5 medical reference.</p>
         </div>
 
         <div class="service-card">
           <div class="service-icon-box">📚</div>
-          <span class="badge-pill" style="font-size: 0.75rem;">Toddlers 1-3 Yrs</span>
+          <span class="badge-pill" style="font-size: 0.72rem; padding: 0.25rem 0.65rem; margin-bottom: 0.75rem; font-weight: 600;">Toddlers 1-3 Yrs</span>
           <h3 class="service-card-title">The Whole-Brain Child</h3>
           <p class="service-card-desc">By Dr. Daniel Siegel. Twelve revolutionary strategies to nurture your child’s developing mind.</p>
         </div>
 
         <div class="service-card">
           <div class="service-icon-box">📝</div>
-          <span class="badge-pill" style="font-size: 0.75rem;">All Ages</span>
+          <span class="badge-pill" style="font-size: 0.72rem; padding: 0.25rem 0.65rem; margin-bottom: 0.75rem; font-weight: 600;">All Ages</span>
           <h3 class="service-card-title">First Steps Milestone Journal</h3>
           <p class="service-card-desc">Our clinic's complimentary printed keepsake for tracking growth percentiles and joyful first words.</p>
         </div>

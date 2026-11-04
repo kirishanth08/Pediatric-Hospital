@@ -18,6 +18,7 @@
   }
 
   function initDashboardInteractions() {
+    bindSidebarScrollPreservation();
     injectDashboardModals();
     bindCheckInWorkflow();
     bindProxyWorkflow();
@@ -30,6 +31,46 @@
     bindSettingsWorkflow();
     bindDocumentDownloads();
     renderGrowthChart();
+  }
+
+  /* --------------------------------------------------------------------------
+     0. SIDEBAR SCROLL PRESERVATION ACROSS PAGE NAVIGATION
+     Ensures clicking sidebar links maintains smooth position without resetting to top
+     -------------------------------------------------------------------------- */
+  function bindSidebarScrollPreservation() {
+    const sidebar = document.querySelector('.portal-sidebar');
+    if (!sidebar) return;
+
+    const STORAGE_KEY = 'firststeps_portal_sidebar_scroll';
+
+    // Restore saved scroll position immediately
+    const savedPos = sessionStorage.getItem(STORAGE_KEY);
+    if (savedPos !== null) {
+      sidebar.scrollTop = parseInt(savedPos, 10);
+      // Double check after layout settles
+      requestAnimationFrame(function () {
+        sidebar.scrollTop = parseInt(savedPos, 10);
+      });
+    }
+
+    // Save position continuously on scroll
+    sidebar.addEventListener('scroll', function () {
+      sessionStorage.setItem(STORAGE_KEY, sidebar.scrollTop);
+    }, { passive: true });
+
+    // Save exact position immediately when any link inside sidebar is clicked
+    sidebar.addEventListener('click', function (e) {
+      const link = e.target.closest('a');
+      if (link) {
+        sessionStorage.setItem(STORAGE_KEY, sidebar.scrollTop);
+      }
+    });
+
+    window.addEventListener('beforeunload', function () {
+      if (sidebar) {
+        sessionStorage.setItem(STORAGE_KEY, sidebar.scrollTop);
+      }
+    });
   }
 
   /* --------------------------------------------------------------------------

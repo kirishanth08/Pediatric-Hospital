@@ -19,7 +19,163 @@ document.addEventListener('DOMContentLoaded', () => {
   try { initPatientDepartureVideo(); } catch (err) { console.error('Video error:', err); }
   try { initFormSmartValidation(); } catch (err) { console.error('Form validation error:', err); }
   try { initDashboardAppointments(); } catch (err) { console.error('Dashboard appointments error:', err); }
+  try { initPortalSidebarScroll(); } catch (err) { console.error('Sidebar scroll error:', err); }
+  try { initPortalMobileNav(); } catch (err) { console.error('Portal mobile nav error:', err); }
 });
+
+/* ==========================================================================
+   PORTAL MOBILE NAVIGATION & OFFCANVAS DRAWER (360px & <= 1024px)
+   ========================================================================== */
+function initPortalMobileNav() {
+  const portalLayout = document.querySelector('.portal-layout');
+  const portalSidebar = document.querySelector('.portal-sidebar');
+  if (!portalLayout || !portalSidebar) return;
+
+  // 1. Create and inject mobile top bar if missing
+  let mobileBar = document.querySelector('.portal-mobile-bar');
+  if (!mobileBar) {
+    mobileBar = document.createElement('div');
+    mobileBar.className = 'portal-mobile-bar';
+    mobileBar.innerHTML = `
+      <button type="button" class="portal-mobile-toggle-btn" aria-label="Open portal navigation" aria-expanded="false">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <span>Menu</span>
+      </button>
+
+      <a href="index.html" class="portal-mobile-brand" aria-label="First Steps Home">
+        <img src="assets/images/first_steps_logo.svg" width="28" height="28" alt="First Steps Logo">
+        <span>FIRST STEPS</span>
+      </a>
+
+      <div class="portal-mobile-actions-slot"></div>
+    `;
+    portalLayout.prepend(mobileBar);
+  }
+
+  // Dock a copy of portal-top-actions inside the mobile bar for clean alignment
+  const topActions = document.querySelector('.portal-layout > .portal-top-actions');
+  const actionsSlot = mobileBar.querySelector('.portal-mobile-actions-slot');
+  if (topActions && actionsSlot && !actionsSlot.querySelector('.portal-top-actions')) {
+    const clonedActions = topActions.cloneNode(true);
+    clonedActions.classList.add('docked-top-actions');
+    actionsSlot.appendChild(clonedActions);
+
+    const themeBtn = clonedActions.querySelector('.theme-toggle-btn');
+    if (themeBtn) {
+      themeBtn.addEventListener('click', () => {
+        const activeTheme = document.documentElement.getAttribute('data-theme');
+        const nextTheme = activeTheme === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', nextTheme);
+        localStorage.setItem('fs-theme', nextTheme);
+        document.querySelectorAll('.theme-toggle-btn').forEach(btn => {
+          btn.innerHTML = nextTheme === 'dark' 
+            ? '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>'
+            : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>';
+        });
+      });
+    }
+
+    const rtlBtn = clonedActions.querySelector('.rtl-toggle-btn');
+    if (rtlBtn) {
+      rtlBtn.addEventListener('click', () => {
+        const currentDir = document.documentElement.getAttribute('dir') || 'ltr';
+        const nextDir = currentDir === 'rtl' ? 'ltr' : 'rtl';
+        document.documentElement.setAttribute('dir', nextDir);
+        localStorage.setItem('fs-dir', nextDir);
+        document.querySelectorAll('.rtl-toggle-btn').forEach(b => {
+          b.textContent = nextDir === 'rtl' ? 'LTR' : 'RTL';
+          b.classList.toggle('active', nextDir === 'rtl');
+        });
+      });
+    }
+  }
+
+  // 2. Add backdrop overlay
+  let backdrop = document.querySelector('.portal-sidebar-backdrop');
+  if (!backdrop) {
+    backdrop = document.createElement('div');
+    backdrop.className = 'portal-sidebar-backdrop';
+    document.body.appendChild(backdrop);
+  }
+
+  // 3. Add mobile header & close button inside portal sidebar
+  if (!portalSidebar.querySelector('.portal-sidebar-mobile-header')) {
+    const mobileHeader = document.createElement('div');
+    mobileHeader.className = 'portal-sidebar-mobile-header';
+    mobileHeader.innerHTML = `
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <span style="font-weight: 800; font-family: var(--font-heading); color: var(--text-main); font-size: 1.05rem;">Portal Navigation</span>
+      </div>
+      <button type="button" class="portal-sidebar-close-btn" aria-label="Close portal navigation">✕</button>
+    `;
+    portalSidebar.prepend(mobileHeader);
+  }
+
+  const toggleBtn = mobileBar.querySelector('.portal-mobile-toggle-btn');
+  const closeBtn = portalSidebar.querySelector('.portal-sidebar-close-btn');
+
+  function openSidebar() {
+    portalSidebar.classList.add('open-mobile');
+    backdrop.classList.add('active');
+    if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeSidebar() {
+    portalSidebar.classList.remove('open-mobile');
+    backdrop.classList.remove('active');
+    if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  if (toggleBtn) toggleBtn.addEventListener('click', openSidebar);
+  if (closeBtn) closeBtn.addEventListener('click', closeSidebar);
+  if (backdrop) backdrop.addEventListener('click', closeSidebar);
+
+  // Close when clicking any menu link
+  portalSidebar.querySelectorAll('.portal-menu-link').forEach(link => {
+    link.addEventListener('click', () => {
+      closeSidebar();
+    });
+  });
+}
+
+/* ==========================================================================
+   PORTAL SIDEBAR SCROLL PRESERVATION
+   ========================================================================== */
+function initPortalSidebarScroll() {
+  const sidebar = document.querySelector('.portal-sidebar');
+  if (!sidebar) return;
+
+  const STORAGE_KEY = 'firststeps_portal_sidebar_scroll';
+  const savedPos = sessionStorage.getItem(STORAGE_KEY);
+  if (savedPos !== null) {
+    sidebar.scrollTop = parseInt(savedPos, 10);
+    requestAnimationFrame(() => {
+      sidebar.scrollTop = parseInt(savedPos, 10);
+    });
+  }
+
+  sidebar.addEventListener('scroll', () => {
+    sessionStorage.setItem(STORAGE_KEY, sidebar.scrollTop);
+  }, { passive: true });
+
+  sidebar.addEventListener('click', (e) => {
+    if (e.target.closest('a')) {
+      sessionStorage.setItem(STORAGE_KEY, sidebar.scrollTop);
+    }
+  });
+
+  window.addEventListener('beforeunload', () => {
+    if (sidebar) {
+      sessionStorage.setItem(STORAGE_KEY, sidebar.scrollTop);
+    }
+  });
+}
 
 /* ==========================================================================
    THEME TOGGLE (CALM EVENING DARK MODE)
@@ -141,10 +297,41 @@ function initMobileNav() {
       const isOpen = navLinks.classList.toggle('show');
       toggleBtn.setAttribute('aria-expanded', isOpen);
       toggleBtn.innerHTML = isOpen ? CLOSE_ICON : MENU_ICON;
+      if (!isOpen) {
+        navLinks.querySelectorAll('.nav-dropdown').forEach(d => {
+          d.classList.remove('open');
+          const t = d.querySelector('.dropdown-toggle');
+          if (t) t.setAttribute('aria-expanded', 'false');
+        });
+      }
     });
 
-    // Close when clicking an anchor
-    navLinks.querySelectorAll('a').forEach(link => {
+    // Mobile dropdown accordion handling (e.g., Home 1 vs Home 2)
+    const dropdownToggles = navLinks.querySelectorAll('.dropdown-toggle');
+    dropdownToggles.forEach(toggle => {
+      toggle.addEventListener('click', (e) => {
+        if (window.innerWidth <= 1024) {
+          e.preventDefault();
+          e.stopPropagation();
+          const parent = toggle.closest('.nav-dropdown');
+          if (parent) {
+            const isCurrentlyOpen = parent.classList.contains('open');
+            navLinks.querySelectorAll('.nav-dropdown').forEach(d => {
+              d.classList.remove('open');
+              const t = d.querySelector('.dropdown-toggle');
+              if (t) t.setAttribute('aria-expanded', 'false');
+            });
+            if (!isCurrentlyOpen) {
+              parent.classList.add('open');
+              toggle.setAttribute('aria-expanded', 'true');
+            }
+          }
+        }
+      });
+    });
+
+    // Close when clicking an anchor (excluding dropdown toggles)
+    navLinks.querySelectorAll('a:not(.dropdown-toggle)').forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('show');
         if (toggleBtn) {
@@ -464,7 +651,7 @@ function initDashboardAppointments() {
   listContainer.style.display = 'block';
   listContainer.innerHTML = `
     <div class="dash-card" style="border: 2px solid var(--brand-lavender); box-shadow: var(--shadow-sm);">
-      <div class="dash-card-header" style="margin-bottom: 1rem;">
+      <div class="dash-card-header booked-visits-header" style="margin-bottom: 1rem;">
         <div>
           <h2 class="dash-card-title"><span>🗓️</span> Your Booked Clinic Visits (${appointments.length})</h2>
           <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.15rem;">Live scheduled visits synced across your family account.</p>
@@ -474,14 +661,14 @@ function initDashboardAppointments() {
 
       <div style="display: flex; flex-direction: column; gap: 0.85rem;">
         ${appointments.map((appt, idx) => `
-          <div style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1rem; background: var(--bg-primary); border-radius: var(--radius-md); border: 1.5px solid var(--border-blush); flex-wrap: wrap;">
-            <div style="display: flex; align-items: center; gap: 1rem;">
-              <img src="${getDoctorAvatar(appt.doctor)}" alt="${appt.doctor}" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid var(--surface-white); flex-shrink: 0;">
-              <div>
-                <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <div class="booked-appt-item">
+            <div class="booked-appt-info">
+              <img src="${getDoctorAvatar(appt.doctor)}" alt="${appt.doctor}" class="booked-appt-avatar">
+              <div class="booked-appt-details">
+                <div class="booked-appt-child-row">
                   <strong style="color: var(--text-main); font-size: 0.95rem;">${appt.childName}</strong>
-                  <span style="font-size: 0.75rem; background: var(--surface-white); padding: 0.15rem 0.5rem; border-radius: 999px; border: 1px solid var(--border-blush); color: var(--text-muted);">${appt.age || 'Child'}</span>
-                  ${idx === 0 ? '<span style="font-size: 0.7rem; font-weight: 700; color: #047857; background: #E6F4EA; padding: 0.15rem 0.45rem; border-radius: 999px;">Next Visit</span>' : ''}
+                  <span class="booked-appt-age-badge">${appt.age || 'Child'}</span>
+                  ${idx === 0 ? '<span class="booked-appt-next-badge">Next Visit</span>' : ''}
                 </div>
                 <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.2rem;">
                   ${appt.doctor} • <span style="color: var(--brand-lavender-dark); font-weight: 600;">${appt.service || 'Pediatric Consultation'}</span>
@@ -492,8 +679,8 @@ function initDashboardAppointments() {
               </div>
             </div>
 
-            <div style="display: flex; align-items: center; gap: 1.25rem;">
-              <div style="text-align: right;">
+            <div class="booked-appt-action-row">
+              <div class="booked-appt-datetime">
                 <div style="font-weight: 800; color: var(--text-main); font-size: 0.95rem;">${formatDateReadable(appt.date)}</div>
                 <div style="font-size: 0.8rem; font-weight: 700; color: var(--brand-lavender-dark);">${appt.time || '10:30 AM'}</div>
               </div>
